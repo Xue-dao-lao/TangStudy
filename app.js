@@ -102,12 +102,12 @@
   };
   function epigraph() {
     return '<figure class="epigraph"><blockquote>' + esc(EPIGRAPH.text) + '</blockquote><figcaption>' + esc(EPIGRAPH.who) +
-      '<span class="epi-src">; ' + EPIGRAPH.source + '</span></figcaption></figure>';
+      '<span class="epi-src">' + EPIGRAPH.source.charAt(0).toUpperCase() + EPIGRAPH.source.slice(1) + '</span></figcaption></figure>';
   }
   function renderAbout() {
     setNav('about');
     view.innerHTML = '<article class="about">' + epigraph() +
-      '<p>Created with the help of Claude for use in ENGL/CMLT 325, Middlebury College.</p></article>';
+      '<p>Designed by Timothy Billings for ENGL/CMLT 325 at Middlebury College, and built with the help of Claude.</p></article>';
   }
   function renderHome() {
     setNav('home');

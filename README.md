@@ -1,5 +1,9 @@
 # TangStudy
 
+**Not for search engines.** This site holds course materials, including published translations, for
+the students of one class. Every page carries `<meta name="robots" content="noindex, nofollow">`, which
+asks search engines not to list it or follow its links. Please do not link to it publicly.
+
 A web-based app for learning characters in order to begin to read some Tang-Dynasty poetry.
 Built for ENGL/CMLT 325 at Middlebury College. Live at https://xue-dao-lao.github.io/TangStudy/
 
@@ -7,7 +11,7 @@ Built for ENGL/CMLT 325 at Middlebury College. Live at https://xue-dao-lao.githu
 
 Everything students see is generated from plain-text files in `source/`:
 
-- `source/lexicon.txt`: the master lexicon, one entry per line: `char (simp.), crib gloss; additional glosses`.
+- `source/lexicon.txt`: the master lexicon, one entry per line: `char (simp.) pinyin, crib gloss; additional glosses`.
   The simplified form appears only when it differs; everything before the first semicolon is the crib gloss.
 - `source/items/*.txt`: one file per poem or character lesson, holding the reviewed sheet: the text with
   compounds in [brackets], the lexicon lines (a leading `+` marks a character to memorize), and the translations.
