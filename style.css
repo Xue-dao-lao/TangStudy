@@ -208,3 +208,5 @@ h2 { font-size: 26px; margin: 0 0 14px; }
   .spage { box-shadow: none; break-after: page; page-break-after: always; }
   .spage:last-child { break-after: auto; page-break-after: auto; }
 }
+.brush-icon { width: 1.5em; height: 1.5em; color: var(--zhu); vertical-align: -0.4em; margin-right: 0.15em; flex: none; }
+.week-head a .brush-icon { text-decoration: none; }

@@ -101,7 +101,7 @@
     view.innerHTML = keys.map(function (w) {
       return '<section class="week"><div class="week-head"><h2>Week ' + w + '</h2>' +
         '<a class="sans muted" href="#/cards?w=' + w + '">Practice this week’s characters</a>' +
-        '<a class="sans muted" href="#/sheet/week/' + w + '" target="_blank">Print a writing sheet</a></div>' +
+        '<a class="sans muted" href="#/sheet/week/' + w + '" target="_blank">' + BRUSH + 'Print a writing sheet</a></div>' +
         weeks[w].map(function (it) { return itemRow(it, true); }).join('') + '</section>';
     }).join('');
   }
@@ -222,7 +222,7 @@
     }).join('');
     view.innerHTML = '<div class="poem-layout"><div class="poem-main"><div class="poem-title"><span class="zh" lang="zh-Hant">部首</span><span class="en">Common Radicals</span></div>' +
       '<p class="radicals-note">Radicals are the recurring parts from which characters are built, and a clue to their meaning. Several take a different shape when they stand at the side of a character; that form is shown beside the full one.</p>' +
-      '<div class="toolbar btn-row"><a class="btn" href="#/cards?set=radicals">Practice the radicals</a><a class="btn" href="#/sheet/radicals" target="_blank">Print a writing sheet</a></div>' +
+      '<div class="toolbar btn-row"><a class="btn" href="#/cards?set=radicals">Practice the radicals</a><a class="btn" href="#/sheet/radicals" target="_blank">' + BRUSH + 'Print a writing sheet</a></div>' +
       '<div class="grid show-cribs radical-grid" id="grid">' + cells + '</div></div>' +
       '<aside class="entry" id="entry" aria-live="polite"><p class="entry-placeholder">Select a radical to see its meaning and stroke order.</p></aside></div>';
     var gridEl = document.getElementById('grid');
@@ -235,6 +235,11 @@
       if (window.innerWidth <= 860) document.getElementById('entry').scrollIntoView({ behavior: 'smooth', block: 'start' });
     });
   }
+
+  // A writing brush (毛筆), tilted 20° from upright; drawn for this app.
+  var BRUSH = '<svg class="brush-icon" viewBox="0 0 24 24" aria-hidden="true"><g transform="rotate(20 12 12)" fill="currentColor">' +
+    '<path d="M11.5 1.1Q12 .8 12.5 1.1L13.3 12.9Q12 13.3 10.7 12.9Z"/>' +
+    '<path d="M10 13.7H14C15.2 16.6 14.4 19.8 11.9 22.8 11.6 23.1 11.1 23 11.2 22.6 11.5 20.8 10.6 19.6 10 18.1 9.4 16.6 9.5 15 10 13.7Z"/></g></svg>';
 
   // ---------- printable writing sheets ----------
   // Letter paper, 0.5in margins. Ten 0.75in boxes to a row. Up to three characters to a page, and the
@@ -375,7 +380,7 @@
         (e.simp ? '<button class="btn" data-form="' + esc(e.simp) + '" aria-pressed="false">Simplified <span lang="zh-Hans">' + esc(e.simp) + '</span></button>' : '') + '</div>' : '') +
       '<div class="writer"></div><div class="writer-status"></div>' +
       '<div class="btn-row"><button class="btn primary" data-act="animate">Animate strokes</button><button class="btn" data-act="quiz">Practice writing</button></div>' +
-      '<p class="entry-sheet"><a href="#/sheet/chars/' + encodeURIComponent(key) + '" target="_blank">Print a writing sheet for <span lang="zh-Hant">' + esc(key) + '</span></a></p></div>' : '';
+      '<p class="entry-sheet"><a href="#/sheet/chars/' + encodeURIComponent(key) + '" target="_blank">' + BRUSH + 'Print a writing sheet for <span lang="zh-Hant">' + esc(key) + '</span></a></p></div>' : '';
 
     box.innerHTML = '<div class="entry-head"><span class="entry-char" lang="zh-Hant">' + esc(key) + '</span>' +
       (e.simp ? '<span class="entry-simp" lang="zh-Hans">(' + esc(e.simp) + ')</span>' : '') +
