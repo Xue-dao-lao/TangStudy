@@ -238,7 +238,7 @@
         '</div><div class="crib">' + (e ? rich(e.crib) : '') + '</div></div>';
     }).join('');
     view.innerHTML = '<div class="poem-layout"><div class="poem-main"><div class="poem-title"><span class="zh" lang="zh-Hant">常用字</span><span class="en">The ' + top.length + ' Most Frequent Characters in Tang Verse</span></div>' +
-      '<p class="radicals-note">Ranked by how often each occurs in the Complete Tang Poems (全唐詩), nearly fifty thousand poems. The first hundred make up almost a third of all the characters in that collection; all three hundred, about half. Characters become links as their glosses are added: ' + done + ' of ' + top.length + ' so far.</p>' +
+      '<p class="radicals-note">Ranked by how often each occurs in the lines of the Complete Tang Poems (全唐詩) and its modern supplements, some 57,000 poems. The first hundred make up almost a third of all the characters in those poems; all three hundred, more than half. Characters become links as their glosses are added: ' + done + ' of ' + top.length + ' so far.</p>' +
       '<div class="grid show-cribs radical-grid top-grid" id="grid">' + cells + '</div></div>' +
       '<aside class="entry" id="entry" aria-live="polite"><p class="entry-placeholder">Select a character to see its meaning and stroke order.</p></aside></div>';
     var gridEl = document.getElementById('grid');

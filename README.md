@@ -16,7 +16,9 @@ Everything students see is generated from plain-text files in `source/`:
 - `source/items/*.txt`: one file per poem or character lesson, holding the reviewed sheet: the text with
   compounds in [brackets], the lexicon lines (a leading `+` marks a character to memorize), and the translations.
   A gloss in an item file that differs from the master lexicon becomes a contextual gloss for that poem only.
-- `source/tang_char_freq.txt`: frequency ranks in the Quan Tangshi.
+- `source/tang_char_freq.txt`: frequency ranks in the Quan Tangshi, made by `tools/rank.py` from the poem lines
+  (editorial notes removed) of the traditional-character transcription in the chinese-poetry project.
+  `source/tang_char_freq_original.txt` is the earlier list, which counted those notes too.
 
 `tools/build.py` turns these into `data/content.json`, copies stroke data into `strokes/`, and cuts the TW-Kai
 font down to the characters in use (`fonts/`).

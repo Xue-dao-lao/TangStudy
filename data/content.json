@@ -14,7 +14,7 @@
    "crib": "before",
    "more": "in front of; former",
    "forms": null,
-   "rank": 55,
+   "rank": 66,
    "compounds": []
   },
   "明": {
@@ -23,7 +23,7 @@
    "crib": "bright",
    "more": "clear, illuminate",
    "forms": null,
-   "rank": 48,
+   "rank": 46,
    "compounds": []
   },
   "月": {
@@ -32,7 +32,7 @@
    "crib": "moon",
    "more": "month",
    "forms": null,
-   "rank": 19,
+   "rank": 18,
    "compounds": []
   },
   "光": {
@@ -41,7 +41,7 @@
    "crib": "light",
    "more": "radiance, glory",
    "forms": null,
-   "rank": 108,
+   "rank": 104,
    "compounds": []
   },
   "疑": {
@@ -50,7 +50,7 @@
    "crib": "suspect",
    "more": "doubt, wonder whether",
    "forms": null,
-   "rank": 385,
+   "rank": 433,
    "compounds": []
   },
   "是": {
@@ -59,7 +59,7 @@
    "crib": "be",
    "more": "this; right, correct",
    "forms": null,
-   "rank": 44,
+   "rank": 45,
    "compounds": []
   },
   "地": {
@@ -68,7 +68,7 @@
    "crib": "ground",
    "more": "earth, land",
    "forms": null,
-   "rank": 81,
+   "rank": 84,
    "compounds": []
   },
   "上": {
@@ -77,7 +77,7 @@
    "crib": "on",
    "more": "above, up; ascend",
    "forms": null,
-   "rank": 14,
+   "rank": 15,
    "compounds": []
   },
   "霜": {
@@ -86,7 +86,7 @@
    "crib": "frost",
    "more": null,
    "forms": null,
-   "rank": 229,
+   "rank": 217,
    "compounds": []
   },
   "舉": {
@@ -103,7 +103,7 @@
    "crib": "head",
    "more": "top, end",
    "forms": null,
-   "rank": 129,
+   "rank": 118,
    "compounds": []
   },
   "望": {
@@ -112,7 +112,7 @@
    "crib": "gaze toward",
    "more": "look into the distance; hope; full moon",
    "forms": null,
-   "rank": 125,
+   "rank": 116,
    "compounds": []
   },
   "低": {
@@ -129,7 +129,7 @@
    "crib": "think of",
    "more": "long for; thought",
    "forms": null,
-   "rank": 91,
+   "rank": 87,
    "compounds": []
   },
   "故": {
@@ -138,7 +138,7 @@
    "crib": "old",
    "more": "former; reason, therefore",
    "forms": null,
-   "rank": 191,
+   "rank": 188,
    "compounds": [
     "故鄉"
    ]
@@ -149,7 +149,7 @@
    "crib": "village",
    "more": "home region, countryside",
    "forms": null,
-   "rank": 242,
+   "rank": 231,
    "compounds": [
     "故鄉"
    ]
@@ -160,7 +160,7 @@
    "crib": "quiet",
    "more": "still, calm",
    "forms": null,
-   "rank": 284,
+   "rank": 270,
    "compounds": []
   },
   "夜": {
@@ -169,7 +169,7 @@
    "crib": "night",
    "more": null,
    "forms": null,
-   "rank": 46,
+   "rank": 42,
    "compounds": []
   },
   "人": {
@@ -199,7 +199,7 @@
    "crib": "strength",
    "more": "force, effort",
    "forms": null,
-   "rank": 489,
+   "rank": 463,
    "compounds": []
   },
   "又": {
@@ -208,7 +208,7 @@
    "crib": "again",
    "more": "also, moreover; *originally* a right hand",
    "forms": null,
-   "rank": 258,
+   "rank": 290,
    "compounds": []
   },
   "口": {
@@ -217,7 +217,7 @@
    "crib": "mouth",
    "more": "opening, entrance",
    "forms": null,
-   "rank": 499,
+   "rank": 482,
    "compounds": []
   },
   "囗": {
@@ -242,7 +242,7 @@
    "crib": "evening",
    "more": "dusk",
    "forms": null,
-   "rank": 317,
+   "rank": 299,
    "compounds": []
   },
   "大": {
@@ -251,7 +251,7 @@
    "crib": "great",
    "more": "big",
    "forms": null,
-   "rank": 134,
+   "rank": 153,
    "compounds": []
   },
   "女": {
@@ -260,7 +260,7 @@
    "crib": "woman",
    "more": "girl, daughter",
    "forms": null,
-   "rank": 323,
+   "rank": 315,
    "compounds": []
   },
   "子": {
@@ -269,7 +269,7 @@
    "crib": "child",
    "more": "son, boy; master; *nominalizer*",
    "forms": null,
-   "rank": 53,
+   "rank": 54,
    "compounds": []
   },
   "寸": {
@@ -286,7 +286,7 @@
    "crib": "small",
    "more": "little, young",
    "forms": null,
-   "rank": 231,
+   "rank": 234,
    "compounds": []
   },
   "工": {
@@ -321,7 +321,7 @@
    "forms": [
     "忄"
    ],
-   "rank": 25,
+   "rank": 23,
    "compounds": []
   },
   "戈": {
@@ -340,7 +340,7 @@
    "forms": [
     "扌"
    ],
-   "rank": 364,
+   "rank": 346,
    "compounds": []
   },
   "日": {
@@ -358,7 +358,7 @@
    "crib": "tree",
    "more": "wood",
    "forms": null,
-   "rank": 285,
+   "rank": 273,
    "compounds": []
   },
   "水": {
@@ -378,7 +378,7 @@
    "crib": "field",
    "more": "farmland",
    "forms": null,
-   "rank": 363,
+   "rank": 355,
    "compounds": []
   },
   "目": {
@@ -407,7 +407,7 @@
    "forms": [
     "糸"
    ],
-   "rank": 471,
+   "rank": 440,
    "compounds": []
   },
   "耳": {
@@ -426,7 +426,7 @@
    "forms": [
     "衤"
    ],
-   "rank": 140,
+   "rank": 125,
    "compounds": []
   },
   "言": {
@@ -435,7 +435,7 @@
    "crib": "speech",
    "more": "words, say",
    "forms": null,
-   "rank": 160,
+   "rank": 152,
    "compounds": []
   },
   "貝": {
@@ -462,7 +462,7 @@
    "forms": [
     "⻊"
    ],
-   "rank": 369,
+   "rank": 350,
    "compounds": []
   },
   "金": {
@@ -473,7 +473,7 @@
    "forms": [
     "釒"
    ],
-   "rank": 50,
+   "rank": 48,
    "compounds": []
   },
   "門": {
@@ -482,7 +482,7 @@
    "crib": "gate",
    "more": "door",
    "forms": null,
-   "rank": 51,
+   "rank": 49,
    "compounds": []
   },
   "隹": {
@@ -499,7 +499,7 @@
    "crib": "rain",
    "more": null,
    "forms": null,
-   "rank": 71,
+   "rank": 68,
    "compounds": []
   },
   "馬": {
@@ -508,7 +508,7 @@
    "crib": "horse",
    "more": null,
    "forms": null,
-   "rank": 106,
+   "rank": 98,
    "compounds": []
   },
   "不": {
@@ -526,7 +526,7 @@
    "crib": "one",
    "more": "a, single; whole, all; once",
    "forms": null,
-   "rank": 3,
+   "rank": 5,
    "compounds": []
   },
   "無": {
@@ -535,7 +535,7 @@
    "crib": "not have",
    "more": "there is no, without",
    "forms": null,
-   "rank": 4,
+   "rank": 3,
    "compounds": []
   },
   "山": {
@@ -544,7 +544,7 @@
    "crib": "mountain",
    "more": "hill",
    "forms": null,
-   "rank": 5,
+   "rank": 4,
    "compounds": []
   },
   "風": {
@@ -580,7 +580,7 @@
    "crib": "sky",
    "more": "heaven; day",
    "forms": null,
-   "rank": 10,
+   "rank": 11,
    "compounds": []
   },
   "來": {
@@ -589,7 +589,7 @@
    "crib": "come",
    "more": "since; *after a verb*, toward the speaker",
    "forms": null,
-   "rank": 11,
+   "rank": 10,
    "compounds": []
   },
   "中": {
@@ -598,7 +598,7 @@
    "crib": "middle",
    "more": "inside, among; *read zhòng*, hit the mark",
    "forms": null,
-   "rank": 12,
+   "rank": 13,
    "compounds": []
   },
   "何": {
@@ -607,7 +607,7 @@
    "crib": "what",
    "more": "why, how, where",
    "forms": null,
-   "rank": 13,
+   "rank": 12,
    "compounds": []
   },
   "時": {
@@ -616,7 +616,7 @@
    "crib": "time",
    "more": "season, hour; when",
    "forms": null,
-   "rank": 15,
+   "rank": 14,
    "compounds": []
   },
   "花": {
@@ -634,7 +634,7 @@
    "crib": "be",
    "more": "become, do, make, act as; *read wèi*, for, because of",
    "forms": null,
-   "rank": 18,
+   "rank": 21,
    "compounds": []
   },
   "春": {
@@ -643,7 +643,7 @@
    "crib": "spring",
    "more": "youth, desire",
    "forms": null,
-   "rank": 20,
+   "rank": 19,
    "compounds": []
   },
   "故鄉": {
@@ -915,1503 +915,1503 @@
   {
    "rank": 1,
    "ch": "不",
-   "count": 31311
+   "count": 30528
   },
   {
    "rank": 2,
    "ch": "人",
-   "count": 24554
+   "count": 23492
   },
   {
    "rank": 3,
-   "ch": "一",
-   "count": 20277
+   "ch": "無",
+   "count": 18774
   },
   {
    "rank": 4,
-   "ch": "無",
-   "count": 19205
+   "ch": "山",
+   "count": 17585
   },
   {
    "rank": 5,
-   "ch": "山",
-   "count": 18212
+   "ch": "一",
+   "count": 17541
   },
   {
    "rank": 6,
    "ch": "風",
-   "count": 17030
+   "count": 16911
   },
   {
    "rank": 7,
    "ch": "日",
-   "count": 16688
+   "count": 16316
   },
   {
    "rank": 8,
    "ch": "有",
-   "count": 15460
+   "count": 14608
   },
   {
    "rank": 9,
    "ch": "雲",
-   "count": 14210
+   "count": 14016
   },
   {
    "rank": 10,
-   "ch": "天",
-   "count": 14157
+   "ch": "來",
+   "count": 13910
   },
   {
    "rank": 11,
-   "ch": "來",
-   "count": 14062
+   "ch": "天",
+   "count": 13705
   },
   {
    "rank": 12,
-   "ch": "中",
-   "count": 13745
+   "ch": "何",
+   "count": 13374
   },
   {
    "rank": 13,
-   "ch": "何",
-   "count": 13500
+   "ch": "中",
+   "count": 12969
   },
   {
    "rank": 14,
-   "ch": "上",
-   "count": 13262
+   "ch": "時",
+   "count": 12567
   },
   {
    "rank": 15,
-   "ch": "時",
-   "count": 13063
+   "ch": "上",
+   "count": 12405
   },
   {
    "rank": 16,
    "ch": "花",
-   "count": 12340
+   "count": 12205
   },
   {
    "rank": 17,
    "ch": "水",
-   "count": 12291
+   "count": 12163
   },
   {
    "rank": 18,
-   "ch": "為",
-   "count": 12259
+   "ch": "月",
+   "count": 11992
   },
   {
    "rank": 19,
-   "ch": "月",
-   "count": 12204
+   "ch": "春",
+   "count": 11735
   },
   {
    "rank": 20,
-   "ch": "春",
-   "count": 11842
+   "ch": "生",
+   "count": 10973
   },
   {
    "rank": 21,
-   "ch": "生",
-   "count": 11239
+   "ch": "為",
+   "count": 10855
   },
   {
    "rank": 22,
-   "ch": "年",
-   "count": 11122
+   "ch": "相",
+   "count": 10818
   },
   {
    "rank": 23,
-   "ch": "相",
-   "count": 11073
+   "ch": "心",
+   "count": 10614
   },
   {
    "rank": 24,
-   "ch": "見",
-   "count": 11002
+   "ch": "自",
+   "count": 10379
   },
   {
    "rank": 25,
-   "ch": "心",
-   "count": 10717
+   "ch": "年",
+   "count": 10378
   },
   {
    "rank": 26,
-   "ch": "自",
-   "count": 10707
+   "ch": "長",
+   "count": 10027
   },
   {
    "rank": 27,
-   "ch": "此",
-   "count": 10297
+   "ch": "如",
+   "count": 9989
   },
   {
    "rank": 28,
-   "ch": "長",
-   "count": 10248
+   "ch": "君",
+   "count": 9978
   },
   {
    "rank": 29,
-   "ch": "如",
-   "count": 10158
+   "ch": "知",
+   "count": 9769
   },
   {
    "rank": 30,
-   "ch": "君",
-   "count": 10105
+   "ch": "白",
+   "count": 9259
   },
   {
    "rank": 31,
-   "ch": "知",
-   "count": 10018
+   "ch": "此",
+   "count": 9066
   },
   {
    "rank": 32,
-   "ch": "白",
-   "count": 9516
+   "ch": "歸",
+   "count": 9035
   },
   {
    "rank": 33,
-   "ch": "歸",
-   "count": 9173
+   "ch": "行",
+   "count": 8874
   },
   {
    "rank": 34,
-   "ch": "行",
-   "count": 9130
+   "ch": "見",
+   "count": 8850
   },
   {
    "rank": 35,
-   "ch": "三",
-   "count": 9024
+   "ch": "秋",
+   "count": 8599
   },
   {
    "rank": 36,
-   "ch": "作",
-   "count": 8982
+   "ch": "去",
+   "count": 8502
   },
   {
    "rank": 37,
-   "ch": "下",
-   "count": 8792
+   "ch": "得",
+   "count": 8462
   },
   {
    "rank": 38,
-   "ch": "秋",
-   "count": 8708
+   "ch": "空",
+   "count": 8418
   },
   {
    "rank": 39,
-   "ch": "得",
-   "count": 8642
+   "ch": "在",
+   "count": 8255
   },
   {
    "rank": 40,
-   "ch": "去",
-   "count": 8590
+   "ch": "下",
+   "count": 8204
   },
   {
    "rank": 41,
-   "ch": "在",
-   "count": 8589
+   "ch": "清",
+   "count": 8199
   },
   {
    "rank": 42,
-   "ch": "空",
-   "count": 8485
+   "ch": "夜",
+   "count": 8100
   },
   {
    "rank": 43,
-   "ch": "清",
-   "count": 8444
+   "ch": "高",
+   "count": 7935
   },
   {
    "rank": 44,
-   "ch": "是",
-   "count": 8168
+   "ch": "江",
+   "count": 7851
   },
   {
    "rank": 45,
-   "ch": "高",
-   "count": 8166
+   "ch": "是",
+   "count": 7794
   },
   {
    "rank": 46,
-   "ch": "夜",
-   "count": 8159
+   "ch": "明",
+   "count": 7749
   },
   {
    "rank": 47,
-   "ch": "江",
-   "count": 8131
+   "ch": "未",
+   "count": 7621
   },
   {
    "rank": 48,
-   "ch": "明",
-   "count": 8093
+   "ch": "金",
+   "count": 7444
   },
   {
    "rank": 49,
-   "ch": "未",
-   "count": 7888
+   "ch": "門",
+   "count": 7251
   },
   {
    "rank": 50,
-   "ch": "金",
-   "count": 7755
+   "ch": "多",
+   "count": 7238
   },
   {
    "rank": 51,
-   "ch": "門",
-   "count": 7508
+   "ch": "三",
+   "count": 7216
   },
   {
    "rank": 52,
-   "ch": "多",
-   "count": 7398
+   "ch": "處",
+   "count": 7187
   },
   {
    "rank": 53,
-   "ch": "子",
-   "count": 7339
+   "ch": "青",
+   "count": 7061
   },
   {
    "rank": 54,
-   "ch": "處",
-   "count": 7337
+   "ch": "子",
+   "count": 7023
   },
   {
    "rank": 55,
-   "ch": "前",
-   "count": 7289
+   "ch": "道",
+   "count": 6982
   },
   {
    "rank": 56,
-   "ch": "今",
-   "count": 7248
+   "ch": "客",
+   "count": 6858
   },
   {
    "rank": 57,
-   "ch": "道",
-   "count": 7226
+   "ch": "聲",
+   "count": 6816
   },
   {
    "rank": 58,
-   "ch": "青",
-   "count": 7162
+   "ch": "千",
+   "count": 6810
   },
   {
    "rank": 59,
-   "ch": "詩",
-   "count": 7116
+   "ch": "寒",
+   "count": 6772
   },
   {
    "rank": 60,
-   "ch": "事",
-   "count": 7102
+   "ch": "家",
+   "count": 6690
   },
   {
    "rank": 61,
-   "ch": "客",
-   "count": 6951
+   "ch": "落",
+   "count": 6665
   },
   {
    "rank": 62,
-   "ch": "千",
-   "count": 6922
+   "ch": "玉",
+   "count": 6641
   },
   {
    "rank": 63,
-   "ch": "聲",
-   "count": 6878
+   "ch": "事",
+   "count": 6606
   },
   {
    "rank": 64,
-   "ch": "家",
-   "count": 6829
+   "ch": "今",
+   "count": 6597
   },
   {
    "rank": 65,
-   "ch": "寒",
-   "count": 6805
+   "ch": "萬",
+   "count": 6494
   },
   {
    "rank": 66,
-   "ch": "玉",
-   "count": 6752
+   "ch": "前",
+   "count": 6460
   },
   {
    "rank": 67,
    "ch": "出",
-   "count": 6748
+   "count": 6424
   },
   {
    "rank": 68,
-   "ch": "落",
-   "count": 6701
+   "ch": "雨",
+   "count": 6414
   },
   {
    "rank": 69,
-   "ch": "南",
-   "count": 6652
+   "ch": "我",
+   "count": 6354
   },
   {
    "rank": 70,
-   "ch": "萬",
-   "count": 6598
+   "ch": "遠",
+   "count": 6353
   },
   {
    "rank": 71,
-   "ch": "雨",
-   "count": 6459
+   "ch": "朝",
+   "count": 6287
   },
   {
    "rank": 72,
-   "ch": "入",
-   "count": 6436
+   "ch": "南",
+   "count": 6234
   },
   {
    "rank": 73,
-   "ch": "朝",
-   "count": 6435
+   "ch": "入",
+   "count": 6187
   },
   {
    "rank": 74,
-   "ch": "遠",
-   "count": 6429
+   "ch": "路",
+   "count": 6169
   },
   {
    "rank": 75,
-   "ch": "我",
-   "count": 6410
+   "ch": "飛",
+   "count": 6022
   },
   {
    "rank": 76,
-   "ch": "路",
-   "count": 6220
+   "ch": "盡",
+   "count": 5961
   },
   {
    "rank": 77,
-   "ch": "與",
-   "count": 6190
+   "ch": "東",
+   "count": 5937
   },
   {
    "rank": 78,
-   "ch": "東",
-   "count": 6138
+   "ch": "城",
+   "count": 5896
   },
   {
    "rank": 79,
-   "ch": "飛",
-   "count": 6050
+   "ch": "深",
+   "count": 5894
   },
   {
    "rank": 80,
-   "ch": "同",
-   "count": 6044
+   "ch": "流",
+   "count": 5886
   },
   {
    "rank": 81,
-   "ch": "地",
-   "count": 6017
+   "ch": "與",
+   "count": 5884
   },
   {
    "rank": 82,
-   "ch": "城",
-   "count": 6002
+   "ch": "草",
+   "count": 5841
   },
   {
    "rank": 83,
-   "ch": "盡",
-   "count": 5994
+   "ch": "開",
+   "count": 5835
   },
   {
    "rank": 84,
-   "ch": "開",
-   "count": 5969
+   "ch": "地",
+   "count": 5765
   },
   {
    "rank": 85,
-   "ch": "流",
-   "count": 5962
+   "ch": "樹",
+   "count": 5684
   },
   {
    "rank": 86,
-   "ch": "深",
-   "count": 5934
+   "ch": "新",
+   "count": 5680
   },
   {
    "rank": 87,
-   "ch": "草",
-   "count": 5932
+   "ch": "思",
+   "count": 5666
   },
   {
    "rank": 88,
-   "ch": "新",
-   "count": 5914
+   "ch": "將",
+   "count": 5663
   },
   {
    "rank": 89,
-   "ch": "將",
-   "count": 5770
-  },
-  {
-   "rank": 90,
-   "ch": "十",
-   "count": 5748
-  },
-  {
-   "rank": 91,
-   "ch": "思",
-   "count": 5734
-  },
-  {
-   "rank": 92,
-   "ch": "樹",
-   "count": 5711
-  },
-  {
-   "rank": 93,
-   "ch": "成",
-   "count": 5708
-  },
-  {
-   "rank": 94,
-   "ch": "已",
-   "count": 5669
-  },
-  {
-   "rank": 95,
-   "ch": "還",
-   "count": 5625
-  },
-  {
-   "rank": 96,
-   "ch": "可",
-   "count": 5609
-  },
-  {
-   "rank": 97,
    "ch": "色",
-   "count": 5603
-  },
-  {
-   "rank": 98,
-   "ch": "應",
-   "count": 5592
-  },
-  {
-   "rank": 99,
-   "ch": "別",
-   "count": 5576
-  },
-  {
-   "rank": 100,
-   "ch": "書",
    "count": 5566
   },
   {
+   "rank": 90,
+   "ch": "還",
+   "count": 5525
+  },
+  {
+   "rank": 91,
+   "ch": "欲",
+   "count": 5494
+  },
+  {
+   "rank": 92,
+   "ch": "煙",
+   "count": 5482
+  },
+  {
+   "rank": 93,
+   "ch": "已",
+   "count": 5476
+  },
+  {
+   "rank": 94,
+   "ch": "別",
+   "count": 5461
+  },
+  {
+   "rank": 95,
+   "ch": "成",
+   "count": 5446
+  },
+  {
+   "rank": 96,
+   "ch": "誰",
+   "count": 5405
+  },
+  {
+   "rank": 97,
+   "ch": "西",
+   "count": 5364
+  },
+  {
+   "rank": 98,
+   "ch": "馬",
+   "count": 5345
+  },
+  {
+   "rank": 99,
+   "ch": "可",
+   "count": 5342
+  },
+  {
+   "rank": 100,
+   "ch": "應",
+   "count": 5326
+  },
+  {
    "rank": 101,
-   "ch": "卷",
-   "count": 5540
+   "ch": "酒",
+   "count": 5300
   },
   {
    "rank": 102,
-   "ch": "西",
-   "count": 5533
+   "ch": "身",
+   "count": 5273
   },
   {
    "rank": 103,
-   "ch": "欲",
-   "count": 5522
+   "ch": "更",
+   "count": 5231
   },
   {
    "rank": 104,
-   "ch": "煙",
-   "count": 5498
+   "ch": "光",
+   "count": 5223
   },
   {
    "rank": 105,
-   "ch": "石",
-   "count": 5478
+   "ch": "聞",
+   "count": 5160
   },
   {
    "rank": 106,
-   "ch": "馬",
-   "count": 5475
+   "ch": "獨",
+   "count": 5134
   },
   {
    "rank": 107,
-   "ch": "誰",
-   "count": 5439
+   "ch": "重",
+   "count": 5099
   },
   {
    "rank": 108,
-   "ch": "光",
-   "count": 5411
+   "ch": "向",
+   "count": 5055
   },
   {
    "rank": 109,
-   "ch": "五",
-   "count": 5407
+   "ch": "同",
+   "count": 5052
   },
   {
    "rank": 110,
-   "ch": "酒",
-   "count": 5353
+   "ch": "石",
+   "count": 4984
   },
   {
    "rank": 111,
-   "ch": "身",
-   "count": 5325
+   "ch": "閑",
+   "count": 4917
   },
   {
    "rank": 112,
-   "ch": "重",
-   "count": 5303
+   "ch": "陽",
+   "count": 4905
   },
   {
    "rank": 113,
-   "ch": "更",
-   "count": 5283
+   "ch": "看",
+   "count": 4861
   },
   {
    "rank": 114,
-   "ch": "聞",
-   "count": 5272
+   "ch": "香",
+   "count": 4814
   },
   {
    "rank": 115,
-   "ch": "獨",
-   "count": 5172
+   "ch": "海",
+   "count": 4800
   },
   {
    "rank": 116,
-   "ch": "陽",
-   "count": 5125
+   "ch": "望",
+   "count": 4746
   },
   {
    "rank": 117,
-   "ch": "向",
-   "count": 5091
+   "ch": "雪",
+   "count": 4703
   },
   {
    "rank": 118,
-   "ch": "閑",
-   "count": 4973
+   "ch": "頭",
+   "count": 4692
   },
   {
    "rank": 119,
-   "ch": "海",
-   "count": 4961
+   "ch": "滿",
+   "count": 4689
   },
   {
    "rank": 120,
    "ch": "從",
-   "count": 4940
+   "count": 4687
   },
   {
    "rank": 121,
-   "ch": "看",
-   "count": 4911
+   "ch": "情",
+   "count": 4642
   },
   {
    "rank": 122,
-   "ch": "古",
-   "count": 4879
+   "ch": "愁",
+   "count": 4619
   },
   {
    "rank": 123,
-   "ch": "香",
-   "count": 4848
+   "ch": "難",
+   "count": 4576
   },
   {
    "rank": 124,
-   "ch": "之",
-   "count": 4842
+   "ch": "林",
+   "count": 4560
   },
   {
    "rank": 125,
-   "ch": "望",
-   "count": 4824
+   "ch": "衣",
+   "count": 4557
   },
   {
    "rank": 126,
-   "ch": "名",
-   "count": 4821
+   "ch": "老",
+   "count": 4550
   },
   {
    "rank": 127,
-   "ch": "林",
-   "count": 4785
+   "ch": "莫",
+   "count": 4547
   },
   {
    "rank": 128,
-   "ch": "雪",
-   "count": 4745
+   "ch": "方",
+   "count": 4527
   },
   {
    "rank": 129,
-   "ch": "頭",
-   "count": 4733
+   "ch": "古",
+   "count": 4519
   },
   {
    "rank": 130,
-   "ch": "二",
-   "count": 4720
+   "ch": "書",
+   "count": 4503
   },
   {
    "rank": 131,
-   "ch": "滿",
-   "count": 4713
-  },
-  {
-   "rank": 132,
-   "ch": "方",
-   "count": 4709
-  },
-  {
-   "rank": 133,
-   "ch": "情",
-   "count": 4703
-  },
-  {
-   "rank": 134,
-   "ch": "大",
-   "count": 4676
-  },
-  {
-   "rank": 135,
-   "ch": "四",
-   "count": 4644
-  },
-  {
-   "rank": 136,
-   "ch": "難",
-   "count": 4632
-  },
-  {
-   "rank": 137,
-   "ch": "愁",
-   "count": 4624
-  },
-  {
-   "rank": 138,
-   "ch": "老",
-   "count": 4605
-  },
-  {
-   "rank": 139,
-   "ch": "莫",
-   "count": 4597
-  },
-  {
-   "rank": 140,
-   "ch": "衣",
-   "count": 4584
-  },
-  {
-   "rank": 141,
-   "ch": "本",
-   "count": 4538
-  },
-  {
-   "rank": 142,
-   "ch": "能",
-   "count": 4528
-  },
-  {
-   "rank": 143,
-   "ch": "歌",
-   "count": 4521
-  },
-  {
-   "rank": 144,
-   "ch": "龍",
-   "count": 4518
-  },
-  {
-   "rank": 145,
    "ch": "塵",
-   "count": 4483
-  },
-  {
-   "rank": 146,
-   "ch": "里",
-   "count": 4479
-  },
-  {
-   "rank": 147,
-   "ch": "似",
    "count": 4448
   },
   {
+   "rank": 132,
+   "ch": "能",
+   "count": 4412
+  },
+  {
+   "rank": 133,
+   "ch": "里",
+   "count": 4410
+  },
+  {
+   "rank": 134,
+   "ch": "紅",
+   "count": 4397
+  },
+  {
+   "rank": 135,
+   "ch": "龍",
+   "count": 4390
+  },
+  {
+   "rank": 136,
+   "ch": "名",
+   "count": 4327
+  },
+  {
+   "rank": 137,
+   "ch": "歌",
+   "count": 4318
+  },
+  {
+   "rank": 138,
+   "ch": "似",
+   "count": 4300
+  },
+  {
+   "rank": 139,
+   "ch": "分",
+   "count": 4277
+  },
+  {
+   "rank": 140,
+   "ch": "黃",
+   "count": 4265
+  },
+  {
+   "rank": 141,
+   "ch": "作",
+   "count": 4262
+  },
+  {
+   "rank": 142,
+   "ch": "樓",
+   "count": 4151
+  },
+  {
+   "rank": 143,
+   "ch": "復",
+   "count": 4142
+  },
+  {
+   "rank": 144,
+   "ch": "遊",
+   "count": 4095
+  },
+  {
+   "rank": 145,
+   "ch": "氣",
+   "count": 4074
+  },
+  {
+   "rank": 146,
+   "ch": "當",
+   "count": 4072
+  },
+  {
+   "rank": 147,
+   "ch": "舊",
+   "count": 4052
+  },
+  {
    "rank": 148,
-   "ch": "後",
-   "count": 4435
+   "ch": "猶",
+   "count": 4041
   },
   {
    "rank": 149,
-   "ch": "黃",
-   "count": 4421
+   "ch": "平",
+   "count": 3995
   },
   {
    "rank": 150,
-   "ch": "紅",
-   "count": 4413
+   "ch": "到",
+   "count": 3991
   },
   {
    "rank": 151,
-   "ch": "分",
-   "count": 4408
+   "ch": "十",
+   "count": 3962
   },
   {
    "rank": 152,
-   "ch": "當",
-   "count": 4383
+   "ch": "言",
+   "count": 3957
   },
   {
    "rank": 153,
-   "ch": "王",
-   "count": 4259
+   "ch": "大",
+   "count": 3945
   },
   {
    "rank": 154,
-   "ch": "樓",
-   "count": 4222
+   "ch": "間",
+   "count": 3938
   },
   {
    "rank": 155,
-   "ch": "文",
-   "count": 4221
+   "ch": "亦",
+   "count": 3893
   },
   {
    "rank": 156,
-   "ch": "復",
-   "count": 4218
+   "ch": "仙",
+   "count": 3882
   },
   {
    "rank": 157,
-   "ch": "遊",
-   "count": 4195
+   "ch": "過",
+   "count": 3870
   },
   {
    "rank": 158,
-   "ch": "平",
-   "count": 4188
+   "ch": "五",
+   "count": 3867
   },
   {
    "rank": 159,
-   "ch": "舊",
-   "count": 4185
+   "ch": "鳥",
+   "count": 3855
   },
   {
    "rank": 160,
-   "ch": "言",
-   "count": 4175
+   "ch": "後",
+   "count": 3847
   },
   {
    "rank": 161,
-   "ch": "亦",
-   "count": 4153
+   "ch": "非",
+   "count": 3844
   },
   {
    "rank": 162,
-   "ch": "間",
-   "count": 4134
+   "ch": "葉",
+   "count": 3774
   },
   {
    "rank": 163,
-   "ch": "氣",
-   "count": 4122
+   "ch": "王",
+   "count": 3765
   },
   {
    "rank": 164,
-   "ch": "猶",
-   "count": 4081
+   "ch": "離",
+   "count": 3702
   },
   {
    "rank": 165,
-   "ch": "仙",
-   "count": 4031
+   "ch": "外",
+   "count": 3701
   },
   {
    "rank": 166,
-   "ch": "到",
-   "count": 4020
+   "ch": "起",
+   "count": 3695
   },
   {
    "rank": 167,
-   "ch": "非",
-   "count": 4009
-  },
-  {
-   "rank": 168,
-   "ch": "過",
-   "count": 3954
-  },
-  {
-   "rank": 169,
-   "ch": "華",
-   "count": 3887
-  },
-  {
-   "rank": 170,
-   "ch": "鳥",
-   "count": 3881
-  },
-  {
-   "rank": 171,
-   "ch": "然",
-   "count": 3858
-  },
-  {
-   "rank": 172,
-   "ch": "外",
-   "count": 3851
-  },
-  {
-   "rank": 173,
-   "ch": "葉",
-   "count": 3814
-  },
-  {
-   "rank": 174,
-   "ch": "百",
-   "count": 3792
-  },
-  {
-   "rank": 175,
-   "ch": "起",
-   "count": 3770
-  },
-  {
-   "rank": 176,
-   "ch": "初",
-   "count": 3764
-  },
-  {
-   "rank": 177,
    "ch": "意",
-   "count": 3764
-  },
-  {
-   "rank": 178,
-   "ch": "北",
-   "count": 3745
-  },
-  {
-   "rank": 179,
-   "ch": "離",
-   "count": 3737
-  },
-  {
-   "rank": 180,
-   "ch": "松",
-   "count": 3706
-  },
-  {
-   "rank": 181,
-   "ch": "世",
-   "count": 3687
-  },
-  {
-   "rank": 182,
-   "ch": "公",
    "count": 3685
   },
   {
-   "rank": 183,
-   "ch": "九",
+   "rank": 168,
+   "ch": "然",
    "count": 3682
   },
   {
-   "rank": 184,
-   "ch": "安",
-   "count": 3635
+   "rank": 169,
+   "ch": "松",
+   "count": 3670
   },
   {
-   "rank": 185,
-   "ch": "所",
-   "count": 3614
+   "rank": 170,
+   "ch": "華",
+   "count": 3618
   },
   {
-   "rank": 186,
-   "ch": "神",
-   "count": 3604
+   "rank": 171,
+   "ch": "百",
+   "count": 3610
   },
   {
-   "rank": 187,
-   "ch": "若",
-   "count": 3582
+   "rank": 172,
+   "ch": "北",
+   "count": 3608
   },
   {
-   "rank": 188,
+   "rank": 173,
+   "ch": "初",
+   "count": 3589
+  },
+  {
+   "rank": 174,
+   "ch": "詩",
+   "count": 3584
+  },
+  {
+   "rank": 175,
    "ch": "幾",
-   "count": 3577
+   "count": 3554
   },
   {
-   "rank": 189,
+   "rank": 176,
    "ch": "邊",
-   "count": 3574
+   "count": 3552
   },
   {
-   "rank": 190,
-   "ch": "國",
-   "count": 3534
+   "rank": 177,
+   "ch": "之",
+   "count": 3535
   },
   {
-   "rank": 191,
-   "ch": "故",
-   "count": 3529
-  },
-  {
-   "rank": 192,
-   "ch": "隨",
+   "rank": 178,
+   "ch": "世",
    "count": 3526
   },
   {
-   "rank": 193,
+   "rank": 179,
+   "ch": "隨",
+   "count": 3495
+  },
+  {
+   "rank": 180,
+   "ch": "若",
+   "count": 3495
+  },
+  {
+   "rank": 181,
+   "ch": "神",
+   "count": 3489
+  },
+  {
+   "rank": 182,
    "ch": "竹",
-   "count": 3508
+   "count": 3472
+  },
+  {
+   "rank": 183,
+   "ch": "安",
+   "count": 3463
+  },
+  {
+   "rank": 184,
+   "ch": "公",
+   "count": 3416
+  },
+  {
+   "rank": 185,
+   "ch": "宮",
+   "count": 3360
+  },
+  {
+   "rank": 186,
+   "ch": "夢",
+   "count": 3351
+  },
+  {
+   "rank": 187,
+   "ch": "裏",
+   "count": 3339
+  },
+  {
+   "rank": 188,
+   "ch": "故",
+   "count": 3333
+  },
+  {
+   "rank": 189,
+   "ch": "暮",
+   "count": 3279
+  },
+  {
+   "rank": 190,
+   "ch": "陰",
+   "count": 3269
+  },
+  {
+   "rank": 191,
+   "ch": "國",
+   "count": 3260
+  },
+  {
+   "rank": 192,
+   "ch": "少",
+   "count": 3235
+  },
+  {
+   "rank": 193,
+   "ch": "四",
+   "count": 3217
   },
   {
    "rank": 194,
-   "ch": "夢",
-   "count": 3428
+   "ch": "終",
+   "count": 3214
   },
   {
    "rank": 195,
-   "ch": "宮",
-   "count": 3404
+   "ch": "孤",
+   "count": 3212
   },
   {
    "rank": 196,
-   "ch": "裏",
-   "count": 3362
+   "ch": "文",
+   "count": 3204
   },
   {
    "rank": 197,
-   "ch": "吟",
-   "count": 3329
+   "ch": "漢",
+   "count": 3195
   },
   {
    "rank": 198,
-   "ch": "陰",
-   "count": 3307
+   "ch": "露",
+   "count": 3182
   },
   {
    "rank": 199,
-   "ch": "以",
-   "count": 3302
+   "ch": "野",
+   "count": 3175
   },
   {
    "rank": 200,
-   "ch": "暮",
-   "count": 3301
+   "ch": "吟",
+   "count": 3175
   },
   {
    "rank": 201,
-   "ch": "少",
-   "count": 3300
+   "ch": "坐",
+   "count": 3175
   },
   {
    "rank": 202,
-   "ch": "漢",
-   "count": 3277
-  },
-  {
-   "rank": 203,
-   "ch": "終",
-   "count": 3248
-  },
-  {
-   "rank": 204,
-   "ch": "孤",
-   "count": 3233
-  },
-  {
-   "rank": 205,
    "ch": "須",
-   "count": 3227
-  },
-  {
-   "rank": 206,
-   "ch": "野",
-   "count": 3226
-  },
-  {
-   "rank": 207,
-   "ch": "坐",
-   "count": 3205
-  },
-  {
-   "rank": 208,
-   "ch": "露",
-   "count": 3198
-  },
-  {
-   "rank": 209,
-   "ch": "醉",
-   "count": 3184
-  },
-  {
-   "rank": 210,
-   "ch": "臺",
-   "count": 3180
-  },
-  {
-   "rank": 211,
-   "ch": "好",
-   "count": 3177
-  },
-  {
-   "rank": 212,
-   "ch": "晚",
-   "count": 3174
-  },
-  {
-   "rank": 213,
-   "ch": "枝",
    "count": 3171
   },
   {
-   "rank": 214,
-   "ch": "者",
+   "rank": 203,
+   "ch": "醉",
    "count": 3162
   },
   {
-   "rank": 215,
-   "ch": "柳",
-   "count": 3123
+   "rank": 204,
+   "ch": "枝",
+   "count": 3150
   },
   {
-   "rank": 216,
-   "ch": "臨",
+   "rank": 205,
+   "ch": "晚",
+   "count": 3148
+  },
+  {
+   "rank": 206,
+   "ch": "好",
+   "count": 3134
+  },
+  {
+   "rank": 207,
+   "ch": "臺",
    "count": 3113
   },
   {
-   "rank": 217,
+   "rank": 208,
+   "ch": "所",
+   "count": 3102
+  },
+  {
+   "rank": 209,
+   "ch": "柳",
+   "count": 3092
+  },
+  {
+   "rank": 210,
+   "ch": "碧",
+   "count": 3060
+  },
+  {
+   "rank": 211,
+   "ch": "逢",
+   "count": 3053
+  },
+  {
+   "rank": 212,
+   "ch": "臨",
+   "count": 3031
+  },
+  {
+   "rank": 213,
+   "ch": "幽",
+   "count": 3021
+  },
+  {
+   "rank": 214,
    "ch": "河",
-   "count": 3087
+   "count": 3010
+  },
+  {
+   "rank": 215,
+   "ch": "波",
+   "count": 2994
+  },
+  {
+   "rank": 216,
+   "ch": "輕",
+   "count": 2985
+  },
+  {
+   "rank": 217,
+   "ch": "霜",
+   "count": 2983
   },
   {
    "rank": 218,
-   "ch": "逢",
-   "count": 3087
+   "ch": "關",
+   "count": 2979
   },
   {
    "rank": 219,
-   "ch": "碧",
-   "count": 3082
+   "ch": "泉",
+   "count": 2975
   },
   {
    "rank": 220,
-   "ch": "泉",
-   "count": 3044
+   "ch": "回",
+   "count": 2957
   },
   {
    "rank": 221,
-   "ch": "幽",
-   "count": 3037
+   "ch": "留",
+   "count": 2950
   },
   {
    "rank": 222,
-   "ch": "關",
-   "count": 3020
+   "ch": "微",
+   "count": 2948
   },
   {
    "rank": 223,
-   "ch": "歲",
-   "count": 3018
+   "ch": "問",
+   "count": 2945
   },
   {
    "rank": 224,
-   "ch": "波",
-   "count": 3014
+   "ch": "綠",
+   "count": 2944
   },
   {
    "rank": 225,
-   "ch": "微",
-   "count": 3006
+   "ch": "連",
+   "count": 2943
   },
   {
    "rank": 226,
    "ch": "半",
-   "count": 3004
+   "count": 2941
   },
   {
    "rank": 227,
-   "ch": "問",
-   "count": 3004
+   "ch": "歲",
+   "count": 2930
   },
   {
    "rank": 228,
-   "ch": "輕",
-   "count": 2998
+   "ch": "芳",
+   "count": 2865
   },
   {
    "rank": 229,
-   "ch": "霜",
-   "count": 2990
+   "ch": "池",
+   "count": 2847
   },
   {
    "rank": 230,
-   "ch": "連",
-   "count": 2989
+   "ch": "九",
+   "count": 2846
   },
   {
    "rank": 231,
-   "ch": "小",
-   "count": 2986
+   "ch": "鄉",
+   "count": 2843
   },
   {
    "rank": 232,
-   "ch": "回",
-   "count": 2976
+   "ch": "因",
+   "count": 2823
   },
   {
    "rank": 233,
-   "ch": "經",
-   "count": 2976
+   "ch": "影",
+   "count": 2821
   },
   {
    "rank": 234,
-   "ch": "留",
-   "count": 2975
+   "ch": "小",
+   "count": 2807
   },
   {
    "rank": 235,
-   "ch": "影",
-   "count": 2968
+   "ch": "兩",
+   "count": 2794
   },
   {
    "rank": 236,
-   "ch": "綠",
-   "count": 2962
+   "ch": "共",
+   "count": 2790
   },
   {
    "rank": 237,
-   "ch": "因",
-   "count": 2960
+   "ch": "經",
+   "count": 2786
   },
   {
    "rank": 238,
-   "ch": "兩",
-   "count": 2956
+   "ch": "豈",
+   "count": 2753
   },
   {
    "rank": 239,
-   "ch": "正",
-   "count": 2925
+   "ch": "斷",
+   "count": 2742
   },
   {
    "rank": 240,
-   "ch": "池",
-   "count": 2912
+   "ch": "近",
+   "count": 2740
   },
   {
    "rank": 241,
-   "ch": "芳",
-   "count": 2907
+   "ch": "餘",
+   "count": 2731
   },
   {
    "rank": 242,
-   "ch": "鄉",
-   "count": 2884
+   "ch": "翠",
+   "count": 2721
   },
   {
    "rank": 243,
-   "ch": "樂",
-   "count": 2876
-  },
-  {
-   "rank": 244,
-   "ch": "餘",
-   "count": 2867
-  },
-  {
-   "rank": 245,
-   "ch": "傳",
-   "count": 2850
-  },
-  {
-   "rank": 246,
-   "ch": "共",
-   "count": 2827
-  },
-  {
-   "rank": 247,
-   "ch": "近",
-   "count": 2815
-  },
-  {
-   "rank": 248,
-   "ch": "其",
-   "count": 2798
-  },
-  {
-   "rank": 249,
-   "ch": "真",
-   "count": 2797
-  },
-  {
-   "rank": 250,
-   "ch": "斷",
-   "count": 2796
-  },
-  {
-   "rank": 251,
    "ch": "照",
-   "count": 2782
-  },
-  {
-   "rank": 252,
-   "ch": "豈",
-   "count": 2771
-  },
-  {
-   "rank": 253,
-   "ch": "期",
-   "count": 2762
-  },
-  {
-   "rank": 254,
-   "ch": "翠",
-   "count": 2732
-  },
-  {
-   "rank": 255,
-   "ch": "庭",
-   "count": 2729
-  },
-  {
-   "rank": 256,
-   "ch": "六",
    "count": 2717
   },
   {
-   "rank": 257,
+   "rank": 244,
+   "ch": "樂",
+   "count": 2704
+  },
+  {
+   "rank": 245,
+   "ch": "期",
+   "count": 2698
+  },
+  {
+   "rank": 246,
    "ch": "驚",
-   "count": 2701
+   "count": 2686
   },
   {
-   "rank": 258,
-   "ch": "又",
-   "count": 2697
-  },
-  {
-   "rank": 259,
-   "ch": "物",
-   "count": 2695
-  },
-  {
-   "rank": 260,
+   "rank": 247,
    "ch": "尋",
-   "count": 2693
+   "count": 2665
   },
   {
-   "rank": 261,
-   "ch": "曾",
-   "count": 2692
+   "rank": 248,
+   "ch": "庭",
+   "count": 2665
   },
   {
-   "rank": 262,
-   "ch": "動",
-   "count": 2691
-  },
-  {
-   "rank": 263,
+   "rank": 249,
    "ch": "曲",
-   "count": 2689
+   "count": 2663
   },
   {
-   "rank": 264,
-   "ch": "先",
-   "count": 2687
+   "rank": 250,
+   "ch": "動",
+   "count": 2662
   },
   {
-   "rank": 265,
-   "ch": "居",
-   "count": 2659
+   "rank": 251,
+   "ch": "卻",
+   "count": 2656
   },
   {
-   "rank": 266,
-   "ch": "常",
-   "count": 2651
+   "rank": 252,
+   "ch": "真",
+   "count": 2652
   },
   {
-   "rank": 267,
-   "ch": "雙",
-   "count": 2636
-  },
-  {
-   "rank": 268,
-   "ch": "溪",
-   "count": 2634
-  },
-  {
-   "rank": 269,
-   "ch": "首",
-   "count": 2629
-  },
-  {
-   "rank": 270,
-   "ch": "殘",
-   "count": 2621
-  },
-  {
-   "rank": 271,
-   "ch": "和",
+   "rank": 253,
+   "ch": "物",
    "count": 2619
   },
   {
-   "rank": 272,
-   "ch": "吹",
+   "rank": 254,
+   "ch": "雙",
    "count": 2611
   },
   {
-   "rank": 273,
-   "ch": "對",
+   "rank": 255,
+   "ch": "正",
+   "count": 2604
+  },
+  {
+   "rank": 256,
+   "ch": "吹",
+   "count": 2599
+  },
+  {
+   "rank": 257,
+   "ch": "曾",
+   "count": 2596
+  },
+  {
+   "rank": 258,
+   "ch": "者",
    "count": 2591
   },
   {
-   "rank": 274,
-   "ch": "却",
-   "count": 2582
-  },
-  {
-   "rank": 275,
+   "rank": 259,
    "ch": "遙",
-   "count": 2581
-  },
-  {
-   "rank": 276,
-   "ch": "語",
-   "count": 2576
-  },
-  {
-   "rank": 277,
-   "ch": "苦",
-   "count": 2570
-  },
-  {
-   "rank": 278,
-   "ch": "星",
    "count": 2569
   },
   {
-   "rank": 279,
-   "ch": "至",
-   "count": 2558
+   "rank": 260,
+   "ch": "常",
+   "count": 2560
   },
   {
-   "rank": 280,
-   "ch": "通",
-   "count": 2533
+   "rank": 261,
+   "ch": "苦",
+   "count": 2557
   },
   {
-   "rank": 281,
+   "rank": 262,
+   "ch": "星",
+   "count": 2532
+  },
+  {
+   "rank": 263,
+   "ch": "殘",
+   "count": 2527
+  },
+  {
+   "rank": 264,
+   "ch": "對",
+   "count": 2521
+  },
+  {
+   "rank": 265,
+   "ch": "溪",
+   "count": 2521
+  },
+  {
+   "rank": 266,
    "ch": "曉",
-   "count": 2528
+   "count": 2510
   },
   {
-   "rank": 282,
-   "ch": "州",
-   "count": 2516
+   "rank": 267,
+   "ch": "居",
+   "count": 2508
   },
   {
-   "rank": 283,
-   "ch": "川",
-   "count": 2503
+   "rank": 268,
+   "ch": "先",
+   "count": 2482
   },
   {
-   "rank": 284,
-   "ch": "靜",
-   "count": 2489
-  },
-  {
-   "rank": 285,
-   "ch": "木",
-   "count": 2487
-  },
-  {
-   "rank": 286,
+   "rank": 269,
    "ch": "垂",
-   "count": 2485
+   "count": 2468
   },
   {
-   "rank": 287,
+   "rank": 270,
+   "ch": "靜",
+   "count": 2466
+  },
+  {
+   "rank": 271,
    "ch": "鶴",
-   "count": 2470
+   "count": 2444
   },
   {
-   "rank": 288,
-   "ch": "沙",
-   "count": 2450
+   "rank": 272,
+   "ch": "峰",
+   "count": 2442
   },
   {
-   "rank": 289,
-   "ch": "景",
-   "count": 2438
+   "rank": 273,
+   "ch": "木",
+   "count": 2436
   },
   {
-   "rank": 290,
-   "ch": "舟",
+   "rank": 274,
+   "ch": "二",
    "count": 2435
   },
   {
-   "rank": 291,
-   "ch": "虛",
-   "count": 2433
-  },
-  {
-   "rank": 292,
+   "rank": 275,
    "ch": "憶",
-   "count": 2431
+   "count": 2415
   },
   {
-   "rank": 293,
-   "ch": "依",
-   "count": 2430
+   "rank": 276,
+   "ch": "舟",
+   "count": 2414
   },
   {
-   "rank": 294,
-   "ch": "笑",
-   "count": 2426
-  },
-  {
-   "rank": 295,
-   "ch": "紫",
-   "count": 2416
-  },
-  {
-   "rank": 296,
+   "rank": 277,
    "ch": "悲",
-   "count": 2410
+   "count": 2404
   },
   {
-   "rank": 297,
-   "ch": "八",
+   "rank": 278,
+   "ch": "笑",
+   "count": 2403
+  },
+  {
+   "rank": 279,
+   "ch": "以",
+   "count": 2400
+  },
+  {
+   "rank": 280,
+   "ch": "沙",
+   "count": 2397
+  },
+  {
+   "rank": 281,
+   "ch": "虛",
    "count": 2393
   },
   {
-   "rank": 298,
+   "rank": 282,
+   "ch": "語",
+   "count": 2393
+  },
+  {
+   "rank": 283,
+   "ch": "紫",
+   "count": 2382
+  },
+  {
+   "rank": 284,
+   "ch": "至",
+   "count": 2359
+  },
+  {
+   "rank": 285,
+   "ch": "鳴",
+   "count": 2357
+  },
+  {
+   "rank": 286,
+   "ch": "通",
+   "count": 2357
+  },
+  {
+   "rank": 287,
+   "ch": "依",
+   "count": 2350
+  },
+  {
+   "rank": 288,
+   "ch": "和",
+   "count": 2338
+  },
+  {
+   "rank": 289,
+   "ch": "浮",
+   "count": 2330
+  },
+  {
+   "rank": 290,
+   "ch": "又",
+   "count": 2324
+  },
+  {
+   "rank": 291,
+   "ch": "忽",
+   "count": 2321
+  },
+  {
+   "rank": 292,
    "ch": "靈",
-   "count": 2388
+   "count": 2315
+  },
+  {
+   "rank": 293,
+   "ch": "迴",
+   "count": 2300
+  },
+  {
+   "rank": 294,
+   "ch": "楚",
+   "count": 2291
+  },
+  {
+   "rank": 295,
+   "ch": "合",
+   "count": 2282
+  },
+  {
+   "rank": 296,
+   "ch": "魚",
+   "count": 2276
+  },
+  {
+   "rank": 297,
+   "ch": "久",
+   "count": 2274
+  },
+  {
+   "rank": 298,
+   "ch": "傳",
+   "count": 2273
   },
   {
    "rank": 299,
-   "ch": "楚",
-   "count": 2373
+   "ch": "夕",
+   "count": 2266
   },
   {
    "rank": 300,
-   "ch": "鳴",
-   "count": 2370
+   "ch": "登",
+   "count": 2263
   }
  ],
- "version": "8a18de2d51"
+ "version": "1e74f0b20a"
 }
