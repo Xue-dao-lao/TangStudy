@@ -4,8 +4,8 @@ Poet: 李白 Li Bai
 Title: 靜夜思 / Quiet Night Thoughts
 Week: 1
 
-床前[明月]光，疑是地上霜。
-舉頭望[明月]，低頭思[故鄉]。
+床前明月光，疑是地上霜。
+舉頭望明月，低頭思[故鄉]。
 
 LEXICON
 靜 (静), quiet; still, calm
@@ -29,7 +29,6 @@ LEXICON
 鄉 (乡), village; home region, countryside
 
 COMPOUNDS
-明月, bright moon
 故鄉 (故乡), home; native place (*lit.* old village)
 
 TRANSLATIONS

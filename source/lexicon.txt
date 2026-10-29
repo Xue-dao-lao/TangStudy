@@ -25,5 +25,4 @@ CHARACTERS
 夜, night
 
 COMPOUNDS
-明月, bright moon
 故鄉 (故乡), home; native place (*lit.* old village)
