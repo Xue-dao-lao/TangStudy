@@ -76,6 +76,7 @@
     if (parts[0] === 'poem' || parts[0] === 'lesson') return renderItem(decodeURIComponent(parts[1] || ''));
     if (parts[0] === 'index') return renderIndex();
     if (parts[0] === 'radicals') return renderRadicals();
+    if (parts[0] === 'top') return renderTop();
     if (parts[0] === 'sheet') return renderSheet(parts.slice(1).map(decodeURIComponent));
     if (parts[0].indexOf('cards') === 0) return renderCards();
     renderHome();
@@ -206,6 +207,31 @@
         view.querySelector('.tr-body').innerHTML = '<p class="tr-title">' + esc(t.title) + '</p>' +
           (t.note ? '<p class="tr-note">' + esc(t.note) + '</p>' : '') + '<p class="tr-text">' + esc(t.text) + '</p>';
       });
+    });
+  }
+
+  // ---------- the most frequent characters ----------
+  function renderTop() {
+    setNav('top');
+    var top = C.top || [], done = top.filter(function (t) { return C.lexicon[t.ch]; }).length;
+    var cells = top.map(function (t) {
+      var e = C.lexicon[t.ch];
+      return '<div class="unit top-unit' + (e ? '' : ' pending') + '"><div class="top-rank">' + t.rank + '</div><div class="cells">' +
+        (e ? '<button class="cell" lang="zh-Hant" data-k="' + esc(t.ch) + '" aria-pressed="false" aria-label="' + t.rank + ', ' + esc(t.ch) + '">' + esc(t.ch) + '</button>'
+           : '<span class="cell" lang="zh-Hant" title="Not yet glossed">' + esc(t.ch) + '</span>') +
+        '</div><div class="crib">' + (e ? rich(e.crib) : '') + '</div></div>';
+    }).join('');
+    view.innerHTML = '<div class="poem-layout"><div class="poem-main"><div class="poem-title"><span class="zh" lang="zh-Hant">常用字</span><span class="en">The ' + top.length + ' Most Frequent Characters in Tang Verse</span></div>' +
+      '<p class="radicals-note">Ranked by how often each occurs in the Complete Tang Poems (全唐詩), nearly fifty thousand poems. The first hundred make up almost a third of all the characters in that collection; all three hundred, about half. Characters become links as their glosses are added: ' + done + ' of ' + top.length + ' so far.</p>' +
+      '<div class="grid show-cribs radical-grid top-grid" id="grid">' + cells + '</div></div>' +
+      '<aside class="entry" id="entry" aria-live="polite"><p class="entry-placeholder">Select a character to see its meaning and stroke order.</p></aside></div>';
+    var gridEl = document.getElementById('grid');
+    gridEl.addEventListener('click', function (ev) {
+      var b = ev.target.closest('button.cell'); if (!b) return;
+      gridEl.querySelectorAll('.cell[aria-pressed="true"]').forEach(function (c) { c.setAttribute('aria-pressed', 'false'); });
+      b.setAttribute('aria-pressed', 'true');
+      showEntry(b.getAttribute('data-k'), null);
+      if (window.innerWidth <= 860) document.getElementById('entry').scrollIntoView({ behavior: 'smooth', block: 'start' });
     });
   }
 

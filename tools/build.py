@@ -43,6 +43,16 @@ def load_lexicon(path):
             lex[e['key']] = {k: e[k] for k in ('simp', 'py', 'crib', 'more', 'forms')}
     return lex
 
+TOP_N = 300   # length of the Top 300 page; raise to 500 to show the whole frequency list
+
+def load_top(path, n):
+    out = []
+    for m in re.finditer(r'(\d+)\.\s+(\S)\s+\(([\d,]+)\)', open(path, encoding='utf-8').read()):
+        if int(m.group(1)) <= n:
+            out.append({'rank': int(m.group(1)), 'ch': VARIANTS.get(m.group(2), m.group(2)),
+                        'count': int(m.group(3).replace(',', ''))})
+    return out
+
 def load_ranks(path):
     ranks = {}
     for m in re.finditer(r'(\d+)\.\s+(\S)\s+\(', open(path, encoding='utf-8').read()):
@@ -277,7 +287,9 @@ def main():
             for t in line:
                 font_chars.update(t.get('chars', [])); font_chars.update(t.get('p', ''))
     font_chars.update('，。、；：？！「」『』（）')
-    font_chars.update('唐詩入門')  # the app's own name
+    font_chars.update('唐詩入門常用字部首')  # the app's own headings
+    top = load_top(os.path.join(ROOT, 'source', 'tang_char_freq.txt'), TOP_N)
+    font_chars.update(t['ch'] for t in top)
 
     sdir = os.path.join(ROOT, 'strokes')
     os.makedirs(sdir, exist_ok=True)
@@ -297,7 +309,7 @@ def main():
     if missing_glyphs:
         problems.append('TW-Kai lacks glyphs (fallback font used): ' + ''.join(missing_glyphs))
 
-    content = {'lexicon': out_lex, 'items': items}
+    content = {'lexicon': out_lex, 'items': items, 'top': top}
     blob = json.dumps(content, ensure_ascii=False, sort_keys=True)
     content['version'] = hashlib.sha1(blob.encode()).hexdigest()[:10]
     os.makedirs(os.path.join(ROOT, 'data'), exist_ok=True)
