@@ -1,0 +1,328 @@
+{
+ "lexicon": {
+  "床": {
+   "simp": null,
+   "crib": "bed",
+   "more": "couch; well-railing",
+   "compounds": []
+  },
+  "前": {
+   "simp": null,
+   "crib": "before",
+   "more": "in front of; former",
+   "rank": 55,
+   "compounds": []
+  },
+  "明": {
+   "simp": null,
+   "crib": "bright",
+   "more": "clear, illuminate",
+   "rank": 48,
+   "compounds": [
+    "明月"
+   ]
+  },
+  "月": {
+   "simp": null,
+   "crib": "moon",
+   "more": "month",
+   "rank": 19,
+   "compounds": [
+    "明月"
+   ]
+  },
+  "光": {
+   "simp": null,
+   "crib": "light",
+   "more": "radiance, glory",
+   "rank": 108,
+   "compounds": []
+  },
+  "疑": {
+   "simp": null,
+   "crib": "suspect",
+   "more": "doubt, wonder whether",
+   "rank": 385,
+   "compounds": []
+  },
+  "是": {
+   "simp": null,
+   "crib": "be",
+   "more": "this; right, correct",
+   "rank": 44,
+   "compounds": []
+  },
+  "地": {
+   "simp": null,
+   "crib": "ground",
+   "more": "earth, land",
+   "rank": 81,
+   "compounds": []
+  },
+  "上": {
+   "simp": null,
+   "crib": "on",
+   "more": "above, up; ascend",
+   "rank": 14,
+   "compounds": []
+  },
+  "霜": {
+   "simp": null,
+   "crib": "frost",
+   "more": null,
+   "rank": 229,
+   "compounds": []
+  },
+  "舉": {
+   "simp": "举",
+   "crib": "raise",
+   "more": "lift; all, whole",
+   "compounds": []
+  },
+  "頭": {
+   "simp": "头",
+   "crib": "head",
+   "more": "top, end",
+   "rank": 129,
+   "compounds": []
+  },
+  "望": {
+   "simp": null,
+   "crib": "gaze toward",
+   "more": "look into the distance; hope; full moon",
+   "rank": 125,
+   "compounds": []
+  },
+  "低": {
+   "simp": null,
+   "crib": "lower",
+   "more": "low",
+   "compounds": []
+  },
+  "思": {
+   "simp": null,
+   "crib": "think of",
+   "more": "long for; thought",
+   "rank": 91,
+   "compounds": []
+  },
+  "故": {
+   "simp": null,
+   "crib": "old",
+   "more": "former; reason, therefore",
+   "rank": 191,
+   "compounds": [
+    "故鄉"
+   ]
+  },
+  "鄉": {
+   "simp": "乡",
+   "crib": "village",
+   "more": "home region, countryside",
+   "rank": 242,
+   "compounds": [
+    "故鄉"
+   ]
+  },
+  "明月": {
+   "simp": null,
+   "crib": "bright moon",
+   "more": null
+  },
+  "故鄉": {
+   "simp": "故乡",
+   "crib": "home",
+   "more": "native place (*lit.* old village)"
+  }
+ },
+ "items": [
+  {
+   "id": "jingyesi",
+   "type": "poem",
+   "week": 1,
+   "release": null,
+   "poet": {
+    "zh": "李白",
+    "en": "Li Bai"
+   },
+   "title": {
+    "zh": "靜夜思",
+    "en": "Quiet Night Thoughts"
+   },
+   "lines": [
+    [
+     {
+      "k": "床",
+      "chars": [
+       "床"
+      ]
+     },
+     {
+      "k": "前",
+      "chars": [
+       "前"
+      ]
+     },
+     {
+      "k": "明月",
+      "chars": [
+       "明",
+       "月"
+      ]
+     },
+     {
+      "k": "光",
+      "chars": [
+       "光"
+      ]
+     },
+     {
+      "p": "，"
+     },
+     {
+      "k": "疑",
+      "chars": [
+       "疑"
+      ]
+     },
+     {
+      "k": "是",
+      "chars": [
+       "是"
+      ]
+     },
+     {
+      "k": "地",
+      "chars": [
+       "地"
+      ]
+     },
+     {
+      "k": "上",
+      "chars": [
+       "上"
+      ]
+     },
+     {
+      "k": "霜",
+      "chars": [
+       "霜"
+      ]
+     },
+     {
+      "p": "。"
+     }
+    ],
+    [
+     {
+      "k": "舉",
+      "chars": [
+       "舉"
+      ]
+     },
+     {
+      "k": "頭",
+      "chars": [
+       "頭"
+      ]
+     },
+     {
+      "k": "望",
+      "chars": [
+       "望"
+      ]
+     },
+     {
+      "k": "明月",
+      "chars": [
+       "明",
+       "月"
+      ]
+     },
+     {
+      "p": "，"
+     },
+     {
+      "k": "低",
+      "chars": [
+       "低"
+      ]
+     },
+     {
+      "k": "頭",
+      "chars": [
+       "頭"
+      ]
+     },
+     {
+      "k": "思",
+      "chars": [
+       "思"
+      ]
+     },
+     {
+      "k": "故鄉",
+      "chars": [
+       "故",
+       "鄉"
+      ]
+     },
+     {
+      "p": "。"
+     }
+    ]
+   ],
+   "keys": [
+    "床",
+    "前",
+    "明",
+    "月",
+    "光",
+    "疑",
+    "是",
+    "地",
+    "上",
+    "霜",
+    "舉",
+    "頭",
+    "望",
+    "低",
+    "思",
+    "故",
+    "鄉",
+    "明月",
+    "故鄉"
+   ],
+   "assigned": [
+    "明",
+    "月",
+    "上"
+   ],
+   "overrides": {},
+   "translations": [
+    {
+     "translator": "Judith Gautier",
+     "title": "L’auberge",
+     "date": "1867",
+     "note": "Selon Li Taï-Pé",
+     "text": "Je me suis couché dans ce lit d’auberge;\nla lune, sur le parquet, jetait une lueur blanche,\nEt j’ai d’abord cru qu’il avait neigé sur le parquet.\nJ’ai levé la tête vers la lune claire, et j’ai songé aux pays que je vais parcourir et aux étrangers qu’il me faudra voir.\nPuis j’ai baissé la tête vers le parquet, et j’ai songé à mon pays et aux amis que je ne verrai plus."
+    },
+    {
+     "translator": "Joseph Edkins",
+     "title": "Thoughts on a Quiet Night",
+     "date": "1890",
+     "note": null,
+     "text": "Before my couch the moon shines bright\nOr is it the snow that reflects this light?\nI see the moon when I raise my head\nI look down and my thoughts are homeward led."
+    },
+    {
+     "translator": "Herbert Giles",
+     "title": "Night Thoughts",
+     "date": "1898",
+     "note": null,
+     "text": "I wake, and moonbeams play around my bed,\nGlittering like hoar-frost to my wondering eyes;\nUp towards the glorious moon I raise my head,\nThen lay me down, — and thoughts of home arise."
+    }
+   ]
+  }
+ ],
+ "version": "99248fee4c"
+}

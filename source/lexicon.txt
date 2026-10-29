@@ -1,0 +1,27 @@
+MASTER LEXICON
+Format: char (simp.), crib gloss; additional glosses
+The simplified form appears only when it differs. Everything before the first semicolon is the crib gloss.
+Compounds are entries of their own. Lines in capitals are headings and are ignored.
+
+CHARACTERS
+床, bed; couch; well-railing
+前, before; in front of; former
+明, bright; clear, illuminate
+月, moon; month
+光, light; radiance, glory
+疑, suspect; doubt, wonder whether
+是, be; this; right, correct
+地, ground; earth, land
+上, on; above, up; ascend
+霜, frost
+舉 (举), raise; lift; all, whole
+頭 (头), head; top, end
+望, gaze toward; look into the distance; hope; full moon
+低, lower; low
+思, think of; long for; thought
+故, old; former; reason, therefore
+鄉 (乡), village; home region, countryside
+
+COMPOUNDS
+明月, bright moon
+故鄉 (故乡), home; native place (*lit.* old village)

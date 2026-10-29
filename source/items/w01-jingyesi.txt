@@ -1,0 +1,52 @@
+POEM
+Id: jingyesi
+Poet: 李白 Li Bai
+Title: 靜夜思 / Quiet Night Thoughts
+Week: 1
+
+床前[明月]光，疑是地上霜。
+舉頭望[明月]，低頭思[故鄉]。
+
+LEXICON
+床, bed; couch; well-railing
+前, before; in front of; former
++明, bright; clear, illuminate
++月, moon; month
+光, light; radiance, glory
+疑, suspect; doubt, wonder whether
+是, be; this; right, correct
+地, ground; earth, land
++上, on; above, up; ascend
+霜, frost
+舉 (举), raise; lift; all, whole
+頭 (头), head; top, end
+望, gaze toward; look into the distance; hope; full moon
+低, lower; low
+思, think of; long for; thought
+故, old; former; reason, therefore
+鄉 (乡), village; home region, countryside
+
+COMPOUNDS
+明月, bright moon
+故鄉 (故乡), home; native place (*lit.* old village)
+
+TRANSLATIONS
+== Judith Gautier | L’auberge | 1867
+Note: Selon Li Taï-Pé
+Je me suis couché dans ce lit d’auberge;
+la lune, sur le parquet, jetait une lueur blanche,
+Et j’ai d’abord cru qu’il avait neigé sur le parquet.
+J’ai levé la tête vers la lune claire, et j’ai songé aux pays que je vais parcourir et aux étrangers qu’il me faudra voir.
+Puis j’ai baissé la tête vers le parquet, et j’ai songé à mon pays et aux amis que je ne verrai plus.
+
+== Joseph Edkins | Thoughts on a Quiet Night | 1890
+Before my couch the moon shines bright
+Or is it the snow that reflects this light?
+I see the moon when I raise my head
+I look down and my thoughts are homeward led.
+
+== Herbert Giles | Night Thoughts | 1898
+I wake, and moonbeams play around my bed,
+Glittering like hoar-frost to my wondering eyes;
+Up towards the glorious moon I raise my head,
+Then lay me down, — and thoughts of home arise.
