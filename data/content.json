@@ -153,6 +153,308 @@
    "rank": 46,
    "compounds": []
   },
+  "人": {
+   "simp": null,
+   "crib": "person",
+   "more": "people, others",
+   "forms": [
+    "亻"
+   ],
+   "rank": 2,
+   "compounds": []
+  },
+  "刀": {
+   "simp": null,
+   "crib": "knife",
+   "more": "blade",
+   "forms": [
+    "刂"
+   ],
+   "compounds": []
+  },
+  "力": {
+   "simp": null,
+   "crib": "strength",
+   "more": "force, effort",
+   "forms": null,
+   "rank": 489,
+   "compounds": []
+  },
+  "又": {
+   "simp": null,
+   "crib": "again",
+   "more": "also, moreover; *originally* a right hand",
+   "forms": null,
+   "rank": 258,
+   "compounds": []
+  },
+  "口": {
+   "simp": null,
+   "crib": "mouth",
+   "more": "opening, entrance",
+   "forms": null,
+   "rank": 499,
+   "compounds": []
+  },
+  "囗": {
+   "simp": null,
+   "crib": "enclosure",
+   "more": "*radical only*, not the same as 口",
+   "forms": null,
+   "compounds": []
+  },
+  "土": {
+   "simp": null,
+   "crib": "earth",
+   "more": "soil, land",
+   "forms": null,
+   "compounds": []
+  },
+  "夕": {
+   "simp": null,
+   "crib": "evening",
+   "more": "dusk",
+   "forms": null,
+   "rank": 317,
+   "compounds": []
+  },
+  "大": {
+   "simp": null,
+   "crib": "great",
+   "more": "big",
+   "forms": null,
+   "rank": 134,
+   "compounds": []
+  },
+  "女": {
+   "simp": null,
+   "crib": "woman",
+   "more": "girl, daughter",
+   "forms": null,
+   "rank": 323,
+   "compounds": []
+  },
+  "子": {
+   "simp": null,
+   "crib": "child",
+   "more": "son, boy; master; *nominalizer*",
+   "forms": null,
+   "rank": 53,
+   "compounds": []
+  },
+  "寸": {
+   "simp": null,
+   "crib": "inch",
+   "more": "a little",
+   "forms": null,
+   "compounds": []
+  },
+  "小": {
+   "simp": null,
+   "crib": "small",
+   "more": "little, young",
+   "forms": null,
+   "rank": 231,
+   "compounds": []
+  },
+  "工": {
+   "simp": null,
+   "crib": "work",
+   "more": "skill, artisan",
+   "forms": null,
+   "compounds": []
+  },
+  "幺": {
+   "simp": null,
+   "crib": "tiny",
+   "more": "slight",
+   "forms": null,
+   "compounds": []
+  },
+  "弓": {
+   "simp": null,
+   "crib": "bow",
+   "more": null,
+   "forms": null,
+   "compounds": []
+  },
+  "心": {
+   "simp": null,
+   "crib": "heart",
+   "more": "mind, feelings",
+   "forms": [
+    "忄"
+   ],
+   "rank": 25,
+   "compounds": []
+  },
+  "戈": {
+   "simp": null,
+   "crib": "dagger-axe",
+   "more": "weapon, war",
+   "forms": null,
+   "compounds": []
+  },
+  "手": {
+   "simp": null,
+   "crib": "hand",
+   "more": null,
+   "forms": [
+    "扌"
+   ],
+   "rank": 364,
+   "compounds": []
+  },
+  "日": {
+   "simp": null,
+   "crib": "sun",
+   "more": "day",
+   "forms": null,
+   "rank": 7,
+   "compounds": []
+  },
+  "木": {
+   "simp": null,
+   "crib": "tree",
+   "more": "wood",
+   "forms": null,
+   "rank": 285,
+   "compounds": []
+  },
+  "水": {
+   "simp": null,
+   "crib": "water",
+   "more": "river",
+   "forms": [
+    "氵"
+   ],
+   "rank": 17,
+   "compounds": []
+  },
+  "田": {
+   "simp": null,
+   "crib": "field",
+   "more": "farmland",
+   "forms": null,
+   "rank": 363,
+   "compounds": []
+  },
+  "目": {
+   "simp": null,
+   "crib": "eye",
+   "more": "look",
+   "forms": null,
+   "compounds": []
+  },
+  "示": {
+   "simp": null,
+   "crib": "show",
+   "more": "*as a component*, spirits and rites",
+   "forms": [
+    "礻"
+   ],
+   "compounds": []
+  },
+  "絲": {
+   "simp": "丝",
+   "crib": "silk",
+   "more": "thread",
+   "forms": [
+    "糸"
+   ],
+   "rank": 471,
+   "compounds": []
+  },
+  "耳": {
+   "simp": null,
+   "crib": "ear",
+   "more": "*final particle*, only",
+   "forms": null,
+   "compounds": []
+  },
+  "衣": {
+   "simp": null,
+   "crib": "clothing",
+   "more": "robe",
+   "forms": [
+    "衤"
+   ],
+   "rank": 140,
+   "compounds": []
+  },
+  "言": {
+   "simp": null,
+   "crib": "speech",
+   "more": "words, say",
+   "forms": null,
+   "rank": 160,
+   "compounds": []
+  },
+  "貝": {
+   "simp": "贝",
+   "crib": "cowrie shell",
+   "more": "treasure, money",
+   "forms": null,
+   "compounds": []
+  },
+  "走": {
+   "simp": null,
+   "crib": "run",
+   "more": "walk, go",
+   "forms": null,
+   "compounds": []
+  },
+  "足": {
+   "simp": null,
+   "crib": "foot",
+   "more": "enough",
+   "forms": [
+    "⻊"
+   ],
+   "rank": 369,
+   "compounds": []
+  },
+  "金": {
+   "simp": null,
+   "crib": "metal",
+   "more": "gold",
+   "forms": [
+    "釒"
+   ],
+   "rank": 50,
+   "compounds": []
+  },
+  "門": {
+   "simp": "门",
+   "crib": "gate",
+   "more": "door",
+   "forms": null,
+   "rank": 51,
+   "compounds": []
+  },
+  "隹": {
+   "simp": null,
+   "crib": "bird",
+   "more": "*radical only*, short-tailed bird",
+   "forms": null,
+   "compounds": []
+  },
+  "雨": {
+   "simp": null,
+   "crib": "rain",
+   "more": null,
+   "forms": null,
+   "rank": 71,
+   "compounds": []
+  },
+  "馬": {
+   "simp": "马",
+   "crib": "horse",
+   "more": null,
+   "forms": null,
+   "rank": 106,
+   "compounds": []
+  },
   "故鄉": {
    "simp": "故乡",
    "crib": "home",
@@ -358,7 +660,64 @@
      "text": "I wake, and moonbeams play around my bed,\nGlittering like hoar-frost to my wondering eyes;\nUp towards the glorious moon I raise my head,\nThen lay me down, — and thoughts of home arise."
     }
    ]
+  },
+  {
+   "id": "radicals",
+   "type": "radicals",
+   "week": null,
+   "release": null,
+   "poet": {
+    "zh": "",
+    "en": ""
+   },
+   "title": {
+    "zh": "部首",
+    "en": "Common Radicals"
+   },
+   "lines": [],
+   "keys": [
+    "人",
+    "刀",
+    "力",
+    "又",
+    "口",
+    "囗",
+    "土",
+    "夕",
+    "大",
+    "女",
+    "子",
+    "寸",
+    "小",
+    "工",
+    "幺",
+    "弓",
+    "心",
+    "戈",
+    "手",
+    "日",
+    "木",
+    "水",
+    "田",
+    "目",
+    "示",
+    "絲",
+    "耳",
+    "衣",
+    "言",
+    "貝",
+    "走",
+    "足",
+    "金",
+    "門",
+    "隹",
+    "雨",
+    "馬"
+   ],
+   "assigned": [],
+   "overrides": {},
+   "translations": []
   }
  ],
- "version": "a1674553ce"
+ "version": "35f79e1e47"
 }

@@ -24,5 +24,43 @@ CHARACTERS
 靜 (静), quiet; still, calm
 夜, night
 
+人/亻, person; people, others
+刀/刂, knife; blade
+力, strength; force, effort
+又, again; also, moreover; *originally* a right hand
+口, mouth; opening, entrance
+囗, enclosure; *radical only*, not the same as 口
+土, earth; soil, land
+夕, evening; dusk
+大, great; big
+女, woman; girl, daughter
+子, child; son, boy; master; *nominalizer*
+寸, inch; a little
+小, small; little, young
+工, work; skill, artisan
+幺, tiny; slight
+弓, bow
+心/忄, heart; mind, feelings
+戈, dagger-axe; weapon, war
+手/扌, hand
+日, sun; day
+木, tree; wood
+水/氵, water; river
+田, field; farmland
+目, eye; look
+示/礻, show; *as a component*, spirits and rites
+絲/糸 (丝), silk; thread
+耳, ear; *final particle*, only
+衣/衤, clothing; robe
+言, speech; words, say
+貝 (贝), cowrie shell; treasure, money
+走, run; walk, go
+足/⻊, foot; enough
+金/釒, metal; gold
+門 (门), gate; door
+隹, bird; *radical only*, short-tailed bird
+雨, rain
+馬 (马), horse
+
 COMPOUNDS
 故鄉 (故乡), home; native place (*lit.* old village)
