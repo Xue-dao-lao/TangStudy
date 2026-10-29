@@ -272,7 +272,7 @@
     box.querySelectorAll('[data-form]').forEach(function (b) {
       b.addEventListener('click', function () {
         box.querySelectorAll('[data-form]').forEach(function (x) { x.setAttribute('aria-pressed', 'false'); });
-        b.setAttribute('aria-pressed', 'true'); setForm(b.getAttribute('data-form'));
+        b.setAttribute('aria-pressed', 'true'); setForm(b.getAttribute('data-form')); w.animateCharacter();   // show the new form's strokes at once
       });
     });
     box.querySelector('[data-act="animate"]').addEventListener('click', function () {
