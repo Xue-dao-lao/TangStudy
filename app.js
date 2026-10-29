@@ -97,8 +97,8 @@
   // Epigraph at the head of the syllabus. Swap the text and source here to change it.
   var EPIGRAPH = {
     text: 'Really one DON’T need to know a language. One NEEDS, damn well needs, to know the few hundred words in the few really good poems that any language has in it.',
-    who: 'Ezra Pound to Iris Barry, 1916',
-    source: 'epigraph to Ernest Fenollosa and Ezra Pound, <i>The Chinese Written Character as a Medium for Poetry: A Critical Edition</i> (Fordham University Press, 2008)'
+    who: 'Ezra Pound, letter to Iris Barry, 30 August 1916',
+    source: 'in D. D. Paige, ed., <i>The Letters of Ezra Pound, 1907–1941</i>, vol. 1, p. 145'
   };
   function epigraph() {
     return '<figure class="epigraph"><blockquote>' + esc(EPIGRAPH.text) + '</blockquote><figcaption>' + esc(EPIGRAPH.who) +
