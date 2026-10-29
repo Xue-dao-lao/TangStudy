@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hosting test</title>
+<style>
+  body { font-family: -apple-system, system-ui, sans-serif; max-width: 560px; margin: 40px auto; padding: 0 16px; line-height: 1.6; color: #222; background: #fff; }
+  h1 { font-size: 20px; font-weight: 500; }
+  .row { display: flex; justify-content: space-between; border-bottom: 1px solid #ddd; padding: 8px 0; }
+  .ok { color: #2e7d32; font-weight: 500; }
+  .no { color: #c62828; font-weight: 500; }
+  .verdict { margin-top: 20px; padding: 12px; background: #f4f4f0; border-radius: 8px; }
+  .zh { font-family: "Kaiti TC", "STKaiti", serif; font-size: 28px; }
+</style>
+</head>
+<body>
+<h1>Hosting test for the Tang study app</h1>
+<p class="zh">松下問童子</p>
+<div id="out"></div>
+<div class="verdict" id="verdict"></div>
+<script>
+  const rows = [];
+  const add = (label, pass, detail) => rows.push(
+    `<div class="row"><span>${label}</span><span class="${pass ? 'ok' : 'no'}">${detail}</span></div>`);
+
+  const https = location.protocol === 'https:';
+  add('Connection', https, https ? 'https (secure)' : location.protocol.replace(':', ''));
+
+  const secure = window.isSecureContext === true;
+  add('Secure context', secure, secure ? 'yes' : 'no');
+
+  const sw = 'serviceWorker' in navigator && secure;
+  add('Offline caching possible', sw, sw ? 'yes' : 'no');
+
+  let storage = false;
+  try { localStorage.setItem('_t', '1'); storage = localStorage.getItem('_t') === '1'; localStorage.removeItem('_t'); } catch (e) {}
+  add('Progress can be saved', storage, storage ? 'yes' : 'no');
+
+  add('Page address', true, `<span style="font-weight:400;color:#555;word-break:break-all">${location.href}</span>`);
+  document.getElementById('out').innerHTML = rows.join('');
+
+  document.getElementById('verdict').textContent =
+    location.protocol === 'file:' ? 'This opened as a local file, not from a web server. Try the folder’s web link instead.'
+    : (sw && storage) ? 'Everything we need works here, including offline mode.'
+    : storage ? 'The app will work here, but without offline mode.'
+    : 'Something is blocked; send me a screenshot of this page.';
+</script>
+</body>
+</html>
