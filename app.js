@@ -21,6 +21,7 @@
     });
   }
   function rich(s) { return esc(s).replace(/\*([^*]+)\*/g, '<i>$1</i>'); }
+  function cribText(s) { return String(s || '').replace(/(?![’'*-])\p{P}/gu, '').trim(); }   // cribs never show punctuation
   function el(html) { var t = document.createElement('template'); t.innerHTML = html.trim(); return t.content.firstChild; }
   function today() { return new Date().toISOString().slice(0, 10); }
   function released(it) { return !it.release || it.release <= today(); }
@@ -78,7 +79,7 @@
   // ---------- syllabus ----------
   function itemRow(it, showChars) {
     var chars = it.assigned.join(' ');
-    var right = showChars && chars ? '<div class="item-chars" lang="zh-Hant">' + esc(chars) + '<small>to learn</small></div>' : '<div></div>';
+    var right = showChars && chars ? '<div class="item-chars" lang="zh-Hant">' + esc(chars) + '<small>characters to learn</small></div>' : '<div></div>';
     var en = it.type === 'lesson' ? 'Character lesson' : esc(it.title.en);
     var poet = it.type === 'lesson' ? '' : '<div class="item-poet"><span lang="zh-Hant" class="zh">' + esc(it.poet.zh) + '</span> ' + esc(it.poet.en) + '</div>';
     return '<a class="item-row" href="#/' + it.type + '/' + encodeURIComponent(it.id) + '"><div>' +
@@ -132,7 +133,7 @@
     var grid = lines.map(function (line) {
       return '<div class="line' + (line.end ? ' line-end' : '') + '">' + line.map(function (t) {
         if (t.p) return '<div class="unit"><div class="cells"><span class="cell punct" lang="zh-Hant">' + esc(t.p) + '</span></div></div>';
-        var crib = it.overrides[t.k] || (C.lexicon[t.k] ? C.lexicon[t.k].crib : '');
+        var crib = cribText(it.overrides[t.k] || (C.lexicon[t.k] ? C.lexicon[t.k].crib : ''));
         return '<div class="unit' + (t.chars.length > 1 ? ' compound' : '') + '" data-k="' + esc(t.k) + '"><div class="cells">' +
           t.chars.map(function (ch) {
             return '<button class="cell' + cellMark(ch, t.k) + '" lang="zh-Hant" data-k="' + esc(t.k) + '" data-ch="' + esc(ch) +
@@ -143,10 +144,12 @@
 
     var heading = it.type === 'lesson'
       ? '<div class="poem-title"><span class="zh" lang="zh-Hant">' + esc(titleZh(it)) + '</span><span class="en">Character lesson, week ' + it.week + '</span></div>'
-      : '<div class="poem-title"><span class="zh" lang="zh-Hant">' + esc(it.title.zh) + '</span><span class="en">' + esc(it.title.en) + '</span>' +
+      : '<div class="poem-title"><span class="zh title-zh" lang="zh-Hant">' + Array.from(it.title.zh).map(function (ch) {
+          return C.lexicon[ch] ? '<button class="title-char" data-k="' + esc(ch) + '">' + esc(ch) + '</button>' : esc(ch);
+        }).join('') + '</span><span class="en">' + esc(it.title.en) + '</span>' +
         '<div class="poet"><span class="zh" lang="zh-Hant">' + esc(it.poet.zh) + '</span> ' + esc(it.poet.en) + '</div></div>';
 
-    var legend = '<div class="legend">' + (it.assigned.length ? '<span class="l-now">to learn this week</span>' : '') +
+    var legend = '<div class="legend">' + (it.assigned.length ? '<span class="l-now">characters to learn this week</span>' : '') +
       (Object.keys(past).length ? '<span class="l-past">learned in earlier weeks</span>' : '') + '</div>';
 
     var tr = it.translations.length ? '<section class="translations"><h3>Translations</h3><div class="tr-list">' +
@@ -161,6 +164,15 @@
       '<aside class="entry" id="entry" aria-live="polite"><p class="entry-placeholder">Select a character to see its meaning and stroke order.</p></aside>' + tr + '</div>';
 
     var gridEl = document.getElementById('grid');
+    view.querySelectorAll('.title-char').forEach(function (b) {
+      b.addEventListener('click', function () {
+        gridEl.querySelectorAll('.cell[aria-pressed="true"]').forEach(function (c) { c.setAttribute('aria-pressed', 'false'); });
+        view.querySelectorAll('.title-char.on').forEach(function (c) { c.classList.remove('on'); });
+        b.classList.add('on');
+        showEntry(b.getAttribute('data-k'), it);
+        if (window.innerWidth <= 860) document.getElementById('entry').scrollIntoView({ behavior: 'smooth', block: 'start' });
+      });
+    });
     document.getElementById('crib-toggle').addEventListener('click', function () {
       var on = gridEl.classList.toggle('show-cribs');
       this.setAttribute('aria-pressed', on);
@@ -169,6 +181,7 @@
       var b = e.target.closest('button.cell');
       if (!b) return;
       gridEl.querySelectorAll('.cell[aria-pressed="true"]').forEach(function (c) { c.setAttribute('aria-pressed', 'false'); });
+      view.querySelectorAll('.title-char.on').forEach(function (c) { c.classList.remove('on'); });
       var unit = b.closest('.unit');
       unit.querySelectorAll('.cell').forEach(function (c) { c.setAttribute('aria-pressed', 'true'); });
       showEntry(b.getAttribute('data-k'), it);
@@ -193,7 +206,7 @@
     var here = it && it.overrides[key] ? '<p class="entry-here">In this poem: ' + rich(it.overrides[key]) + '</p>' : '';
     var links = '';
     if (key.length > 1) {
-      links = '<p class="entry-links"><span class="muted">Characters:</span> ' + key.split('').map(function (ch) {
+      links = '<p class="entry-links"><span class="muted">Components:</span> ' + key.split('').map(function (ch) {
         return '<a href="#" data-go="' + esc(ch) + '" lang="zh-Hant">' + esc(ch) + '</a>'; }).join('') + '</p>';
     } else if (e.compounds && e.compounds.length) {
       links = '<p class="entry-links"><span class="muted">See also:</span> ' + e.compounds.map(function (k) {

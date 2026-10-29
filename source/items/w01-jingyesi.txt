@@ -8,6 +8,8 @@ Week: 1
 舉頭望[明月]，低頭思[故鄉]。
 
 LEXICON
+靜 (静), quiet; still, calm
+夜, night
 床, bed; couch; well-railing
 前, before; in front of; former
 +明, bright; clear, illuminate

@@ -124,6 +124,20 @@
     "故鄉"
    ]
   },
+  "靜": {
+   "simp": "静",
+   "crib": "quiet",
+   "more": "still, calm",
+   "rank": 284,
+   "compounds": []
+  },
+  "夜": {
+   "simp": null,
+   "crib": "night",
+   "more": null,
+   "rank": 46,
+   "compounds": []
+  },
   "明月": {
    "simp": null,
    "crib": "bright moon",
@@ -273,6 +287,8 @@
     ]
    ],
    "keys": [
+    "靜",
+    "夜",
     "床",
     "前",
     "明",
@@ -324,5 +340,5 @@
    ]
   }
  ],
- "version": "99248fee4c"
+ "version": "b06b1e5238"
 }

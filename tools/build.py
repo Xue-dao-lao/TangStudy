@@ -187,6 +187,12 @@ def main():
                 if e['crib'] not in (master['more'] or ''):
                     problems.append(f"{it['source']}: override for {e['key']} ('{e['crib']}') "
                                     f"is not among its additional glosses")
+        for ch in split_names(it.get('title'))['zh']:
+            if CJK.match(ch) and ch not in lex:
+                problems.append(f"{it['source']}: title character {ch} has no entry (it won't be clickable)")
+        for e in it['entries']:
+            if re.search(r"[^\w\s*’'-]", e['crib']):
+                problems.append(f"{it['source']}: crib for {e['key']} ('{e['crib']}') contains punctuation")
         for line in it['lines']:
             for t in line:
                 if 'k' in t and t['k'] not in lex:
@@ -233,6 +239,7 @@ def main():
             for t in line:
                 font_chars.update(t.get('chars', [])); font_chars.update(t.get('p', ''))
     font_chars.update('，。、；：？！「」『』（）')
+    font_chars.update('唐詩入門')  # the app's own name
 
     sdir = os.path.join(ROOT, 'strokes')
     os.makedirs(sdir, exist_ok=True)

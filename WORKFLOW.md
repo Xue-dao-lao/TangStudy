@@ -8,8 +8,9 @@ Read the specification (tang-study-app-spec.md in the Project) for the design de
 
 - Traditional characters in standard forms always (為 not 爲, 群 not 羣, 疏 not 疎).
 - Entry format: `char (simp.), crib gloss; additional glosses`. Give the simplified form only when it differs.
-- Everything before the first semicolon appears verbatim in the crib under the character, so keep it a bare
-  English gloss: no grammatical labels, no parentheses. Grammatical functions such as *nominalizer* go after
+- Everything before the first semicolon appears in the crib under the character, so keep it a bare English
+  gloss: no punctuation of any kind, no grammatical labels, no parentheses. (The app strips punctuation from
+  cribs regardless, and the build warns about it.) Grammatical functions such as *nominalizer* go after
   the semicolon, in asterisks (shown in italics).
 - Glosses are spare and suited to Tang poetry: the classical sense first. Flag, rather than bury, any Tang usage
   that diverges from the common sense.
@@ -44,7 +45,8 @@ TRANSLATIONS
 Judith Gautier, "L'auberge" (1867)
 ```
 
-- One LEXICON line per distinct character, in order of first appearance (for lessons, the given order).
+- One LEXICON line per distinct character, in order of first appearance, starting with the characters of the
+  Chinese title, which are clickable on the poem page (for lessons, the given order).
 - For a character already in the master lexicon, copy its existing line and mark it `(existing)`;
   for a new one, draft the entry. New entries need Timothy's full attention; existing ones only need checking
   against this poem's sense.
