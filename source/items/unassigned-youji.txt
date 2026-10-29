@@ -1,0 +1,37 @@
+POEM
+Id: youji
+Poet: 杜牧 Du Mu
+Title: 有寄 / Sent to Someone
+
+雲闊煙深樹，江澄水浴秋。
+[美人][何處]在，明月萬山頭。
+
+LEXICON
+有 yǒu, have; there is, exist
+寄 jì, send; entrust, lodge
+雲 (云) yún, cloud
+闊 (阔) kuò, wide; broad, vast
+煙 (烟) yān, mist; smoke, haze
+深 shēn, deep; dense, far
+樹 (树) shù, tree; plant
+江 jiāng, river; *esp.* the Yangzi
+澄 chéng, clear; limpid, still
+水/氵 shuǐ, water; river
+浴 yù, bathe; wash
+秋 qiū, autumn
+美 měi, beautiful; fine, admirable
+人/亻 rén, person; people, others
+何 hé, what; why, how, where
+處 (处) chù, place; where; *read chǔ*, dwell
+在 zài, be at; be present, exist
+明 míng, bright; clear, illuminate
+月 yuè, moon; month
+萬 (万) wàn, ten thousand; countless, all
+山 shān, mountain; hill
+頭 (头) tóu, top; head, end
+
+COMPOUNDS
+美人 měirén, a beauty; *lit.* fair person, *often* a friend or patron longed for
+何處 (何处) héchù, where; *lit.* what place
+
+TRANSLATIONS

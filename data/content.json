@@ -182,6 +182,7 @@
    ],
    "rank": 2,
    "compounds": [
+    "美人",
     "高人"
    ]
   },
@@ -610,7 +611,9 @@
    "more": "why, how, where",
    "forms": null,
    "rank": 12,
-   "compounds": []
+   "compounds": [
+    "何處"
+   ]
   },
   "時": {
    "simp": "时",
@@ -750,6 +753,123 @@
    "rank": 36,
    "compounds": []
   },
+  "寄": {
+   "simp": null,
+   "py": "jì",
+   "crib": "send",
+   "more": "entrust, lodge",
+   "forms": null,
+   "rank": 356,
+   "compounds": []
+  },
+  "闊": {
+   "simp": "阔",
+   "py": "kuò",
+   "crib": "wide",
+   "more": "broad, vast",
+   "forms": null,
+   "compounds": []
+  },
+  "煙": {
+   "simp": "烟",
+   "py": "yān",
+   "crib": "mist",
+   "more": "smoke, haze",
+   "forms": null,
+   "rank": 92,
+   "compounds": []
+  },
+  "深": {
+   "simp": null,
+   "py": "shēn",
+   "crib": "deep",
+   "more": "dense, far",
+   "forms": null,
+   "rank": 79,
+   "compounds": []
+  },
+  "樹": {
+   "simp": "树",
+   "py": "shù",
+   "crib": "tree",
+   "more": "plant",
+   "forms": null,
+   "rank": 85,
+   "compounds": []
+  },
+  "江": {
+   "simp": null,
+   "py": "jiāng",
+   "crib": "river",
+   "more": "*esp.* the Yangzi",
+   "forms": null,
+   "rank": 44,
+   "compounds": []
+  },
+  "澄": {
+   "simp": null,
+   "py": "chéng",
+   "crib": "clear",
+   "more": "limpid, still",
+   "forms": null,
+   "compounds": []
+  },
+  "浴": {
+   "simp": null,
+   "py": "yù",
+   "crib": "bathe",
+   "more": "wash",
+   "forms": null,
+   "compounds": []
+  },
+  "秋": {
+   "simp": null,
+   "py": "qiū",
+   "crib": "autumn",
+   "more": null,
+   "forms": null,
+   "rank": 35,
+   "compounds": []
+  },
+  "美": {
+   "simp": null,
+   "py": "měi",
+   "crib": "beautiful",
+   "more": "fine, admirable",
+   "forms": null,
+   "compounds": [
+    "美人"
+   ]
+  },
+  "處": {
+   "simp": "处",
+   "py": "chù",
+   "crib": "place",
+   "more": "where; *read chǔ*, dwell",
+   "forms": null,
+   "rank": 52,
+   "compounds": [
+    "何處"
+   ]
+  },
+  "在": {
+   "simp": null,
+   "py": "zài",
+   "crib": "be at",
+   "more": "be present, exist",
+   "forms": null,
+   "rank": 39,
+   "compounds": []
+  },
+  "萬": {
+   "simp": "万",
+   "py": "wàn",
+   "crib": "ten thousand",
+   "more": "countless, all",
+   "forms": null,
+   "rank": 65,
+   "compounds": []
+  },
   "故鄉": {
    "simp": "故乡",
    "py": "gùxiāng",
@@ -769,6 +889,20 @@
    "py": "gāorén",
    "crib": "recluse",
    "more": "*lit.* lofty person, man of high character",
+   "forms": null
+  },
+  "美人": {
+   "simp": null,
+   "py": "měirén",
+   "crib": "a beauty",
+   "more": "*lit.* fair person, *often* a friend or patron longed for",
+   "forms": null
+  },
+  "何處": {
+   "simp": "何处",
+   "py": "héchù",
+   "crib": "where",
+   "more": "*lit.* what place",
    "forms": null
   }
  },
@@ -1197,6 +1331,179 @@
    ],
    "assigned": [],
    "overrides": {},
+   "translations": []
+  },
+  {
+   "id": "youji",
+   "type": "poem",
+   "week": null,
+   "release": null,
+   "poet": {
+    "zh": "杜牧",
+    "en": "Du Mu"
+   },
+   "title": {
+    "zh": "有寄",
+    "en": "Sent to Someone"
+   },
+   "lines": [
+    [
+     {
+      "k": "雲",
+      "chars": [
+       "雲"
+      ]
+     },
+     {
+      "k": "闊",
+      "chars": [
+       "闊"
+      ]
+     },
+     {
+      "k": "煙",
+      "chars": [
+       "煙"
+      ]
+     },
+     {
+      "k": "深",
+      "chars": [
+       "深"
+      ]
+     },
+     {
+      "k": "樹",
+      "chars": [
+       "樹"
+      ]
+     },
+     {
+      "p": "，"
+     },
+     {
+      "k": "江",
+      "chars": [
+       "江"
+      ]
+     },
+     {
+      "k": "澄",
+      "chars": [
+       "澄"
+      ]
+     },
+     {
+      "k": "水",
+      "chars": [
+       "水"
+      ]
+     },
+     {
+      "k": "浴",
+      "chars": [
+       "浴"
+      ]
+     },
+     {
+      "k": "秋",
+      "chars": [
+       "秋"
+      ]
+     },
+     {
+      "p": "。"
+     }
+    ],
+    [
+     {
+      "k": "美人",
+      "chars": [
+       "美",
+       "人"
+      ]
+     },
+     {
+      "k": "何處",
+      "chars": [
+       "何",
+       "處"
+      ]
+     },
+     {
+      "k": "在",
+      "chars": [
+       "在"
+      ]
+     },
+     {
+      "p": "，"
+     },
+     {
+      "k": "明",
+      "chars": [
+       "明"
+      ]
+     },
+     {
+      "k": "月",
+      "chars": [
+       "月"
+      ]
+     },
+     {
+      "k": "萬",
+      "chars": [
+       "萬"
+      ]
+     },
+     {
+      "k": "山",
+      "chars": [
+       "山"
+      ]
+     },
+     {
+      "k": "頭",
+      "chars": [
+       "頭"
+      ]
+     },
+     {
+      "p": "。"
+     }
+    ]
+   ],
+   "keys": [
+    "有",
+    "寄",
+    "雲",
+    "闊",
+    "煙",
+    "深",
+    "樹",
+    "江",
+    "澄",
+    "水",
+    "浴",
+    "秋",
+    "美",
+    "人",
+    "何",
+    "處",
+    "在",
+    "明",
+    "月",
+    "萬",
+    "山",
+    "頭",
+    "美人",
+    "何處"
+   ],
+   "assigned": [],
+   "overrides": {
+    "頭": "top"
+   },
    "translations": []
   }
  ],
@@ -2702,5 +3009,5 @@
    "count": 2263
   }
  ],
- "version": "5cc5379cfa"
+ "version": "0c46373f76"
 }
