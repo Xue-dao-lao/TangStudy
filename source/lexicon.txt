@@ -62,5 +62,21 @@ CHARACTERS
 雨 yǔ, rain
 馬 (马) mǎ, horse
 
+不 bù, not; no, cannot
+一 yī, one; a, single; whole, all; once
+無 (无) wú, not have; there is no, without
+山 shān, mountain; hill
+風 (风) fēng, wind; manners, customs; style
+有 yǒu, have; there is, exist
+雲 (云) yún, cloud
+天 tiān, sky; heaven; day
+來 (来) lái, come; since; *after a verb*, toward the speaker
+中 zhōng, middle; inside, among; *read zhòng*, hit the mark
+何 hé, what; why, how, where
+時 (时) shí, time; season, hour; when
+花 huā, flower; blossom
+為 (为) wéi, be; become, do, make, act as; *read wèi*, for, because of
+春 chūn, spring; youth, desire
+
 COMPOUNDS
 故鄉 (故乡) gùxiāng, home; native place (*lit.* old village)

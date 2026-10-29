@@ -387,7 +387,7 @@
       blocks.forEach(function (b) { b.min = b.strokes.length ? minRows(b.strokes.length) : 1; });
       var pages = paginate(blocks);
       document.getElementById('pages').innerHTML = pages.map(function (pg) {
-        return '<div class="spage"><header class="sheet-head"><div><span class="zh" lang="zh-Hant">唐詩入門</span> ' + esc(req.heading) + '</div>' +
+        return '<div class="spage"><header class="sheet-head"><div><span class="zh" lang="zh-Hant">唐詩識字</span> ' + esc(req.heading) + '</div>' +
           '<div class="sheet-name">Name ______________________</div></header>' +
           pg.map(function (b) {
             var idx = blocks.indexOf(b);

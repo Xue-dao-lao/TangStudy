@@ -287,7 +287,7 @@ def main():
             for t in line:
                 font_chars.update(t.get('chars', [])); font_chars.update(t.get('p', ''))
     font_chars.update('，。、；：？！「」『』（）')
-    font_chars.update('唐詩入門常用字部首')  # the app's own headings
+    font_chars.update('唐詩識字常用字部首')  # the app's own headings
     top = load_top(os.path.join(ROOT, 'source', 'tang_char_freq.txt'), TOP_N)
     font_chars.update(t['ch'] for t in top)
 

@@ -511,6 +511,141 @@
    "rank": 106,
    "compounds": []
   },
+  "不": {
+   "simp": null,
+   "py": "bù",
+   "crib": "not",
+   "more": "no, cannot",
+   "forms": null,
+   "rank": 1,
+   "compounds": []
+  },
+  "一": {
+   "simp": null,
+   "py": "yī",
+   "crib": "one",
+   "more": "a, single; whole, all; once",
+   "forms": null,
+   "rank": 3,
+   "compounds": []
+  },
+  "無": {
+   "simp": "无",
+   "py": "wú",
+   "crib": "not have",
+   "more": "there is no, without",
+   "forms": null,
+   "rank": 4,
+   "compounds": []
+  },
+  "山": {
+   "simp": null,
+   "py": "shān",
+   "crib": "mountain",
+   "more": "hill",
+   "forms": null,
+   "rank": 5,
+   "compounds": []
+  },
+  "風": {
+   "simp": "风",
+   "py": "fēng",
+   "crib": "wind",
+   "more": "manners, customs; style",
+   "forms": null,
+   "rank": 6,
+   "compounds": []
+  },
+  "有": {
+   "simp": null,
+   "py": "yǒu",
+   "crib": "have",
+   "more": "there is, exist",
+   "forms": null,
+   "rank": 8,
+   "compounds": []
+  },
+  "雲": {
+   "simp": "云",
+   "py": "yún",
+   "crib": "cloud",
+   "more": null,
+   "forms": null,
+   "rank": 9,
+   "compounds": []
+  },
+  "天": {
+   "simp": null,
+   "py": "tiān",
+   "crib": "sky",
+   "more": "heaven; day",
+   "forms": null,
+   "rank": 10,
+   "compounds": []
+  },
+  "來": {
+   "simp": "来",
+   "py": "lái",
+   "crib": "come",
+   "more": "since; *after a verb*, toward the speaker",
+   "forms": null,
+   "rank": 11,
+   "compounds": []
+  },
+  "中": {
+   "simp": null,
+   "py": "zhōng",
+   "crib": "middle",
+   "more": "inside, among; *read zhòng*, hit the mark",
+   "forms": null,
+   "rank": 12,
+   "compounds": []
+  },
+  "何": {
+   "simp": null,
+   "py": "hé",
+   "crib": "what",
+   "more": "why, how, where",
+   "forms": null,
+   "rank": 13,
+   "compounds": []
+  },
+  "時": {
+   "simp": "时",
+   "py": "shí",
+   "crib": "time",
+   "more": "season, hour; when",
+   "forms": null,
+   "rank": 15,
+   "compounds": []
+  },
+  "花": {
+   "simp": null,
+   "py": "huā",
+   "crib": "flower",
+   "more": "blossom",
+   "forms": null,
+   "rank": 16,
+   "compounds": []
+  },
+  "為": {
+   "simp": "为",
+   "py": "wéi",
+   "crib": "be",
+   "more": "become, do, make, act as; *read wèi*, for, because of",
+   "forms": null,
+   "rank": 18,
+   "compounds": []
+  },
+  "春": {
+   "simp": null,
+   "py": "chūn",
+   "crib": "spring",
+   "more": "youth, desire",
+   "forms": null,
+   "rank": 20,
+   "compounds": []
+  },
   "故鄉": {
    "simp": "故乡",
    "py": "gùxiāng",
@@ -2278,5 +2413,5 @@
    "count": 2370
   }
  ],
- "version": "a2bd4e5b37"
+ "version": "8a18de2d51"
 }
