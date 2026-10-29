@@ -181,7 +181,9 @@
     "亻"
    ],
    "rank": 2,
-   "compounds": []
+   "compounds": [
+    "高人"
+   ]
   },
   "刀": {
    "simp": null,
@@ -646,11 +648,127 @@
    "rank": 19,
    "compounds": []
   },
+  "感": {
+   "simp": null,
+   "py": "gǎn",
+   "crib": "be moved",
+   "more": "feel, stir",
+   "forms": null,
+   "rank": 500,
+   "compounds": []
+  },
+  "興": {
+   "simp": "兴",
+   "py": "xìng",
+   "crib": "mood",
+   "more": "inspiration, delight; *read xīng*, rise, flourish",
+   "forms": null,
+   "rank": 357,
+   "compounds": []
+  },
+  "香": {
+   "simp": null,
+   "py": "xiāng",
+   "crib": "fragrant",
+   "more": "incense, fragrance",
+   "forms": null,
+   "rank": 114,
+   "compounds": [
+    "香爐"
+   ]
+  },
+  "爐": {
+   "simp": "炉",
+   "py": "lú",
+   "crib": "burner",
+   "more": "stove, censer",
+   "forms": null,
+   "compounds": [
+    "香爐"
+   ]
+  },
+  "最": {
+   "simp": null,
+   "py": "zuì",
+   "crib": "most",
+   "more": "highest",
+   "forms": null,
+   "compounds": []
+  },
+  "高": {
+   "simp": null,
+   "py": "gāo",
+   "crib": "high",
+   "more": "lofty, tall",
+   "forms": null,
+   "rank": 43,
+   "compounds": [
+    "高人"
+   ]
+  },
+  "頂": {
+   "simp": "顶",
+   "py": "dǐng",
+   "crib": "summit",
+   "more": "top, crown of the head",
+   "forms": null,
+   "compounds": []
+  },
+  "住": {
+   "simp": null,
+   "py": "zhù",
+   "crib": "dwell",
+   "more": "live, stay",
+   "forms": null,
+   "rank": 493,
+   "compounds": []
+  },
+  "暮": {
+   "simp": null,
+   "py": "mù",
+   "crib": "dusk",
+   "more": "evening, late",
+   "forms": null,
+   "rank": 189,
+   "compounds": []
+  },
+  "下": {
+   "simp": null,
+   "py": "xià",
+   "crib": "descend",
+   "more": "below, down, under",
+   "forms": null,
+   "rank": 40,
+   "compounds": []
+  },
+  "去": {
+   "simp": null,
+   "py": "qù",
+   "crib": "go",
+   "more": "depart, leave",
+   "forms": null,
+   "rank": 36,
+   "compounds": []
+  },
   "故鄉": {
    "simp": "故乡",
    "py": "gùxiāng",
    "crib": "home",
    "more": "native place (*lit.* old village)",
+   "forms": null
+  },
+  "香爐": {
+   "simp": "香炉",
+   "py": "xiānglú",
+   "crib": "Incense Burner (Peak)",
+   "more": "*lit.* censer, *a peak of Mount Lu*",
+   "forms": null
+  },
+  "高人": {
+   "simp": null,
+   "py": "gāorén",
+   "crib": "recluse",
+   "more": "*lit.* lofty person, man of high character",
    "forms": null
   }
  },
@@ -852,6 +970,177 @@
      "text": "I wake, and moonbeams play around my bed,\nGlittering like hoar-frost to my wondering eyes;\nUp towards the glorious moon I raise my head,\nThen lay me down, — and thoughts of home arise."
     }
    ]
+  },
+  {
+   "id": "ganxing",
+   "type": "poem",
+   "week": null,
+   "release": null,
+   "poet": {
+    "zh": "李端",
+    "en": "Li Duan"
+   },
+   "title": {
+    "zh": "感興",
+    "en": "Moved by a Feeling"
+   },
+   "lines": [
+    [
+     {
+      "k": "香爐",
+      "chars": [
+       "香",
+       "爐"
+      ]
+     },
+     {
+      "k": "最",
+      "chars": [
+       "最"
+      ]
+     },
+     {
+      "k": "高",
+      "chars": [
+       "高"
+      ]
+     },
+     {
+      "k": "頂",
+      "chars": [
+       "頂"
+      ]
+     },
+     {
+      "p": "，"
+     },
+     {
+      "k": "中",
+      "chars": [
+       "中"
+      ]
+     },
+     {
+      "k": "有",
+      "chars": [
+       "有"
+      ]
+     },
+     {
+      "k": "高人",
+      "chars": [
+       "高",
+       "人"
+      ]
+     },
+     {
+      "k": "住",
+      "chars": [
+       "住"
+      ]
+     },
+     {
+      "p": "。"
+     }
+    ],
+    [
+     {
+      "k": "日",
+      "chars": [
+       "日"
+      ]
+     },
+     {
+      "k": "暮",
+      "chars": [
+       "暮"
+      ]
+     },
+     {
+      "k": "下",
+      "chars": [
+       "下"
+      ]
+     },
+     {
+      "k": "山",
+      "chars": [
+       "山"
+      ]
+     },
+     {
+      "k": "來",
+      "chars": [
+       "來"
+      ]
+     },
+     {
+      "p": "，"
+     },
+     {
+      "k": "月",
+      "chars": [
+       "月"
+      ]
+     },
+     {
+      "k": "明",
+      "chars": [
+       "明"
+      ]
+     },
+     {
+      "k": "上",
+      "chars": [
+       "上"
+      ]
+     },
+     {
+      "k": "山",
+      "chars": [
+       "山"
+      ]
+     },
+     {
+      "k": "去",
+      "chars": [
+       "去"
+      ]
+     },
+     {
+      "p": "。"
+     }
+    ]
+   ],
+   "keys": [
+    "感",
+    "興",
+    "香",
+    "爐",
+    "最",
+    "高",
+    "頂",
+    "中",
+    "有",
+    "人",
+    "住",
+    "日",
+    "暮",
+    "下",
+    "山",
+    "來",
+    "月",
+    "明",
+    "上",
+    "去",
+    "香爐",
+    "高人"
+   ],
+   "assigned": [],
+   "overrides": {
+    "上": "ascend"
+   },
+   "translations": []
   },
   {
    "id": "radicals",
@@ -2413,5 +2702,5 @@
    "count": 2263
   }
  ],
- "version": "1e74f0b20a"
+ "version": "5cc5379cfa"
 }

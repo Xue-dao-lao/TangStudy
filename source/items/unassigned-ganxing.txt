@@ -1,0 +1,35 @@
+POEM
+Id: ganxing
+Poet: 李端 Li Duan
+Title: 感興 / Moved by a Feeling
+
+[香爐]最高頂，中有[高人]住。
+日暮下山來，月明上山去。
+
+LEXICON
+感 gǎn, be moved; feel, stir
+興 (兴) xìng, mood; inspiration, delight; *read xīng*, rise, flourish
+香 xiāng, fragrant; incense, fragrance
+爐 (炉) lú, burner; stove, censer
+最 zuì, most; highest
+高 gāo, high; lofty, tall
+頂 (顶) dǐng, summit; top, crown of the head
+中 zhōng, middle; inside, among; *read zhòng*, hit the mark
+有 yǒu, have; there is, exist
+人/亻 rén, person; people, others
+住 zhù, dwell; live, stay
+日 rì, sun; day
+暮 mù, dusk; evening, late
+下 xià, descend; below, down, under
+山 shān, mountain; hill
+來 (来) lái, come; since; *after a verb*, toward the speaker
+月 yuè, moon; month
+明 míng, bright; clear, illuminate
+上 shàng, ascend; on, above, up
+去 qù, go; depart, leave
+
+COMPOUNDS
+香爐 (香炉) xiānglú, Incense Burner (Peak); *lit.* censer, *a peak of Mount Lu*
+高人 gāorén, recluse; *lit.* lofty person, man of high character
+
+TRANSLATIONS
