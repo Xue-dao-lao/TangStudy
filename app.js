@@ -309,25 +309,50 @@
       if (args[0] === 'radicals') (L.e.forms || []).forEach(function (f) { blocks.push({ ch: f, e: L.e, label: 'as a component of ' + c }); });
     });
     document.body.classList.add('sheet-mode');
+    // Students pick characters from tiles rather than typing them: most have no Chinese keyboard.
+    var groups = [];
+    scheduled().slice().sort(function (a, b) { return a.week - b.week; }).forEach(function (i) {
+      var g = groups.filter(function (x) { return x.week === i.week; })[0];
+      if (!g) { g = { id: 'w' + i.week, week: i.week, label: 'Week ' + i.week, chars: [] }; groups.push(g); }
+      i.assigned.forEach(function (k) { if (k.length === 1 && g.chars.indexOf(k) < 0) g.chars.push(k); });
+    });
+    groups = groups.filter(function (g) { return g.chars.length; });
+    if (radicals()) groups.push({ id: 'rad', label: 'Common radicals', chars: [].concat.apply([], radicals().keys.map(forms)) });
+    var all = [];
+    Object.keys(C.lexicon).forEach(function (k) { if (Array.from(k).length === 1) forms(k).forEach(function (f) { all.push(f); }); });
+    function pyOf(c) { var L = lexFor(c); return (L && L.e.py || '').normalize('NFD').replace(/[̀-ͯ]/g, ''); }
+    all.sort(function (a, b) { return pyOf(a).localeCompare(pyOf(b)); });
+    groups.push({ id: 'all', label: 'All characters (by pinyin)', chars: all });
+    var start = args[0] === 'radicals' ? 'rad' : args[0] === 'week' ? 'w' + args[1] : args[2] || (groups[0] || {}).id;
+
     view.innerHTML = '<div class="sheet"><div class="sheet-tools">' +
-      '<div class="btn-row"><button class="btn primary" id="print">Print or save as PDF</button>' +
-      '<form id="add-form" class="add-form"><label for="add">Add characters to this sheet</label><input id="add" lang="zh-Hant" autocomplete="off" placeholder="e.g. 山水">' +
-      '<button class="btn" type="submit">Add</button></form></div><p class="add-error" id="add-error" role="alert"></p>' +
+      '<div class="btn-row"><button class="btn primary" id="print">Print or save as PDF</button></div>' +
+      '<div class="pick"><label for="pick-group">Add a character to this sheet from</label> <select id="pick-group">' +
+      groups.map(function (g) { return '<option value="' + g.id + '"' + (g.id === start ? ' selected' : '') + '>' + esc(g.label) + '</option>'; }).join('') +
+      '</select><div class="pick-grid" id="pick-grid" role="group" aria-label="Characters to add"></div></div>' +
       '<p class="sans muted">Letter paper, portrait. Up to three characters a page; spare space becomes extra rows to write in.</p></div>' +
       '<div id="pages"><p class="muted">Preparing the sheet…</p></div></div>';
 
-    function go(list) { location.hash = '#/sheet/chars/' + encodeURIComponent(list.join('')); }
+    function go(list) {   // the chosen list stays open after each addition
+      location.hash = '#/sheet/chars/' + encodeURIComponent(list.join('')) + '/' + document.getElementById('pick-group').value;
+    }
     document.getElementById('print').addEventListener('click', function () { window.print(); });
-    var input = document.getElementById('add'), err = document.getElementById('add-error');
-    input.addEventListener('input', function () { err.textContent = ''; });
-    document.getElementById('add-form').addEventListener('submit', function (ev) {
-      ev.preventDefault();
-      var chars = Array.from(input.value).filter(function (c) { return /\S/.test(c) && !/[,，、;；\s]/.test(c); });
-      if (!chars.length) { err.textContent = 'Type or paste a character first.'; return; }
-      var bad = chars.filter(function (c) { return !lexFor(c); });
-      if (bad.length) { err.textContent = 'Not yet in the course lexicon: ' + bad.join(' ') + '. Only characters with entries can be added.'; return; }
-      go(blocks.map(function (b) { return b.ch; }).concat(chars));
+    var onSheet = blocks.map(function (b) { return b.ch; });
+    function showGroup(id) {
+      var g = groups.filter(function (x) { return x.id === id; })[0] || groups[0];
+      document.getElementById('pick-grid').innerHTML = g.chars.map(function (c) {
+        var L = lexFor(c), here = onSheet.indexOf(c) >= 0;
+        var tip = (L.form ? L.key + ' as a component' : (L.e.py ? L.e.py + ', ' : '') + (L.e.crib || ''));
+        return '<button class="pick-ch' + (here ? ' here' : '') + '" lang="zh-Hant" data-c="' + esc(c) + '" title="' + esc(tip) + '"' +
+          ' aria-label="' + esc(c + ', ' + tip + (here ? ', already on the sheet' : '')) + '"' + (here ? ' disabled' : '') + '>' + esc(c) + '</button>';
+      }).join('');
+    }
+    document.getElementById('pick-group').addEventListener('change', function () { showGroup(this.value); });
+    document.getElementById('pick-grid').addEventListener('click', function (ev) {
+      var b = ev.target.closest('.pick-ch'); if (!b || b.disabled) return;
+      go(onSheet.concat([b.getAttribute('data-c')]));
     });
+    showGroup(start);
 
     if (!blocks.length) { document.getElementById('pages').innerHTML = '<p class="empty">No characters on this sheet yet. Add some above.</p>'; return; }
     Promise.all(blocks.map(function (b) {

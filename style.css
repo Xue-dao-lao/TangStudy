@@ -174,6 +174,12 @@ h2 { font-size: 26px; margin: 0 0 14px; }
 .sheet { max-width: 8.5in; margin: 0 auto; }
 .sheet-tools { margin-bottom: 18px; }
 .sheet-tools .btn-row { gap: 10px 18px; }
+.pick { margin: 14px 0 4px; font-family: var(--sans); font-size: 14px; }
+.pick select { font: inherit; padding: 4px 8px; border: 1px solid var(--ink); border-radius: 4px; background: var(--paper); color: var(--ink); }
+.pick-grid { display: flex; flex-wrap: wrap; gap: 4px; margin-top: 10px; }
+.pick-ch { font-family: var(--kai); font-size: 24px; width: 44px; height: 44px; border: 1px solid var(--grid); background: var(--paper); color: var(--ink); cursor: pointer; padding: 0; }
+.pick-ch:hover { background: var(--zhu-wash); border-color: var(--zhu); }
+.pick-ch.here { color: var(--ink-soft); background: var(--panel); cursor: default; opacity: .55; }
 .add-form { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; font-family: var(--sans); font-size: 14px; }
 .add-form input { font-family: var(--kai); font-size: 20px; width: 8em; padding: 3px 8px; border: 1px solid var(--ink); border-radius: 4px; background: var(--paper); color: var(--ink); }
 .add-error { font-family: var(--sans); font-size: 13px; color: var(--zhu); min-height: 1.2em; margin: 6px 0 0; }
