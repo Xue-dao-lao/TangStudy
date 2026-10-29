@@ -170,27 +170,41 @@ h2 { font-size: 26px; margin: 0 0 14px; }
 .card-py { font-size: 20px; font-style: italic; margin: 0; }
 .week-head a + a { margin-left: 4px; }
 
-/* Writing sheets */
-.sheet { max-width: 7.5in; margin: 0 auto; }
-.sheet-tools { display: flex; flex-wrap: wrap; gap: 10px 16px; align-items: center; margin-bottom: 20px; }
-.sheet-head { display: flex; justify-content: space-between; align-items: baseline; gap: 16px; flex-wrap: wrap;
-  border-bottom: 1px solid var(--zhu); padding-bottom: 6px; margin-bottom: 14px; font-size: 18px; }
-.sheet-head .zh { color: var(--zhu); font-size: 22px; }
-.sheet-name { font-family: var(--sans); font-size: 14px; color: var(--ink-soft); }
-.sblock { margin: 0 0 16px; break-inside: avoid; page-break-inside: avoid; }
-.scap { display: flex; align-items: baseline; gap: 8px; flex-wrap: wrap; margin-bottom: 4px; font-size: 15px; line-height: 1.3; }
-.scap-ch { font-family: var(--kai); font-size: 26px; line-height: 1; }
-.scap-simp { font-family: var(--kai); font-size: 18px; color: var(--ink-soft); }
-.scap-py { font-style: italic; font-size: 17px; }
+/* Writing sheets: laid out in inches so the screen preview matches the printed page */
+.sheet { max-width: 8.5in; margin: 0 auto; }
+.sheet-tools { margin-bottom: 18px; }
+.sheet-tools .btn-row { gap: 10px 18px; }
+.add-form { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; font-family: var(--sans); font-size: 14px; }
+.add-form input { font-family: var(--kai); font-size: 20px; width: 8em; padding: 3px 8px; border: 1px solid var(--ink); border-radius: 4px; background: var(--paper); color: var(--ink); }
+.add-error { font-family: var(--sans); font-size: 13px; color: var(--zhu); min-height: 1.2em; margin: 6px 0 0; }
+.sheet-tools .sans { margin: 2px 0 0; }
+#pages { display: flex; flex-direction: column; align-items: center; gap: 24px; }
+.spage { width: 8.5in; height: 11in; padding: 0.5in; background: #fff; box-shadow: 0 0 0 1px #E3DED4; color: #2C2C2A; overflow: hidden; }
+.sheet-head { display: flex; justify-content: space-between; align-items: baseline; gap: 16px; height: 0.45in; margin-bottom: 0.15in;
+  border-bottom: 1px solid #B8321F; font-size: 16px; }
+.sheet-head .zh { color: #B8321F; font-size: 20px; }
+.sheet-name { font-family: var(--sans); font-size: 13px; color: #5E6468; }
+.sblock { height: auto; margin: 0 0 0.2in; }
+.scap { display: flex; align-items: baseline; gap: 8px; height: 0.36in; overflow: hidden; font-size: 14px; line-height: 1.3; white-space: nowrap; }
+.scap-ch { font-family: var(--kai); font-size: 24px; line-height: 1; }
+.scap-simp { font-family: var(--kai); font-size: 17px; color: #5E6468; }
+.scap-py { font-style: italic; font-size: 16px; }
+.scap-gloss { overflow: hidden; text-overflow: ellipsis; }
 .scap-gloss b { font-weight: 500; }
-.scap-label { font-family: var(--sans); font-size: 13px; color: var(--ink-soft); }
-.scap-n { margin-left: auto; font-family: var(--sans); font-size: 12px; color: var(--ink-soft); }
-.sgrid { display: grid; grid-template-columns: repeat(10, 1fr); border-right: 0.75px solid #B8321F; border-bottom: 0.75px solid #B8321F; }
-.sbox { display: block; width: 100%; height: auto; }
+.scap-label { font-family: var(--sans); font-size: 12px; color: #5E6468; }
+.scap-n { margin-left: auto; font-family: var(--sans); font-size: 11px; color: #5E6468; }
+.scap-remove { font-family: var(--sans); font-size: 11px; background: none; border: none; color: #B8321F; cursor: pointer; padding: 0 0 0 6px; text-decoration: underline; }
+.sgrid { display: grid; grid-template-columns: repeat(10, 0.75in); width: 7.5in; border-right: 0.75px solid #B8321F; border-bottom: 0.75px solid #B8321F; }
+.sbox { display: block; width: 0.75in; height: 0.75in; }
+@media screen and (max-width: 900px) { .spage { zoom: 0.5; } }
+@media screen and (max-width: 440px) { .spage { zoom: 0.42; } }
 @media print {
-  @page { size: letter portrait; margin: 0.5in; }
+  @page { size: letter portrait; margin: 0; }
   html, body { background: #fff; }
-  .masthead, .colophon, .notice, .sheet-tools { display: none !important; }
+  .masthead, .colophon, .notice, .sheet-tools, .scap-remove { display: none !important; }
   main { padding: 0; max-width: none; min-height: 0; }
   .sheet { max-width: none; }
+  #pages { display: block; }
+  .spage { box-shadow: none; break-after: page; page-break-after: always; }
+  .spage:last-child { break-after: auto; page-break-after: auto; }
 }

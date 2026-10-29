@@ -237,7 +237,10 @@
   }
 
   // ---------- printable writing sheets ----------
-  var SHEET_COLS = 10, MIN_TRACE = 3;
+  // Letter paper, 0.5in margins. Ten 0.75in boxes to a row. Up to three characters to a page, and the
+  // page is always filled: spare rows are shared out as extra blank rows among the characters on it.
+  var SHEET_COLS = 10, MIN_TRACE = 3, PER_PAGE = 3;
+  var PAGE_IN = 9.85, HEAD_IN = 0.6, BLOCK_IN = 0.56, ROW_IN = 0.75;
   function sheetBox(paths, colors) {          // one 米字格 box, optionally holding strokes
     var g = '<svg viewBox="0 0 100 100" class="sbox" aria-hidden="true"><path d="M0 0.5H100M0.5 0V100" stroke="#B8321F" stroke-width="1" fill="none"/>' +
       '<g stroke="#E3B9AE" stroke-width="0.7" stroke-dasharray="4 4"><line x1="0" y1="50" x2="100" y2="50"/><line x1="50" y1="0" x2="50" y2="100"/>' +
@@ -249,53 +252,105 @@
     }
     return g + '</svg>';
   }
-  function sheetBoxes(strokes) {              // stroke sequence, then tracing copies, then a full row to write freely
+  function minRows(n) {                       // rows a character needs: sequence and tracing, then one blank row
+    var left = (SHEET_COLS - n % SHEET_COLS) % SHEET_COLS;
+    return Math.ceil(n / SHEET_COLS) + (left < MIN_TRACE ? 1 : 0) + 1;
+  }
+  function sheetBoxes(strokes, extraRows) {   // stroke sequence, tracing copies, then rows to write freely
     var n = strokes.length, boxes = [], i;
     for (i = 0; i < n; i++) boxes.push(sheetBox(strokes.slice(0, i + 1), strokes.slice(0, i + 1).map(function (_, j) { return j === i ? '#B8321F' : '#2C2C2A'; })));
     var grey = strokes.map(function () { return '#CFCBC1'; });
-    var left = (SHEET_COLS - boxes.length % SHEET_COLS) % SHEET_COLS;
+    var left = (SHEET_COLS - n % SHEET_COLS) % SHEET_COLS;
     for (i = 0; i < left; i++) boxes.push(sheetBox(strokes, grey));         // trace to the end of the row
-    if (left < MIN_TRACE) {                                                 // too few? start a row with more
-      for (i = 0; i < SHEET_COLS; i++) boxes.push(i < MIN_TRACE ? sheetBox(strokes, grey) : sheetBox());
-    }
-    for (i = 0; i < SHEET_COLS; i++) boxes.push(sheetBox());
+    if (left < MIN_TRACE) for (i = 0; i < SHEET_COLS; i++) boxes.push(i < MIN_TRACE ? sheetBox(strokes, grey) : sheetBox());
+    for (i = 0; i < SHEET_COLS * (1 + (extraRows || 0)); i++) boxes.push(sheetBox());
     return boxes.join('');
+  }
+  function paginate(blocks) {                 // group blocks into pages; give each its share of spare rows
+    var pages = [], cur = [];
+    function fits(list) {
+      var rows = list.reduce(function (t, b) { return t + b.min; }, 0);
+      return list.length <= PER_PAGE && HEAD_IN + list.length * BLOCK_IN + rows * ROW_IN <= PAGE_IN;
+    }
+    blocks.forEach(function (b) { if (cur.length && !fits(cur.concat([b]))) { pages.push(cur); cur = []; } cur.push(b); });
+    if (cur.length) pages.push(cur);
+    pages.forEach(function (pg) {
+      var used = pg.reduce(function (t, b) { return t + b.min; }, 0);
+      var spare = Math.max(0, Math.floor((PAGE_IN - HEAD_IN - pg.length * BLOCK_IN) / ROW_IN + 1e-6) - used);
+      pg.forEach(function (b, i) { b.extra = Math.floor(spare / pg.length) + (i < spare % pg.length ? 1 : 0); });
+    });
+    return pages;
+  }
+  function sheetChars(args) {                 // what a sheet address asks for
+    if (args[0] === 'week') {
+      var w = +args[1], list = [];
+      scheduled().forEach(function (i) { if (i.week === w) i.assigned.forEach(function (k) { if (k.length === 1 && list.indexOf(k) < 0) list.push(k); }); });
+      return { heading: 'Week ' + w + ': characters to learn', list: list };
+    }
+    if (args[0] === 'radicals' && radicals()) return { heading: 'Common Radicals', list: radicals().keys.slice() };
+    return { heading: 'Writing practice', list: Array.from(args[1] || '').filter(function (c) { return lexFor(c); }) };
+  }
+  function lexFor(c) {                        // a character's entry, or the entry it is a component form of
+    if (C.lexicon[c]) return { key: c, e: C.lexicon[c] };
+    for (var k in C.lexicon) if ((C.lexicon[k].forms || []).indexOf(c) >= 0) return { key: k, e: C.lexicon[k], form: true };
+    return null;
   }
   function renderSheet(args) {
     setNav('');
-    var list = [], heading = 'Writing practice';
-    if (args[0] === 'week') {
-      var w = +args[1]; heading = 'Week ' + w + ': characters to learn';
-      scheduled().forEach(function (i) { if (i.week === w) i.assigned.forEach(function (k) { if (k.length === 1 && list.indexOf(k) < 0) list.push(k); }); });
-    } else if (args[0] === 'radicals' && radicals()) {
-      heading = 'Common Radicals'; list = radicals().keys.slice();
-    } else if (args[0] === 'char' && args[1]) {
-      list = [args[1]]; heading = 'Writing practice: ' + args[1];
-    }
-    var blocks = [];
-    list.forEach(function (k) {
-      var e = C.lexicon[k] || {};
-      blocks.push({ ch: k, e: e, label: '' });
-      (e.forms || []).forEach(function (f) { blocks.push({ ch: f, e: e, label: 'as a component of ' + k }); });
+    var req = sheetChars(args), blocks = [];
+    req.list.forEach(function (c) {
+      var L = lexFor(c);
+      blocks.push({ ch: c, e: L.e, label: L.form ? 'as a component of ' + L.key : '' });
+      if (args[0] === 'radicals') (L.e.forms || []).forEach(function (f) { blocks.push({ ch: f, e: L.e, label: 'as a component of ' + c }); });
     });
     document.body.classList.add('sheet-mode');
-    view.innerHTML = '<div class="sheet"><div class="sheet-tools"><button class="btn primary" id="print">Print or save as PDF</button>' +
-      '<span class="sans muted">Letter paper, portrait. Each character: its strokes in order, grey copies to trace, then a row to write on your own.</span></div>' +
-      '<header class="sheet-head"><div><span class="zh" lang="zh-Hant">唐詩入門</span> ' + esc(heading) + '</div><div class="sheet-name">Name ______________________</div></header>' +
-      (blocks.length ? blocks.map(function (b, i) {
-        return '<section class="sblock"><div class="scap"><span class="scap-ch" lang="zh-Hant">' + esc(b.ch) + '</span>' +
-          (b.label ? '<span class="scap-label">' + esc(b.label) + '</span>' :
-            (b.e.simp ? '<span class="scap-simp" lang="zh-Hans">(' + esc(b.e.simp) + ')</span>' : '') +
-            (b.e.py ? '<span class="scap-py">' + esc(b.e.py) + '</span>' : '') +
-            '<span class="scap-gloss"><b>' + rich(b.e.crib || '') + '</b>' + (b.e.more ? '; ' + rich(b.e.more) : '') + '</span>') +
-          '<span class="scap-n" id="sn' + i + '"></span></div><div class="sgrid" id="sg' + i + '"></div></section>';
-      }).join('') : '<p class="empty">No characters to practice here yet.</p>') + '</div>';
+    view.innerHTML = '<div class="sheet"><div class="sheet-tools">' +
+      '<div class="btn-row"><button class="btn primary" id="print">Print or save as PDF</button>' +
+      '<form id="add-form" class="add-form"><label for="add">Add characters to this sheet</label><input id="add" lang="zh-Hant" autocomplete="off" placeholder="e.g. 山水">' +
+      '<button class="btn" type="submit">Add</button></form></div><p class="add-error" id="add-error" role="alert"></p>' +
+      '<p class="sans muted">Letter paper, portrait. Up to three characters a page; spare space becomes extra rows to write in.</p></div>' +
+      '<div id="pages"><p class="muted">Preparing the sheet…</p></div></div>';
+
+    function go(list) { location.hash = '#/sheet/chars/' + encodeURIComponent(list.join('')); }
     document.getElementById('print').addEventListener('click', function () { window.print(); });
-    blocks.forEach(function (b, i) {
-      loader(b.ch, function (d) {
-        document.getElementById('sg' + i).innerHTML = sheetBoxes(d.strokes);
-        document.getElementById('sn' + i).textContent = d.strokes.length + (d.strokes.length === 1 ? ' stroke' : ' strokes');
-      }, function () { document.getElementById('sg' + i).innerHTML = '<p class="muted">No stroke data for this character.</p>'; });
+    var input = document.getElementById('add'), err = document.getElementById('add-error');
+    input.addEventListener('input', function () { err.textContent = ''; });
+    document.getElementById('add-form').addEventListener('submit', function (ev) {
+      ev.preventDefault();
+      var chars = Array.from(input.value).filter(function (c) { return /\S/.test(c) && !/[,，、;；\s]/.test(c); });
+      if (!chars.length) { err.textContent = 'Type or paste a character first.'; return; }
+      var bad = chars.filter(function (c) { return !lexFor(c); });
+      if (bad.length) { err.textContent = 'Not yet in the course lexicon: ' + bad.join(' ') + '. Only characters with entries can be added.'; return; }
+      go(blocks.map(function (b) { return b.ch; }).concat(chars));
+    });
+
+    if (!blocks.length) { document.getElementById('pages').innerHTML = '<p class="empty">No characters on this sheet yet. Add some above.</p>'; return; }
+    Promise.all(blocks.map(function (b) {
+      return new Promise(function (ok) { loader(b.ch, function (d) { b.strokes = d.strokes; ok(); }, function () { b.strokes = []; ok(); }); });
+    })).then(function () {
+      blocks.forEach(function (b) { b.min = b.strokes.length ? minRows(b.strokes.length) : 1; });
+      var pages = paginate(blocks);
+      document.getElementById('pages').innerHTML = pages.map(function (pg) {
+        return '<div class="spage"><header class="sheet-head"><div><span class="zh" lang="zh-Hant">唐詩入門</span> ' + esc(req.heading) + '</div>' +
+          '<div class="sheet-name">Name ______________________</div></header>' +
+          pg.map(function (b) {
+            var idx = blocks.indexOf(b);
+            return '<section class="sblock"><div class="scap"><span class="scap-ch" lang="zh-Hant">' + esc(b.ch) + '</span>' +
+              (b.label ? '<span class="scap-label">' + esc(b.label) + '</span>' :
+                (b.e.simp ? '<span class="scap-simp" lang="zh-Hans">(' + esc(b.e.simp) + ')</span>' : '') +
+                (b.e.py ? '<span class="scap-py">' + esc(b.e.py) + '</span>' : '') +
+                '<span class="scap-gloss"><b>' + rich(b.e.crib || '') + '</b>' + (b.e.more ? '; ' + rich(b.e.more) : '') + '</span>') +
+              '<span class="scap-n">' + (b.strokes.length ? b.strokes.length + (b.strokes.length === 1 ? ' stroke' : ' strokes') : '') + '</span>' +
+              '<button class="scap-remove" data-i="' + idx + '" aria-label="Remove ' + esc(b.ch) + ' from this sheet">Remove</button></div>' +
+              '<div class="sgrid">' + (b.strokes.length ? sheetBoxes(b.strokes, b.extra) : '') + '</div></section>';
+          }).join('') + '</div>';
+      }).join('');
+      document.querySelectorAll('.scap-remove').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          var i = +btn.getAttribute('data-i');
+          go(blocks.filter(function (_, j) { return j !== i; }).map(function (b) { return b.ch; }));
+        });
+      });
     });
   }
 
@@ -320,7 +375,7 @@
         (e.simp ? '<button class="btn" data-form="' + esc(e.simp) + '" aria-pressed="false">Simplified <span lang="zh-Hans">' + esc(e.simp) + '</span></button>' : '') + '</div>' : '') +
       '<div class="writer"></div><div class="writer-status"></div>' +
       '<div class="btn-row"><button class="btn primary" data-act="animate">Animate strokes</button><button class="btn" data-act="quiz">Practice writing</button></div>' +
-      '<p class="entry-sheet"><a href="#/sheet/char/' + encodeURIComponent(key) + '" target="_blank">Print a writing sheet for <span lang="zh-Hant">' + esc(key) + '</span></a></p></div>' : '';
+      '<p class="entry-sheet"><a href="#/sheet/chars/' + encodeURIComponent(key) + '" target="_blank">Print a writing sheet for <span lang="zh-Hant">' + esc(key) + '</span></a></p></div>' : '';
 
     box.innerHTML = '<div class="entry-head"><span class="entry-char" lang="zh-Hant">' + esc(key) + '</span>' +
       (e.simp ? '<span class="entry-simp" lang="zh-Hans">(' + esc(e.simp) + ')</span>' : '') +
