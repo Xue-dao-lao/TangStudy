@@ -156,3 +156,6 @@ h2 { font-size: 26px; margin: 0 0 14px; }
   border-bottom: 1px dotted var(--grid); line-height: 1.1; }
 .title-char:hover, .title-char.on { background: var(--zhu-wash); border-bottom-color: var(--zhu); }
 .brand-zh { letter-spacing: .04em; }
+.item-week { font-family: var(--sans); font-size: 13px; color: var(--ink-soft); text-align: right; white-space: nowrap; }
+.letter { font-size: 22px; color: var(--zhu); margin: 22px 0 0; padding-bottom: 4px; border-bottom: 1px solid var(--grid); }
+.index-section h2 + p { margin: -8px 0 4px; }

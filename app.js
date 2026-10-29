@@ -25,13 +25,14 @@
   function today() { return new Date().toISOString().slice(0, 10); }
   function released(it) { return !it.release || it.release <= today(); }
   function items() { return C.items.filter(released); }
+  function scheduled() { return items().filter(function (i) { return i.week != null; }); }
   function itemById(id) { return items().filter(function (i) { return i.id === id; })[0]; }
   function titleZh(it) { return it.type === 'lesson' ? it.keys.join('，') : it.title.zh; }
   function shuffle(a) { for (var i = a.length - 1; i > 0; i--) { var j = Math.floor(Math.random() * (i + 1)); var t = a[i]; a[i] = a[j]; a[j] = t; } return a; }
 
   function assignedBefore(week) {
     var s = {};
-    items().forEach(function (it) { if (it.week < week) it.assigned.forEach(function (k) { s[k] = 1; }); });
+    scheduled().forEach(function (it) { if (week == null || it.week < week) it.assigned.forEach(function (k) { s[k] = 1; }); });
     return s;
   }
 
@@ -78,7 +79,8 @@
   // ---------- syllabus ----------
   function itemRow(it, showChars) {
     var chars = it.assigned.join(' ');
-    var right = showChars && chars ? '<div class="item-chars" lang="zh-Hant">' + esc(chars) + '<small>characters to learn</small></div>' : '<div></div>';
+    var right = showChars && chars ? '<div class="item-chars" lang="zh-Hant">' + esc(chars) + '<small>characters to learn</small></div>'
+      : !showChars ? '<div class="item-week">' + (it.week != null ? 'Week ' + it.week : 'Not yet assigned') + '</div>' : '<div></div>';
     var en = it.type === 'lesson' ? 'Character lesson' : esc(it.title.en);
     var poet = it.type === 'lesson' ? '' : '<div class="item-poet"><span lang="zh-Hant" class="zh">' + esc(it.poet.zh) + '</span> ' + esc(it.poet.en) + '</div>';
     return '<a class="item-row" href="#/' + it.type + '/' + encodeURIComponent(it.id) + '"><div>' +
@@ -88,7 +90,7 @@
   function renderHome() {
     setNav('home');
     var weeks = {};
-    items().forEach(function (it) { (weeks[it.week] = weeks[it.week] || []).push(it); });
+    scheduled().forEach(function (it) { (weeks[it.week] = weeks[it.week] || []).push(it); });
     var keys = Object.keys(weeks).map(Number).sort(function (a, b) { return b - a; });
     if (!keys.length) { view.innerHTML = '<p class="empty">Nothing has been assigned yet.</p>'; return; }
     view.innerHTML = keys.map(function (w) {
@@ -102,9 +104,13 @@
     setNav('index');
     var poems = items().filter(function (i) { return i.type === 'poem'; });
     var lessons = items().filter(function (i) { return i.type === 'lesson'; });
-    poems.sort(function (a, b) { return a.poet.en.localeCompare(b.poet.en) || a.title.en.localeCompare(b.title.en); });
+    function plain(x) { return x.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase(); }
+    poems.sort(function (a, b) { return plain(a.poet.en).localeCompare(plain(b.poet.en)) || plain(a.title.en).localeCompare(plain(b.title.en)); });
+    var lastLetter = '';
     view.innerHTML =
-      '<section class="index-section"><h2>Poems</h2>' + (poems.length ? poems.map(function (i) { return itemRow(i, false); }).join('') : '<p class="empty">No poems yet.</p>') + '</section>' +
+      '<section class="index-section"><h2>Poems</h2><p class="sans muted">By poet, alphabetically.</p>' + (poems.length ? poems.map(function (i) {
+        var L = plain(i.poet.en).charAt(0).toUpperCase(), head = L !== lastLetter ? '<div class="letter">' + esc(L) + '</div>' : '';
+        lastLetter = L; return head + itemRow(i, false); }).join('') : '<p class="empty">No poems yet.</p>') + '</section>' +
       '<section class="index-section"><h2>Character lessons</h2>' + (lessons.length ? lessons.map(function (i) { return itemRow(i, false); }).join('') : '<p class="empty">No character lessons yet.</p>') + '</section>';
   }
 
@@ -113,7 +119,7 @@
     setNav('');
     var it = itemById(id);
     if (!it) { view.innerHTML = '<p class="empty">That poem isn’t available. <a href="#/">Return to the syllabus</a>.</p>'; return; }
-    var now = {}; it.assigned.forEach(function (k) { now[k] = 1; });
+    var now = {}; if (it.week != null) it.assigned.forEach(function (k) { now[k] = 1; });
     var past = assignedBefore(it.week);
     var lines = [];
     if (it.type === 'lesson') lines = [it.keys.map(function (k) { return { k: k, chars: k.split('') }; })];
@@ -142,14 +148,14 @@
     }).join('');
 
     var heading = it.type === 'lesson'
-      ? '<div class="poem-title"><span class="zh" lang="zh-Hant">' + esc(titleZh(it)) + '</span><span class="en">Character lesson, week ' + it.week + '</span></div>'
+      ? '<div class="poem-title"><span class="zh" lang="zh-Hant">' + esc(titleZh(it)) + '</span><span class="en">Character lesson' + (it.week != null ? ', week ' + it.week : '') + '</span></div>'
       : '<div class="poem-title"><span class="zh title-zh" lang="zh-Hant">' + Array.from(it.title.zh).map(function (ch) {
           return C.lexicon[ch] ? '<button class="title-char" data-k="' + esc(ch) + '">' + esc(ch) + '</button>' : esc(ch);
         }).join('') + '</span><span class="en">' + esc(it.title.en) + '</span>' +
         '<div class="poet"><span class="zh" lang="zh-Hant">' + esc(it.poet.zh) + '</span> ' + esc(it.poet.en) + '</div></div>';
 
-    var legend = '<div class="legend">' + (it.assigned.length ? '<span class="l-now">characters to learn this week</span>' : '') +
-      (Object.keys(past).length ? '<span class="l-past">learned in earlier weeks</span>' : '') + '</div>';
+    var legend = '<div class="legend">' + (Object.keys(now).length ? '<span class="l-now">characters to learn this week</span>' : '') +
+      (Object.keys(past).length ? '<span class="l-past">' + (it.week == null ? 'learned so far' : 'learned in earlier weeks') + '</span>' : '') + '</div>';
 
     var tr = it.translations.length ? '<section class="translations"><h3>Translations</h3><div class="tr-list">' +
       it.translations.map(function (t, i) {
@@ -158,7 +164,7 @@
 
     view.innerHTML = '<div class="poem-layout"><div class="poem-main">' + heading +
       '<div class="toolbar btn-row"><button class="btn" id="crib-toggle" aria-pressed="' + (it.type === 'lesson') + '">Show cribs</button>' +
-      '<a class="btn" href="#/cards?w=' + it.week + '">Practice week ' + it.week + '</a></div>' +
+      (it.week != null ? '<a class="btn" href="#/cards?w=' + it.week + '">Practice week ' + it.week + '</a>' : '') + '</div>' +
       '<div class="grid' + (it.type === 'lesson' ? ' show-cribs' : '') + '" id="grid">' + grid + '</div>' + legend + '</div>' +
       '<aside class="entry" id="entry" aria-live="polite"><p class="entry-placeholder">Select a character to see its meaning and stroke order.</p></aside>' + tr + '</div>';
 
@@ -257,7 +263,7 @@
     setNav('cards');
     var q = (location.hash.split('?')[1] || '');
     var wParam = (q.match(/w=(\d+)/) || [])[1];
-    var weeks = []; items().forEach(function (i) { if (i.assigned.length && weeks.indexOf(i.week) < 0) weeks.push(i.week); });
+    var weeks = []; scheduled().forEach(function (i) { if (i.assigned.length && weeks.indexOf(i.week) < 0) weeks.push(i.week); });
     weeks.sort(function (a, b) { return a - b; });
     var scope = wParam && weeks.indexOf(+wParam) >= 0 ? wParam : 'all';
     var mode = load('tang.mode', 'read');
@@ -278,7 +284,7 @@
 
     function keysInScope() {
       var s = {};
-      items().forEach(function (i) { if (scope === 'all' || String(i.week) === String(scope)) i.assigned.forEach(function (k) { s[k] = 1; }); });
+      scheduled().forEach(function (i) { if (scope === 'all' || String(i.week) === String(scope)) i.assigned.forEach(function (k) { s[k] = 1; }); });
       return Object.keys(s).filter(function (k) { return C.lexicon[k] && (mode === 'read' || k.length === 1); });
     }
     function build() {

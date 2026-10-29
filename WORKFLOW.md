@@ -28,7 +28,7 @@ Read `source/lexicon.txt` first. Return the sheet in a code block, in this form:
 POEM                                  (or LESSON)
 Poet: 李白 Li Bai
 Title: 靜夜思 / Quiet Night Thoughts   (lessons have no title line)
-Week: 1
+Week: 1                               (optional; omit to hold the poem unassigned)
 Release: 2027-02-15                   (optional; hides the item until that date)
 
 床前[明月]光，疑是地上霜。
@@ -58,7 +58,8 @@ Judith Gautier, "L'auberge" (1867)
 
 Timothy returns the revised sheet. Then:
 
-1. Write `source/items/wNN-<id>.txt` (NN = two-digit week; id = a short pinyin slug, e.g. w01-jingyesi.txt)
+1. Write `source/items/wNN-<id>.txt` (NN = two-digit week; id = a short pinyin slug, e.g. w01-jingyesi.txt;
+   for a poem not yet assigned to a week, `unassigned-<id>.txt`)
    containing the revised sheet with an `Id:` line after the header, the `(existing)` marks and ranks removed,
    and a TRANSLATIONS section with the full texts:
    ```
@@ -84,6 +85,9 @@ Timothy returns the revised sheet. Then:
   Search with `grep -rn '^+\?CHAR,' source/items`.
 - **A gloss, in one poem only**: edit that item file's line; the build turns it into a contextual gloss.
 - **Brackets, assigned characters, translations**: edit the item file.
+- **Assigning a held poem to a week**: add or change its `Week:` line (and rename the file to the wNN- form).
+  Poems without a week appear only under All poems (alphabetical by the poet's pinyin), never on the
+  syllabus or in flashcards; their `+` marks take effect once a week is given.
 - **The app itself** (layout, wording, features): edit `index.html`, `style.css`, `app.js`, or `sw.js`.
   Test in a headless browser before pushing.
 - After any change: run the build, check, commit, push. Tell Timothy in a line what changed.

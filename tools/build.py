@@ -200,7 +200,7 @@ def main():
         items.append({
             'id': it.get('id') or os.path.splitext(it['source'])[0],
             'type': it.get('type', 'poem'),
-            'week': int(it.get('week', 0) or 0),
+            'week': int(it['week']) if str(it.get('week', '')).strip().isdigit() else None,  # None = not yet scheduled
             'release': it.get('release'),
             'poet': split_names(it.get('poet')),
             'title': split_names(it.get('title')),
@@ -210,7 +210,7 @@ def main():
             'overrides': overrides,
             'translations': it['translations'],
         })
-    items.sort(key=lambda x: (x['week'], x['type'] != 'lesson', x['id']))
+    items.sort(key=lambda x: (x['week'] is None, x['week'] or 0, x['type'] != 'lesson', x['id']))
 
     # Lexicon with ranks and computed "see also" links
     out_lex = {}
