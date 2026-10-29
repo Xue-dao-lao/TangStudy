@@ -159,6 +159,40 @@ def derive_component(host_path, strokes, out_path):
                'medians': [[[tx(x), ty(y)] for x, y in m] for m in meds]},
               open(out_path, 'w', encoding='utf-8'), ensure_ascii=False)
 
+# Stroke data drawn in a variant form, rebuilt in the standard form the course uses.
+def standard_wei(src_path, out_path, dot_dx=-120, dot_dy=5, top=815):
+    """The data draws 為 as 爲 (爫 on top, 12 strokes). Rebuild the standard 9-stroke 為: a dot, then the
+    lower strokes of 爲 (丿, 𠃍, 一, 𠃌, 灬) stretched upward to fill the space the 爫 occupied."""
+    d = json.load(open(src_path, encoding='utf-8'))
+    num = r'-?\d+(?:\.\d+)?'
+    def pts(p):
+        v = [float(x) for x in re.findall(num, p)]
+        return list(zip(v[0::2], v[1::2]))
+    def move(path, f):
+        out, pair = [], []
+        for t in re.split('(' + num + ')', path):
+            if re.fullmatch(num, t):
+                pair.append(float(t))
+                if len(pair) == 2:
+                    x, y = f(*pair); out.append(f'{round(x)} {round(y)}'); pair = []
+            else:
+                out.append(t)
+        return ''.join(out)
+    lower = range(4, 12)
+    ys = [y for i in lower for _, y in pts(d['strokes'][i])]
+    ytop, ybot = max(ys), min(ys)
+    k = (top - ybot) / (ytop - ybot)
+    def fl(x, y): return x, ybot + (y - ybot) * k
+    dp = pts(d['strokes'][1]); cx = sum(p[0] for p in dp) / len(dp); cy = sum(p[1] for p in dp) / len(dp)
+    sx, sy = fl(*d['medians'][4][0])                       # where the 丿 now begins
+    def fd(x, y): return x - cx + sx + dot_dx, y - cy + sy + dot_dy
+    strokes = [move(d['strokes'][1], fd)] + [move(d['strokes'][i], fl) for i in lower]
+    medians = [[[round(v) for v in fd(*m)] for m in d['medians'][1]]] + \
+              [[[round(v) for v in fl(*m)] for m in d['medians'][i]] for i in lower]
+    json.dump({'strokes': strokes, 'medians': medians}, open(out_path, 'w', encoding='utf-8'), ensure_ascii=False)
+
+REBUILT = {'\u70ba': standard_wei}   # 為
+
 def font_ranges(css_path):
     css = open(css_path, encoding='utf-8').read()
     out = []
@@ -295,7 +329,9 @@ def main():
     os.makedirs(sdir, exist_ok=True)
     for ch in sorted(stroke_chars):
         src = os.path.join(a.strokes, ch + '.json')
-        if os.path.exists(src):
+        if ch in REBUILT and os.path.exists(src):
+            REBUILT[ch](src, os.path.join(sdir, ch + '.json'))
+        elif os.path.exists(src):
             shutil.copy(src, os.path.join(sdir, ch + '.json'))
         elif ch in DERIVED:
             host, strokes = DERIVED[ch]
