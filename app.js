@@ -93,13 +93,23 @@
       '<div class="item-zh" lang="zh-Hant">' + esc(titleZh(it)) + '</div>' +
       '<div class="item-en">' + en + '</div>' + poet + '</div>' + right + '</a>';
   }
+  // Epigraph at the head of the syllabus. Swap the text and source here to change it.
+  var EPIGRAPH = {
+    text: 'Really one DON’T need to know a language. One NEEDS, damn well needs, to know the few hundred words in the few really good poems that any language has in it.',
+    who: 'Ezra Pound to Iris Barry, 1916',
+    source: 'epigraph to Ernest Fenollosa and Ezra Pound, <i>The Chinese Written Character as a Medium for Poetry: A Critical Edition</i> (Fordham University Press, 2008)'
+  };
+  function epigraph() {
+    return '<figure class="epigraph"><blockquote>' + esc(EPIGRAPH.text) + '</blockquote><figcaption>' + esc(EPIGRAPH.who) +
+      '<span class="epi-src">; ' + EPIGRAPH.source + '</span></figcaption></figure>';
+  }
   function renderHome() {
     setNav('home');
     var weeks = {};
     scheduled().forEach(function (it) { (weeks[it.week] = weeks[it.week] || []).push(it); });
     var keys = Object.keys(weeks).map(Number).sort(function (a, b) { return b - a; });
-    if (!keys.length) { view.innerHTML = '<p class="empty">Nothing has been assigned yet.</p>'; return; }
-    view.innerHTML = keys.map(function (w) {
+    if (!keys.length) { view.innerHTML = epigraph() + '<p class="empty">Nothing has been assigned yet.</p>'; return; }
+    view.innerHTML = epigraph() + keys.map(function (w) {
       return '<section class="week"><div class="week-head"><h2>Week ' + w + '</h2>' +
         '<a class="sans muted" href="#/cards?w=' + w + '">Practice this week’s characters</a>' +
         '<a class="sans muted" href="#/sheet/week/' + w + '" target="_blank">' + BRUSH + 'Print a writing sheet</a></div>' +

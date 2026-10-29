@@ -222,3 +222,14 @@ h2 { font-size: 26px; margin: 0 0 14px; }
 .top-unit.pending .cell { color: #B9B4AA; cursor: default; background: transparent; }
 .top-unit.pending .cell:hover { background: transparent; }
 .top-unit .crib { min-height: 1.25em; }
+.epigraph { max-width: 34em; margin: 4px 0 40px auto; padding: 0; }
+.epigraph blockquote { margin: 0; font-size: 19px; font-style: italic; line-height: 1.5; }
+.epigraph figcaption { margin-top: 8px; font-size: 15px; color: var(--ink); text-align: right; }
+.epigraph figcaption::before { content: ""; display: inline-block; width: 1.4em; border-top: 1px solid var(--zhu); vertical-align: 0.3em; margin-right: 0.5em; }
+.epi-src { color: var(--ink-soft); }
+.epi-src i { font-style: italic; }
+@media (max-width: 600px) { .epigraph { margin-left: 0; } .epigraph figcaption { text-align: left; } }
+nav { flex-wrap: wrap; gap: 6px 18px; }
+nav a { white-space: nowrap; }
+.week-head { flex-wrap: wrap; row-gap: 4px; }
+.week-head h2, .week-head a { white-space: nowrap; }
