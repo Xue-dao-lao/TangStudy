@@ -279,8 +279,15 @@
       '<div class="btn-row"><button class="btn" id="save-progress">Save my progress to a file</button>' +
       '<label class="btn">Load progress from a file<input type="file" id="load-progress" accept="application/json" hidden></label></div></div>';
 
-    var progress = load('tang.progress', {});
-    var deck = [], cur = null;
+    // Separate records for reading and writing: knowing a meaning is not knowing how to write it.
+    function shape(pr) {
+      pr = pr || {};
+      if (pr.read || pr.write) return { read: pr.read || {}, write: pr.write || {} };
+      return { read: JSON.parse(JSON.stringify(pr)), write: pr };   // older single record: copy to both
+    }
+    var progress = shape(load('tang.progress', {}));
+    var deck = [], cur = null, round = { right: 0, missed: 0 };
+    function rec() { return progress[mode]; }
 
     function keysInScope() {
       var s = {};
@@ -289,20 +296,23 @@
     }
     function build() {
       var ks = shuffle(keysInScope());
-      ks.sort(function (a, b) { return ((progress[a] || {}).box || 0) - ((progress[b] || {}).box || 0); });
-      deck = ks;
+      ks.sort(function (a, b) { return ((rec()[a] || {}).box || 0) - ((rec()[b] || {}).box || 0); });
+      deck = ks; round = { right: 0, missed: 0 };
       next();
     }
     function grade(ok) {
-      var p = progress[cur] || { box: 0 };
+      var p = rec()[cur] || { box: 0 };
       p.box = ok ? Math.min((p.box || 0) + 1, 5) : 0;
-      p.seen = today(); progress[cur] = p; save('tang.progress', progress);
+      p.seen = today(); rec()[cur] = p; save('tang.progress', progress);
+      if (ok) round.right++; else round.missed++;
       if (!ok) deck.splice(Math.min(3, deck.length), 0, cur);
       next();
     }
     function counts() {
-      var ks = keysInScope(), known = ks.filter(function (k) { return (progress[k] || {}).box >= 3; }).length;
-      document.getElementById('count').textContent = ks.length + ' card' + (ks.length === 1 ? '' : 's') + ' in this set; ' + known + ' answered correctly three times running.';
+      var ks = keysInScope(), known = ks.filter(function (k) { return (rec()[k] || {}).box >= 3; }).length;
+      var verb = mode === 'read' ? 'read' : 'written';
+      document.getElementById('count').innerHTML = 'This round: ' + round.right + ' right, ' + round.missed + ' to review.<br>' +
+        known + ' of ' + ks.length + ' ' + (ks.length === 1 ? 'character' : 'characters') + ' ' + verb + ' correctly three times running.';
     }
     function next() {
       counts();
@@ -374,7 +384,7 @@
       f.text().then(function (txt) {
         var d = JSON.parse(txt);
         if (!d.progress) throw new Error('bad file');
-        save('tang.progress', d.progress); progress = d.progress; build();
+        progress = shape(d.progress); save('tang.progress', progress); build();
         alert('Progress loaded.');
       }).catch(function () { alert('That file doesn’t contain saved progress from this app.'); });
     });
