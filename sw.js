@@ -1,6 +1,6 @@
 /* Offline support: always try the network first, so new material appears as soon as
    a student is online; fall back to the saved copy when offline. */
-var CACHE = 'tang-study-v1';
+var CACHE = 'tang-study-v2';
 var SHELL = ['./', 'index.html', 'style.css', 'app.js', 'lib/hanzi-writer.min.js', 'data/content.json', 'fonts/kai.css'];
 
 function cjk(s) { return Array.from(s).filter(function (c) { return /[㐀-鿿豈-﫿]/.test(c); }); }
@@ -36,8 +36,10 @@ self.addEventListener('fetch', function (e) {
   if (e.request.method !== 'GET') return;
   var url = new URL(e.request.url);
   var isContent = url.pathname.endsWith('/data/content.json');
+  // Ask the server whether each file has changed, rather than trusting the browser's ten-minute copy.
+  var req = url.origin === self.location.origin ? new Request(e.request, { cache: 'no-cache' }) : e.request;
   e.respondWith(
-    fetch(e.request).then(function (r) {
+    fetch(req).then(function (r) {
       if (r && (r.ok || r.type === 'opaque')) {
         if (isContent) {
           // New material: save its stroke files and glyphs for offline use as well.

@@ -259,6 +259,14 @@ def main():
     with open(os.path.join(ROOT, 'data', 'content.json'), 'w', encoding='utf-8') as f:
         json.dump(content, f, ensure_ascii=False, indent=1)
 
+    # Stamp the page's script and stylesheet links so browsers fetch new versions at once.
+    ipath = os.path.join(ROOT, 'index.html')
+    page = open(ipath, encoding='utf-8').read()
+    for name in ('app.js', 'style.css', 'fonts/kai.css'):
+        h = hashlib.sha1(open(os.path.join(ROOT, name), 'rb').read()).hexdigest()[:8]
+        page = re.sub(r'(["\'])' + re.escape(name) + r'(\?v=[0-9a-f]+)?\1', r'\g<1>' + name + '?v=' + h + r'\1', page)
+    open(ipath, 'w', encoding='utf-8').write(page)
+
     print(f"{len(items)} item(s), {len(lex)} lexicon entries, {len(stroke_chars)} stroke files, "
           f"version {content['version']}")
     for p in problems:
