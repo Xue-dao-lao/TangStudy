@@ -190,9 +190,6 @@ def main():
         for ch in split_names(it.get('title'))['zh']:
             if CJK.match(ch) and ch not in lex:
                 problems.append(f"{it['source']}: title character {ch} has no entry (it won't be clickable)")
-        for e in it['entries']:
-            if re.search(r"[^\w\s*’'-]", e['crib']):
-                problems.append(f"{it['source']}: crib for {e['key']} ('{e['crib']}') contains punctuation")
         for line in it['lines']:
             for t in line:
                 if 'k' in t and t['k'] not in lex:

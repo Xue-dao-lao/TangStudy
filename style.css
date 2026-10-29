@@ -90,8 +90,6 @@ h2 { font-size: 26px; margin: 0 0 14px; }
   line-height: 1; background: transparent; color: var(--ink); padding: 0; cursor: pointer; }
 .cell:hover { background: var(--panel); }
 .cell[aria-pressed="true"] { background: var(--zhu-wash); }
-.cell.punct { color: var(--ink-soft); cursor: default; font-size: calc(var(--cell) * .5); }
-.cell.punct:hover { background: transparent; }
 .unit.compound .cells::after { content: ""; position: absolute; left: 12px; right: 13px; bottom: 7px; height: 2px; background: var(--ink); pointer-events: none; }
 .cell.now::after, .cell.past::after { content: ""; position: absolute; top: 4px; right: 4px; border-radius: 50%; pointer-events: none; }
 .cell.now::after { width: 9px; height: 9px; border: 1.6px solid var(--zhu); }
