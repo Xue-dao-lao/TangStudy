@@ -27,7 +27,9 @@
   function items() { return C.items.filter(released); }
   function scheduled() { return items().filter(function (i) { return i.week != null; }); }
   function itemById(id) { return items().filter(function (i) { return i.id === id; })[0]; }
-  function titleZh(it) { return it.type === 'lesson' ? it.keys.join('，') : it.title.zh; }
+  function titleZh(it) { return it.type === 'lesson' ? it.keys.join('，') : it.type === 'radicals' ? '部首' : it.title.zh; }
+  function radicals() { return C.items.filter(function (i) { return i.type === 'radicals'; })[0]; }
+  function forms(k) { var e = C.lexicon[k] || {}; return [k].concat(e.forms || []); }
   function shuffle(a) { for (var i = a.length - 1; i > 0; i--) { var j = Math.floor(Math.random() * (i + 1)); var t = a[i]; a[i] = a[j]; a[j] = t; } return a; }
 
   function assignedBefore(week) {
@@ -72,6 +74,7 @@
     window.scrollTo(0, 0);
     if (parts[0] === 'poem' || parts[0] === 'lesson') return renderItem(decodeURIComponent(parts[1] || ''));
     if (parts[0] === 'index') return renderIndex();
+    if (parts[0] === 'radicals') return renderRadicals();
     if (parts[0].indexOf('cards') === 0) return renderCards();
     renderHome();
   }
@@ -203,6 +206,33 @@
     });
   }
 
+  // ---------- common radicals ----------
+  function renderRadicals() {
+    setNav('radicals');
+    var it = radicals();
+    if (!it) { view.innerHTML = '<h2>Common Radicals</h2><p class="empty">No radicals have been added yet.</p>'; return; }
+    var cells = it.keys.map(function (k) {
+      var e = C.lexicon[k] || {};
+      return '<div class="unit radical"><div class="cells"><button class="cell" lang="zh-Hant" data-k="' + esc(k) + '" aria-pressed="false" aria-label="' + esc(k) + '">' + esc(k) + '</button>' +
+        (e.forms || []).map(function (f) { return '<button class="cell form" lang="zh-Hant" data-k="' + esc(k) + '" aria-pressed="false" aria-label="' + esc(f) + '">' + esc(f) + '</button>'; }).join('') +
+        '</div><div class="crib">' + rich(e.crib || '') + '</div></div>';
+    }).join('');
+    view.innerHTML = '<div class="poem-layout"><div class="poem-main"><div class="poem-title"><span class="zh" lang="zh-Hant">部首</span><span class="en">Common Radicals</span></div>' +
+      '<p class="radicals-note">Radicals are the recurring parts from which characters are built, and a clue to their meaning. Several take a different shape when they stand at the side of a character; that form is shown beside the full one.</p>' +
+      '<div class="toolbar btn-row"><a class="btn" href="#/cards?set=radicals">Practice the radicals</a></div>' +
+      '<div class="grid show-cribs radical-grid" id="grid">' + cells + '</div></div>' +
+      '<aside class="entry" id="entry" aria-live="polite"><p class="entry-placeholder">Select a radical to see its meaning and stroke order.</p></aside></div>';
+    var gridEl = document.getElementById('grid');
+    gridEl.addEventListener('click', function (ev) {
+      var b = ev.target.closest('button.cell'); if (!b) return;
+      gridEl.querySelectorAll('.cell[aria-pressed="true"]').forEach(function (c) { c.setAttribute('aria-pressed', 'false'); });
+      b.closest('.unit').querySelectorAll('.cell').forEach(function (c) { c.setAttribute('aria-pressed', 'true'); });
+      showEntry(b.getAttribute('data-k'), null);
+      if (b.classList.contains('form')) { var fb = document.querySelector('[data-form="' + b.textContent + '"]'); if (fb) fb.click(); }
+      if (window.innerWidth <= 860) document.getElementById('entry').scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+  }
+
   // ---------- dictionary entry ----------
   function showEntry(key, it) {
     var box = document.getElementById('entry');
@@ -219,13 +249,15 @@
     }
     var meta = e.rank ? '<p class="entry-meta">Number ' + e.rank + ' among the most frequent characters in the Complete Tang Poems (全唐詩)</p>' : '';
     var writer = key.length === 1 ? '<div class="writer-wrap">' +
-      (e.simp ? '<div class="btn-row form-switch"><button class="btn" data-form="' + esc(key) + '" aria-pressed="true">Traditional <span lang="zh-Hant">' + esc(key) + '</span></button>' +
-        '<button class="btn" data-form="' + esc(e.simp) + '" aria-pressed="false">Simplified <span lang="zh-Hans">' + esc(e.simp) + '</span></button></div>' : '') +
+      (e.simp || e.forms ? '<div class="btn-row form-switch"><button class="btn" data-form="' + esc(key) + '" aria-pressed="true">' + (e.simp ? 'Traditional ' : 'Full form ') + '<span lang="zh-Hant">' + esc(key) + '</span></button>' +
+        (e.forms || []).map(function (f) { return '<button class="btn" data-form="' + esc(f) + '" aria-pressed="false">Component <span lang="zh-Hant">' + esc(f) + '</span></button>'; }).join('') +
+        (e.simp ? '<button class="btn" data-form="' + esc(e.simp) + '" aria-pressed="false">Simplified <span lang="zh-Hans">' + esc(e.simp) + '</span></button>' : '') + '</div>' : '') +
       '<div class="writer"></div><div class="writer-status"></div>' +
       '<div class="btn-row"><button class="btn primary" data-act="animate">Animate strokes</button><button class="btn" data-act="quiz">Practice writing</button></div></div>' : '';
 
     box.innerHTML = '<div class="entry-head"><span class="entry-char" lang="zh-Hant">' + esc(key) + '</span>' +
-      (e.simp ? '<span class="entry-simp" lang="zh-Hans">(' + esc(e.simp) + ')</span>' : '') + '</div>' + here +
+      (e.simp ? '<span class="entry-simp" lang="zh-Hans">(' + esc(e.simp) + ')</span>' : '') +
+      (e.forms ? '<span class="entry-form">as a component <span lang="zh-Hant">' + e.forms.map(esc).join(' ') + '</span></span>' : '') + '</div>' + here +
       '<p class="entry-crib">' + rich(e.crib) + '</p>' + (e.more ? '<p class="entry-more">' + rich(e.more) + '</p>' : '') +
       meta + links + writer;
 
@@ -265,12 +297,13 @@
     var wParam = (q.match(/w=(\d+)/) || [])[1];
     var weeks = []; scheduled().forEach(function (i) { if (i.assigned.length && weeks.indexOf(i.week) < 0) weeks.push(i.week); });
     weeks.sort(function (a, b) { return a - b; });
-    var scope = wParam && weeks.indexOf(+wParam) >= 0 ? wParam : 'all';
+    var scope = wParam && weeks.indexOf(+wParam) >= 0 ? wParam : /set=radicals/.test(q) && radicals() ? 'radicals' : 'all';
     var mode = load('tang.mode', 'read');
 
     view.innerHTML = '<h2>Flashcards</h2><div class="cards-controls">' +
       '<label>Characters from <select id="scope"><option value="all">all weeks so far</option>' +
       weeks.map(function (w) { return '<option value="' + w + '"' + (String(w) === String(scope) ? ' selected' : '') + '>week ' + w + '</option>'; }).join('') +
+      (radicals() ? '<option value="radicals"' + (scope === 'radicals' ? ' selected' : '') + '>common radicals</option>' : '') +
       '</select></label><div class="btn-row" role="group" aria-label="Card type">' +
       '<button class="btn" data-mode="read">Read: character to meaning</button>' +
       '<button class="btn" data-mode="write">Write: meaning to character</button></div></div>' +
@@ -291,6 +324,7 @@
 
     function keysInScope() {
       var s = {};
+      if (scope === 'radicals') return radicals().keys.filter(function (k) { return C.lexicon[k]; });
       scheduled().forEach(function (i) { if (scope === 'all' || String(i.week) === String(scope)) i.assigned.forEach(function (k) { s[k] = 1; }); });
       return Object.keys(s).filter(function (k) { return C.lexicon[k] && (mode === 'read' || k.length === 1); });
     }
@@ -327,7 +361,7 @@
       cur = deck.shift();
       var e = C.lexicon[cur];
       if (mode === 'read') {
-        card.innerHTML = '<div class="card"><div class="card-char" lang="zh-Hant">' + esc(cur) + '</div>' +
+        card.innerHTML = '<div class="card"><div class="card-char" lang="zh-Hant">' + forms(cur).map(esc).join('<span class="card-sep"> </span>') + '</div>' +
           '<div class="card-answer" id="ans"></div><div class="btn-row" id="acts"><button class="btn primary" id="reveal">Show meaning</button></div></div>';
         document.getElementById('reveal').addEventListener('click', function () {
           document.getElementById('ans').innerHTML = (e.simp ? '<p class="muted">simplified <span lang="zh-Hans" class="zh">' + esc(e.simp) + '</span></p>' : '') +

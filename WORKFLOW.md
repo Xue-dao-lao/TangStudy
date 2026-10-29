@@ -78,6 +78,16 @@ Timothy returns the revised sheet. Then:
 4. Check the poem page in a headless browser at desktop and phone widths.
 5. Commit and push. Pages republishes within a minute or two; students' copies update automatically.
 
+## Radicals
+
+The Common Radicals page (menu: Radicals) is built from `source/items/radicals.txt`, which has the same form
+as a poem's sheet but begins `RADICALS`, has no poem text, and lists the radicals in display order under
+LEXICON. Its entries go into the master lexicon like any others. A radical with a different form as a
+component is written `手/扌, hand`; the form after the slash is shown beside the full one, has its own stroke
+animation, and appears on reading flashcards. Radicals are never tied to a week; flashcards offer them as a
+set of their own ("common radicals"). To add radicals later, add lines to the file and to the lexicon.
+Stroke data for ⻊ is derived by the build from the first seven strokes of 路 (no source has it directly).
+
 ## Changing things later
 
 - **A gloss, everywhere**: edit the master line in `source/lexicon.txt`, and also every item file whose line

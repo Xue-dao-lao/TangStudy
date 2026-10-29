@@ -11,7 +11,7 @@ import argparse, json, os, re, shutil, sys, glob, hashlib
 from collections import defaultdict
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-CJK = re.compile(r'[㐀-鿿豈-﫿\U00020000-\U0003ffff]')
+CJK = re.compile('[\u2e80-\u2fdf\u3400-\u9fff\uf900-\ufaff\U00020000-\U0003ffff]')
 VARIANTS = {'爲': '為', '羣': '群', '疎': '疏'}  # frequency-list forms -> standard forms
 
 def is_heading(line):
@@ -27,8 +27,9 @@ def parse_entry(line):
     if not m:
         return None
     plus, key, simp, gloss = m.groups()
+    key, *forms = [k for k in key.split('/') if k]   # 手/扌: 扌 is the form used as a component
     crib, _, more = gloss.partition(';')
-    return {'key': key, 'simp': (simp or '').strip() or None,
+    return {'key': key, 'forms': forms or None, 'simp': (simp or '').strip() or None,
             'crib': crib.strip(), 'more': more.strip() or None,
             'assigned': plus == '+'}
 
@@ -39,7 +40,7 @@ def load_lexicon(path):
             continue
         e = parse_entry(line)
         if e:
-            lex[e['key']] = {k: e[k] for k in ('simp', 'crib', 'more')}
+            lex[e['key']] = {k: e[k] for k in ('simp', 'crib', 'more', 'forms')}
     return lex
 
 def load_ranks(path):
@@ -75,7 +76,7 @@ def parse_item(path):
     for raw in open(path, encoding='utf-8'):
         line = raw.rstrip('\n')
         s = line.strip()
-        if s in ('POEM', 'LESSON'):
+        if s in ('POEM', 'LESSON', 'RADICALS'):
             item['type'] = s.lower(); section = 'head'; continue
         if s in ('LEXICON', 'COMPOUNDS', 'TRANSLATIONS', 'CHARACTERS'):
             section = s.lower(); continue
@@ -119,6 +120,34 @@ def split_names(field):
     zh = ''.join(t for t in re.findall(r'[㐀-鿿]+', field))
     en = CJK.sub('', field).strip()
     return {'zh': zh, 'en': en}
+
+# Component forms missing from the stroke data, taken from a character that contains them.
+DERIVED = {'\u2eca': ('\u8def', range(7))}   # the foot component, from 路
+
+def derive_component(host_path, strokes, out_path):
+    """Cut a component's strokes out of a host character and enlarge them to fill the box."""
+    d = json.load(open(host_path, encoding='utf-8'))
+    paths = [d['strokes'][i] for i in strokes]
+    meds = [d['medians'][i] for i in strokes]
+    num = r'-?\d+(?:\.\d+)?'
+    nums = [float(x) for p in paths for x in re.findall(num, p)]
+    xs, ys = nums[0::2], nums[1::2]
+    x0, x1, y0, y1 = min(xs), max(xs), min(ys), max(ys)
+    k = 860 / max(x1 - x0, y1 - y0)
+    cx, cy = (x0 + x1) / 2, (y0 + y1) / 2
+    def tx(x): return round(512 + (x - cx) * k)
+    def ty(y): return round(388 + (y - cy) * k)      # 388 = centre of the glyph box, whose y runs from 900 to -124
+    def move(path):
+        out, n = [], 0
+        for tok in re.split('(' + num + ')', path):
+            if re.fullmatch(num, tok):
+                out.append(str(tx(float(tok)) if n % 2 == 0 else ty(float(tok)))); n += 1
+            else:
+                out.append(tok)
+        return ''.join(out)
+    json.dump({'strokes': [move(p) for p in paths],
+               'medians': [[[tx(x), ty(y)] for x, y in m] for m in meds]},
+              open(out_path, 'w', encoding='utf-8'), ensure_ascii=False)
 
 def font_ranges(css_path):
     css = open(css_path, encoding='utf-8').read()
@@ -187,7 +216,7 @@ def main():
                 if e['crib'] not in (master['more'] or ''):
                     problems.append(f"{it['source']}: override for {e['key']} ('{e['crib']}') "
                                     f"is not among its additional glosses")
-        for ch in split_names(it.get('title'))['zh']:
+        for ch in (split_names(it.get('title'))['zh'] if it.get('type') == 'poem' else ''):
             if CJK.match(ch) and ch not in lex:
                 problems.append(f"{it['source']}: title character {ch} has no entry (it won't be clickable)")
         for line in it['lines']:
@@ -226,6 +255,8 @@ def main():
     stroke_chars = set()
     for k, v in lex.items():
         stroke_chars.update(ch for ch in k if CJK.match(ch))
+        for f in v.get('forms') or []:
+            stroke_chars.update(ch for ch in f if CJK.match(ch))
         if v['simp']:
             stroke_chars.update(ch for ch in v['simp'] if CJK.match(ch))
     font_chars = set(stroke_chars)
@@ -244,6 +275,10 @@ def main():
         src = os.path.join(a.strokes, ch + '.json')
         if os.path.exists(src):
             shutil.copy(src, os.path.join(sdir, ch + '.json'))
+        elif ch in DERIVED:
+            host, strokes = DERIVED[ch]
+            derive_component(os.path.join(a.strokes, host + '.json'), strokes, os.path.join(sdir, ch + '.json'))
+            problems.append(f'stroke data for {ch} derived from the first {len(strokes)} strokes of {host}')
         else:
             problems.append(f'no stroke data for {ch}')
 

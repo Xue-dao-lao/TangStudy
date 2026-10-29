@@ -1,9 +1,9 @@
 /* Offline support: always try the network first, so new material appears as soon as
    a student is online; fall back to the saved copy when offline. */
-var CACHE = 'tang-study-v2';
+var CACHE = 'tang-study-v3';
 var SHELL = ['./', 'index.html', 'style.css', 'app.js', 'lib/hanzi-writer.min.js', 'data/content.json', 'fonts/kai.css'];
 
-function cjk(s) { return Array.from(s).filter(function (c) { return /[㐀-鿿豈-﫿]/.test(c); }); }
+function cjk(s) { return Array.from(s).filter(function (c) { return /[\u2e80-\u2fdf\u3400-\u9fff\uf900-\ufaff]/.test(c); }); }
 
 async function everything() {
   var files = SHELL.slice();
@@ -13,6 +13,7 @@ async function everything() {
     Object.keys(data.lexicon).forEach(function (k) {
       cjk(k).forEach(function (c) { chars.add(c); });
       if (data.lexicon[k].simp) cjk(data.lexicon[k].simp).forEach(function (c) { chars.add(c); });
+      (data.lexicon[k].forms || []).forEach(function (f) { cjk(f).forEach(function (c) { chars.add(c); }); });
     });
     chars.forEach(function (c) { files.push('strokes/' + encodeURIComponent(c) + '.json'); });
     var css = await (await fetch('fonts/kai.css', { cache: 'no-cache' })).text();

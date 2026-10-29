@@ -159,3 +159,9 @@ h2 { font-size: 26px; margin: 0 0 14px; }
 .item-week { font-family: var(--sans); font-size: 13px; color: var(--ink-soft); text-align: right; white-space: nowrap; }
 .letter { font-size: 22px; color: var(--zhu); margin: 22px 0 0; padding-bottom: 4px; border-bottom: 1px solid var(--grid); }
 .index-section h2 + p { margin: -8px 0 4px; }
+.radicals-note { max-width: 58ch; margin: -6px 0 18px; }
+.radical-grid { flex-direction: row; flex-wrap: wrap; gap: 14px 10px; }
+.unit.radical .cell.form { color: var(--ink-soft); }
+.entry-form { font-family: var(--sans); font-size: 13px; color: var(--ink-soft); }
+.entry-form span { font-family: var(--kai); font-size: 26px; color: var(--ink); margin-left: 4px; }
+.card-sep { display: inline-block; width: .35em; }

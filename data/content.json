@@ -4,12 +4,14 @@
    "simp": null,
    "crib": "bed",
    "more": "couch; well-railing",
+   "forms": null,
    "compounds": []
   },
   "前": {
    "simp": null,
    "crib": "before",
    "more": "in front of; former",
+   "forms": null,
    "rank": 55,
    "compounds": []
   },
@@ -17,6 +19,7 @@
    "simp": null,
    "crib": "bright",
    "more": "clear, illuminate",
+   "forms": null,
    "rank": 48,
    "compounds": []
   },
@@ -24,6 +27,7 @@
    "simp": null,
    "crib": "moon",
    "more": "month",
+   "forms": null,
    "rank": 19,
    "compounds": []
   },
@@ -31,6 +35,7 @@
    "simp": null,
    "crib": "light",
    "more": "radiance, glory",
+   "forms": null,
    "rank": 108,
    "compounds": []
   },
@@ -38,6 +43,7 @@
    "simp": null,
    "crib": "suspect",
    "more": "doubt, wonder whether",
+   "forms": null,
    "rank": 385,
    "compounds": []
   },
@@ -45,6 +51,7 @@
    "simp": null,
    "crib": "be",
    "more": "this; right, correct",
+   "forms": null,
    "rank": 44,
    "compounds": []
   },
@@ -52,6 +59,7 @@
    "simp": null,
    "crib": "ground",
    "more": "earth, land",
+   "forms": null,
    "rank": 81,
    "compounds": []
   },
@@ -59,6 +67,7 @@
    "simp": null,
    "crib": "on",
    "more": "above, up; ascend",
+   "forms": null,
    "rank": 14,
    "compounds": []
   },
@@ -66,6 +75,7 @@
    "simp": null,
    "crib": "frost",
    "more": null,
+   "forms": null,
    "rank": 229,
    "compounds": []
   },
@@ -73,12 +83,14 @@
    "simp": "举",
    "crib": "raise",
    "more": "lift; all, whole",
+   "forms": null,
    "compounds": []
   },
   "頭": {
    "simp": "头",
    "crib": "head",
    "more": "top, end",
+   "forms": null,
    "rank": 129,
    "compounds": []
   },
@@ -86,6 +98,7 @@
    "simp": null,
    "crib": "gaze toward",
    "more": "look into the distance; hope; full moon",
+   "forms": null,
    "rank": 125,
    "compounds": []
   },
@@ -93,12 +106,14 @@
    "simp": null,
    "crib": "lower",
    "more": "low",
+   "forms": null,
    "compounds": []
   },
   "思": {
    "simp": null,
    "crib": "think of",
    "more": "long for; thought",
+   "forms": null,
    "rank": 91,
    "compounds": []
   },
@@ -106,6 +121,7 @@
    "simp": null,
    "crib": "old",
    "more": "former; reason, therefore",
+   "forms": null,
    "rank": 191,
    "compounds": [
     "故鄉"
@@ -115,6 +131,7 @@
    "simp": "乡",
    "crib": "village",
    "more": "home region, countryside",
+   "forms": null,
    "rank": 242,
    "compounds": [
     "故鄉"
@@ -124,6 +141,7 @@
    "simp": "静",
    "crib": "quiet",
    "more": "still, calm",
+   "forms": null,
    "rank": 284,
    "compounds": []
   },
@@ -131,13 +149,15 @@
    "simp": null,
    "crib": "night",
    "more": null,
+   "forms": null,
    "rank": 46,
    "compounds": []
   },
   "故鄉": {
    "simp": "故乡",
    "crib": "home",
-   "more": "native place (*lit.* old village)"
+   "more": "native place (*lit.* old village)",
+   "forms": null
   }
  },
  "items": [
@@ -340,5 +360,5 @@
    ]
   }
  ],
- "version": "ed606c6a16"
+ "version": "a1674553ce"
 }
