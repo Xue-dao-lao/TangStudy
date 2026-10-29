@@ -63,7 +63,7 @@
 
   // ---------- navigation ----------
   function setNav(name) {
-    document.querySelectorAll('nav a').forEach(function (a) {
+    document.querySelectorAll('nav a, .colophon a').forEach(function (a) {
       if (a.getAttribute('data-nav') === name) a.setAttribute('aria-current', 'page');
       else a.removeAttribute('aria-current');
     });
@@ -77,6 +77,7 @@
     if (parts[0] === 'index') return renderIndex();
     if (parts[0] === 'radicals') return renderRadicals();
     if (parts[0] === 'top') return renderTop();
+    if (parts[0] === 'about') return renderAbout();
     if (parts[0] === 'sheet') return renderSheet(parts.slice(1).map(decodeURIComponent));
     if (parts[0].indexOf('cards') === 0) return renderCards();
     renderHome();
@@ -103,13 +104,18 @@
     return '<figure class="epigraph"><blockquote>' + esc(EPIGRAPH.text) + '</blockquote><figcaption>' + esc(EPIGRAPH.who) +
       '<span class="epi-src">; ' + EPIGRAPH.source + '</span></figcaption></figure>';
   }
+  function renderAbout() {
+    setNav('about');
+    view.innerHTML = '<article class="about">' + epigraph() +
+      '<p>Created with the help of Claude for use in ENGL/CMLT 325, Middlebury College.</p></article>';
+  }
   function renderHome() {
     setNav('home');
     var weeks = {};
     scheduled().forEach(function (it) { (weeks[it.week] = weeks[it.week] || []).push(it); });
     var keys = Object.keys(weeks).map(Number).sort(function (a, b) { return b - a; });
-    if (!keys.length) { view.innerHTML = epigraph() + '<p class="empty">Nothing has been assigned yet.</p>'; return; }
-    view.innerHTML = epigraph() + keys.map(function (w) {
+    if (!keys.length) { view.innerHTML = '<p class="empty">Nothing has been assigned yet.</p>'; return; }
+    view.innerHTML = keys.map(function (w) {
       return '<section class="week"><div class="week-head"><h2>Week ' + w + '</h2>' +
         '<a class="sans muted" href="#/cards?w=' + w + '">Practice this week’s characters</a>' +
         '<a class="sans muted" href="#/sheet/week/' + w + '" target="_blank">' + BRUSH + 'Print a writing sheet</a></div>' +

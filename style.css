@@ -233,3 +233,10 @@ nav { flex-wrap: wrap; gap: 6px 18px; }
 nav a { white-space: nowrap; }
 .week-head { flex-wrap: wrap; row-gap: 4px; }
 .week-head h2, .week-head a { white-space: nowrap; }
+.colophon a { color: var(--ink); }
+.colophon a[aria-current="page"] { text-decoration-color: var(--zhu); }
+.colophon-sep { display: inline-block; width: 1px; height: 0.9em; background: var(--grid); margin: 0 10px; vertical-align: -0.1em; }
+.about { max-width: 40em; }
+.about .epigraph { margin: 8px 0 36px; }
+.about .epigraph figcaption { text-align: left; }
+.about p { font-size: 18px; }
