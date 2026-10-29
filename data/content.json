@@ -870,6 +870,361 @@
    "rank": 65,
    "compounds": []
   },
+  "村": {
+   "simp": null,
+   "py": "cūn",
+   "crib": "village",
+   "more": "rustic",
+   "forms": null,
+   "compounds": []
+  },
+  "清": {
+   "simp": null,
+   "py": "qīng",
+   "crib": "clear",
+   "more": "pure, limpid",
+   "forms": null,
+   "rank": 41,
+   "compounds": []
+  },
+  "曲": {
+   "simp": null,
+   "py": "qū",
+   "crib": "bend",
+   "more": "crooked, winding; *read qǔ*, tune, song",
+   "forms": null,
+   "rank": 249,
+   "compounds": []
+  },
+  "抱": {
+   "simp": null,
+   "py": "bào",
+   "crib": "embrace",
+   "more": "hold in the arms, enfold",
+   "forms": null,
+   "compounds": []
+  },
+  "流": {
+   "simp": null,
+   "py": "liú",
+   "crib": "flow",
+   "more": "current, drift",
+   "forms": null,
+   "rank": 80,
+   "compounds": []
+  },
+  "長": {
+   "simp": "长",
+   "py": "cháng",
+   "crib": "long",
+   "more": "always; *read zhǎng*, grow, elder",
+   "forms": null,
+   "rank": 26,
+   "compounds": []
+  },
+  "夏": {
+   "simp": null,
+   "py": "xià",
+   "crib": "summer",
+   "more": null,
+   "forms": null,
+   "compounds": []
+  },
+  "事": {
+   "simp": null,
+   "py": "shì",
+   "crib": "matter",
+   "more": "affair, thing, task",
+   "forms": null,
+   "rank": 63,
+   "compounds": []
+  },
+  "幽": {
+   "simp": null,
+   "py": "yōu",
+   "crib": "secluded",
+   "more": "quiet, dim, hidden",
+   "forms": null,
+   "rank": 213,
+   "compounds": []
+  },
+  "自": {
+   "simp": null,
+   "py": "zì",
+   "crib": "self",
+   "more": "of itself; from",
+   "forms": null,
+   "rank": 24,
+   "compounds": []
+  },
+  "堂": {
+   "simp": null,
+   "py": "táng",
+   "crib": "hall",
+   "more": "main room",
+   "forms": null,
+   "rank": 331,
+   "compounds": []
+  },
+  "燕": {
+   "simp": null,
+   "py": "yàn",
+   "crib": "swallow",
+   "more": "*read yān*, the state of Yan",
+   "forms": null,
+   "rank": 415,
+   "compounds": []
+  },
+  "相": {
+   "simp": null,
+   "py": "xiāng",
+   "crib": "each other",
+   "more": "mutually; *read xiàng*, appearance, minister",
+   "forms": null,
+   "rank": 22,
+   "compounds": []
+  },
+  "親": {
+   "simp": "亲",
+   "py": "qīn",
+   "crib": "close",
+   "more": "intimate, kin; *as a verb* draw near",
+   "forms": null,
+   "rank": 358,
+   "compounds": []
+  },
+  "近": {
+   "simp": null,
+   "py": "jìn",
+   "crib": "near",
+   "more": "approach, recent",
+   "forms": null,
+   "rank": 240,
+   "compounds": []
+  },
+  "鷗": {
+   "simp": "鸥",
+   "py": "ōu",
+   "crib": "gull",
+   "more": null,
+   "forms": null,
+   "compounds": []
+  },
+  "老": {
+   "simp": null,
+   "py": "lǎo",
+   "crib": "old",
+   "more": "aged, venerable",
+   "forms": null,
+   "rank": 126,
+   "compounds": []
+  },
+  "妻": {
+   "simp": null,
+   "py": "qī",
+   "crib": "wife",
+   "more": null,
+   "forms": null,
+   "compounds": []
+  },
+  "畫": {
+   "simp": "画",
+   "py": "huà",
+   "crib": "draw",
+   "more": "paint, picture",
+   "forms": null,
+   "rank": 388,
+   "compounds": []
+  },
+  "紙": {
+   "simp": "纸",
+   "py": "zhǐ",
+   "crib": "paper",
+   "more": null,
+   "forms": null,
+   "compounds": []
+  },
+  "棋": {
+   "simp": null,
+   "py": "qí",
+   "crib": "chess",
+   "more": "go, board game",
+   "forms": null,
+   "compounds": []
+  },
+  "局": {
+   "simp": null,
+   "py": "jú",
+   "crib": "board",
+   "more": "game, situation",
+   "forms": null,
+   "compounds": []
+  },
+  "稚": {
+   "simp": null,
+   "py": "zhì",
+   "crib": "young",
+   "more": "tender, childish",
+   "forms": null,
+   "compounds": []
+  },
+  "敲": {
+   "simp": null,
+   "py": "qiāo",
+   "crib": "knock",
+   "more": "tap, beat",
+   "forms": null,
+   "compounds": []
+  },
+  "針": {
+   "simp": "针",
+   "py": "zhēn",
+   "crib": "needle",
+   "more": "pin",
+   "forms": null,
+   "compounds": []
+  },
+  "作": {
+   "simp": null,
+   "py": "zuò",
+   "crib": "make",
+   "more": "do, write, become",
+   "forms": null,
+   "rank": 141,
+   "compounds": []
+  },
+  "釣": {
+   "simp": "钓",
+   "py": "diào",
+   "crib": "fish with a line",
+   "more": "angle",
+   "forms": null,
+   "compounds": []
+  },
+  "鉤": {
+   "simp": "钩",
+   "py": "gōu",
+   "crib": "hook",
+   "more": null,
+   "forms": null,
+   "compounds": []
+  },
+  "多": {
+   "simp": null,
+   "py": "duō",
+   "crib": "many",
+   "more": "much, often",
+   "forms": null,
+   "rank": 50,
+   "compounds": []
+  },
+  "病": {
+   "simp": null,
+   "py": "bìng",
+   "crib": "illness",
+   "more": "sick, ailing",
+   "forms": null,
+   "rank": 333,
+   "compounds": []
+  },
+  "所": {
+   "simp": null,
+   "py": "suǒ",
+   "crib": "place",
+   "more": "*before a verb*, what, that which",
+   "forms": null,
+   "rank": 208,
+   "compounds": []
+  },
+  "須": {
+   "simp": "须",
+   "py": "xū",
+   "crib": "need",
+   "more": "must; beard",
+   "forms": null,
+   "rank": 202,
+   "compounds": []
+  },
+  "唯": {
+   "simp": null,
+   "py": "wéi",
+   "crib": "only",
+   "more": "alone",
+   "forms": null,
+   "rank": 301,
+   "compounds": []
+  },
+  "藥": {
+   "simp": "药",
+   "py": "yào",
+   "crib": "medicine",
+   "more": "herb, drug",
+   "forms": null,
+   "rank": 457,
+   "compounds": []
+  },
+  "物": {
+   "simp": null,
+   "py": "wù",
+   "crib": "thing",
+   "more": "creature, matter",
+   "forms": null,
+   "rank": 253,
+   "compounds": []
+  },
+  "微": {
+   "simp": null,
+   "py": "wēi",
+   "crib": "slight",
+   "more": "humble, faint, tiny",
+   "forms": null,
+   "rank": 222,
+   "compounds": []
+  },
+  "軀": {
+   "simp": "躯",
+   "py": "qū",
+   "crib": "body",
+   "more": "person",
+   "forms": null,
+   "compounds": []
+  },
+  "此": {
+   "simp": null,
+   "py": "cǐ",
+   "crib": "this",
+   "more": "here",
+   "forms": null,
+   "rank": 31,
+   "compounds": []
+  },
+  "外": {
+   "simp": null,
+   "py": "wài",
+   "crib": "outside",
+   "more": "beyond, besides",
+   "forms": null,
+   "rank": 165,
+   "compounds": []
+  },
+  "更": {
+   "simp": null,
+   "py": "gèng",
+   "crib": "further",
+   "more": "more, again; *read gēng*, change, night watch",
+   "forms": null,
+   "rank": 103,
+   "compounds": []
+  },
+  "求": {
+   "simp": null,
+   "py": "qiú",
+   "crib": "seek",
+   "more": "ask for, want",
+   "forms": null,
+   "rank": 423,
+   "compounds": []
+  },
   "故鄉": {
    "simp": "故乡",
    "py": "gùxiāng",
@@ -1103,7 +1458,8 @@
      "note": null,
      "text": "I wake, and moonbeams play around my bed,\nGlittering like hoar-frost to my wondering eyes;\nUp towards the glorious moon I raise my head,\nThen lay me down, — and thoughts of home arise."
     }
-   ]
+   ],
+   "notes": []
   },
   {
    "id": "ganxing",
@@ -1274,7 +1630,477 @@
    "overrides": {
     "上": "ascend"
    },
-   "translations": []
+   "translations": [],
+   "notes": []
+  },
+  {
+   "id": "jiangcun",
+   "type": "poem",
+   "week": null,
+   "release": null,
+   "poet": {
+    "zh": "杜甫",
+    "en": "Du Fu"
+   },
+   "title": {
+    "zh": "江村",
+    "en": "River Village"
+   },
+   "lines": [
+    [
+     {
+      "k": "清",
+      "chars": [
+       "清"
+      ]
+     },
+     {
+      "k": "江",
+      "chars": [
+       "江"
+      ]
+     },
+     {
+      "k": "一",
+      "chars": [
+       "一"
+      ]
+     },
+     {
+      "k": "曲",
+      "chars": [
+       "曲"
+      ]
+     },
+     {
+      "k": "抱",
+      "chars": [
+       "抱"
+      ]
+     },
+     {
+      "k": "村",
+      "chars": [
+       "村"
+      ]
+     },
+     {
+      "k": "流",
+      "chars": [
+       "流"
+      ]
+     },
+     {
+      "p": "，"
+     },
+     {
+      "k": "長",
+      "chars": [
+       "長"
+      ]
+     },
+     {
+      "k": "夏",
+      "chars": [
+       "夏"
+      ]
+     },
+     {
+      "k": "江",
+      "chars": [
+       "江"
+      ]
+     },
+     {
+      "k": "村",
+      "chars": [
+       "村"
+      ]
+     },
+     {
+      "k": "事",
+      "chars": [
+       "事"
+      ]
+     },
+     {
+      "k": "事",
+      "chars": [
+       "事"
+      ]
+     },
+     {
+      "k": "幽",
+      "chars": [
+       "幽"
+      ]
+     },
+     {
+      "p": "。"
+     }
+    ],
+    [
+     {
+      "k": "自",
+      "chars": [
+       "自"
+      ]
+     },
+     {
+      "k": "去",
+      "chars": [
+       "去"
+      ]
+     },
+     {
+      "k": "自",
+      "chars": [
+       "自"
+      ]
+     },
+     {
+      "k": "來",
+      "chars": [
+       "來"
+      ]
+     },
+     {
+      "k": "堂",
+      "chars": [
+       "堂"
+      ]
+     },
+     {
+      "k": "上",
+      "chars": [
+       "上"
+      ]
+     },
+     {
+      "k": "燕",
+      "chars": [
+       "燕"
+      ]
+     },
+     {
+      "p": "，"
+     },
+     {
+      "k": "相",
+      "chars": [
+       "相"
+      ]
+     },
+     {
+      "k": "親",
+      "chars": [
+       "親"
+      ]
+     },
+     {
+      "k": "相",
+      "chars": [
+       "相"
+      ]
+     },
+     {
+      "k": "近",
+      "chars": [
+       "近"
+      ]
+     },
+     {
+      "k": "水",
+      "chars": [
+       "水"
+      ]
+     },
+     {
+      "k": "中",
+      "chars": [
+       "中"
+      ]
+     },
+     {
+      "k": "鷗",
+      "chars": [
+       "鷗"
+      ]
+     },
+     {
+      "p": "。"
+     }
+    ],
+    [
+     {
+      "k": "老",
+      "chars": [
+       "老"
+      ]
+     },
+     {
+      "k": "妻",
+      "chars": [
+       "妻"
+      ]
+     },
+     {
+      "k": "畫",
+      "chars": [
+       "畫"
+      ]
+     },
+     {
+      "k": "紙",
+      "chars": [
+       "紙"
+      ]
+     },
+     {
+      "k": "為",
+      "chars": [
+       "為"
+      ]
+     },
+     {
+      "k": "棋",
+      "chars": [
+       "棋"
+      ]
+     },
+     {
+      "k": "局",
+      "chars": [
+       "局"
+      ]
+     },
+     {
+      "p": "，"
+     },
+     {
+      "k": "稚",
+      "chars": [
+       "稚"
+      ]
+     },
+     {
+      "k": "子",
+      "chars": [
+       "子"
+      ]
+     },
+     {
+      "k": "敲",
+      "chars": [
+       "敲"
+      ]
+     },
+     {
+      "k": "針",
+      "chars": [
+       "針"
+      ]
+     },
+     {
+      "k": "作",
+      "chars": [
+       "作"
+      ]
+     },
+     {
+      "k": "釣",
+      "chars": [
+       "釣"
+      ]
+     },
+     {
+      "k": "鉤",
+      "chars": [
+       "鉤"
+      ]
+     },
+     {
+      "p": "。"
+     }
+    ],
+    [
+     {
+      "k": "多",
+      "chars": [
+       "多"
+      ]
+     },
+     {
+      "k": "病",
+      "chars": [
+       "病"
+      ]
+     },
+     {
+      "k": "所",
+      "chars": [
+       "所"
+      ]
+     },
+     {
+      "k": "須",
+      "chars": [
+       "須"
+      ]
+     },
+     {
+      "k": "唯",
+      "chars": [
+       "唯"
+      ]
+     },
+     {
+      "k": "藥",
+      "chars": [
+       "藥"
+      ]
+     },
+     {
+      "k": "物",
+      "chars": [
+       "物"
+      ]
+     },
+     {
+      "p": "，"
+     },
+     {
+      "k": "微",
+      "chars": [
+       "微"
+      ]
+     },
+     {
+      "k": "軀",
+      "chars": [
+       "軀"
+      ]
+     },
+     {
+      "k": "此",
+      "chars": [
+       "此"
+      ]
+     },
+     {
+      "k": "外",
+      "chars": [
+       "外"
+      ]
+     },
+     {
+      "k": "更",
+      "chars": [
+       "更"
+      ]
+     },
+     {
+      "k": "何",
+      "chars": [
+       "何"
+      ]
+     },
+     {
+      "k": "求",
+      "chars": [
+       "求"
+      ]
+     },
+     {
+      "p": "。"
+     }
+    ]
+   ],
+   "keys": [
+    "江",
+    "村",
+    "清",
+    "一",
+    "曲",
+    "抱",
+    "流",
+    "長",
+    "夏",
+    "事",
+    "幽",
+    "自",
+    "去",
+    "來",
+    "堂",
+    "上",
+    "燕",
+    "相",
+    "親",
+    "近",
+    "水",
+    "中",
+    "鷗",
+    "老",
+    "妻",
+    "畫",
+    "紙",
+    "為",
+    "棋",
+    "局",
+    "稚",
+    "子",
+    "敲",
+    "針",
+    "作",
+    "釣",
+    "鉤",
+    "多",
+    "病",
+    "所",
+    "須",
+    "唯",
+    "藥",
+    "物",
+    "微",
+    "軀",
+    "此",
+    "外",
+    "更",
+    "何",
+    "求"
+   ],
+   "assigned": [],
+   "overrides": {
+    "中": "in",
+    "為": "make into"
+   },
+   "translations": [
+    {
+     "translator": "Herbert Giles",
+     "title": "Home Joys",
+     "date": "",
+     "note": null,
+     "text": "My home is girdled by a limpid stream,\n   And there in summer days life’s movements pause,\nSave where some swallow flits from beam to beam,\n   And the wild sea-gull near and nearer draws.\n\nThe goodwife rules a paper board for chess;\n   The children beat a fish-hook out of wire;\nMy ailments call for physic more or less,\n   What else should this poor frame of mine require?"
+    },
+    {
+     "translator": "Amy Lowell & Florence Ayscough",
+     "title": "The River Village",
+     "date": "",
+     "note": null,
+     "text": "The river makes a bend and encircles the village with its current.\nAll the long Summer, the affairs and occupations of the river village are quiet and simple.\nThe swallows who nest in the beams go and come as they please.\nThe gulls in the middle of the river enjoy one another, they crowd together and touch one another.\nMy old wife paints a chess-board on paper.\nMy little sons hammer needles to make fish-hooks.\n\nI have many illnesses, therefore my only necessities are medicines;\nBesides these, what more can so humble a man as I ask?"
+    },
+    {
+     "translator": "Gertrude Joerissen (après Franz Toussaint)",
+     "title": "Spring Afternoon",
+     "date": "",
+     "note": null,
+     "text": "     The stream divides itself into two branches which form a silver ring around my village. My dwelling at the parting of the stream is the jewel of that ring. There happiness reigns. The swallows build their nests between the girders of my veranda. The dragon-flies settle on my iris.\n\n     I look at the orchard over which a blue haze is resting. My aged wife designs a square upon a bit of cloth. My son bends a needle to make a fish-hook.\n\n     My heart beats feebly, and I yearn for my strengthening draught."
+    }
+   ],
+   "notes": [
+    "Line 7: variant, for the whole line 但有故人供祿米 (if only old friends supply me with rice)",
+    "Line 6, compound 稚子 (little son)"
+   ]
   },
   {
    "id": "radicals",
@@ -1331,7 +2157,8 @@
    ],
    "assigned": [],
    "overrides": {},
-   "translations": []
+   "translations": [],
+   "notes": []
   },
   {
    "id": "youji",
@@ -1504,7 +2331,8 @@
    "overrides": {
     "頭": "top"
    },
-   "translations": []
+   "translations": [],
+   "notes": []
   }
  ],
  "top": [
@@ -3009,5 +3837,5 @@
    "count": 2263
   }
  ],
- "version": "0c46373f76"
+ "version": "9b255ab936"
 }

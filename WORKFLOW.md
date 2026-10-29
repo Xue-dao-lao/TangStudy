@@ -114,6 +114,17 @@ At most three characters to a page, and each page is filled: spare rows are shar
 blank rows. Settings at the top of the sheet code in app.js: SHEET_COLS, MIN_TRACE, PER_PAGE, and the
 page measurements in inches.
 
+## Notes
+
+A poem file may have a NOTES section, placed before TRANSLATIONS, one note per line, e.g.
+`Line 7: variant, for the whole line 但有故人供祿米 (if only old friends supply me with rice)`.
+Notes appear beneath the character grid and above the translations; Chinese in them is set in TW-Kai.
+Go light on [bracketed] compounds: the course is about single characters, and a compound worth pointing
+out can be mentioned in a note instead (`Line 6, compound 稚子 (little son)`).
+
+Translations keep their indentation, stanza breaks and paragraph indents as pasted; runs of spaces within a
+line are reduced to one. The date after the title is optional.
+
 ## Changing things later
 
 - **A gloss, everywhere**: edit the master line in `source/lexicon.txt`, and also every item file whose line

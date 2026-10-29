@@ -112,7 +112,7 @@ h2 { font-size: 26px; margin: 0 0 14px; }
 .tr-list .yr { font-size: 15px; }
 .tr-title { font-size: 21px; font-style: italic; margin: 0; }
 .tr-note { color: var(--ink-soft); margin: 2px 0 0; }
-.tr-text { white-space: pre-line; font-size: 19px; line-height: 1.65; max-width: 62ch; margin: 14px 0 0; }
+.tr-text { white-space: pre-wrap; font-size: 19px; line-height: 1.65; max-width: 62ch; margin: 14px 0 0; }
 
 /* Entry panel */
 .entry { background: var(--panel); padding: 20px 22px 22px; border-top: 3px solid var(--zhu); position: sticky; top: 16px; }
@@ -242,3 +242,8 @@ nav a { white-space: nowrap; }
 .about .epigraph figcaption::before { display: none; }
 .about .epi-src { display: block; }
 .about p { font-size: 18px; }
+.poem-notes { margin-top: 28px; max-width: 40em; }
+.poem-notes h3 { font-size: 20px; margin: 0 0 6px; }
+.poem-notes ul { margin: 0; padding-left: 1.1em; }
+.poem-notes li { margin: 4px 0; font-size: 17px; }
+.poem-notes .zh { font-size: 21px; }

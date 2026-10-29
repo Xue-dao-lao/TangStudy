@@ -81,14 +81,14 @@ def tokenize(text):
     return toks
 
 def parse_item(path):
-    item = {'translations': [], 'lines': [], 'entries': [], 'source': os.path.basename(path)}
+    item = {'translations': [], 'lines': [], 'entries': [], 'notes': [], 'source': os.path.basename(path)}
     section, tr = None, None
     for raw in open(path, encoding='utf-8'):
         line = raw.rstrip('\n')
         s = line.strip()
         if s in ('POEM', 'LESSON', 'RADICALS'):
             item['type'] = s.lower(); section = 'head'; continue
-        if s in ('LEXICON', 'COMPOUNDS', 'TRANSLATIONS', 'CHARACTERS'):
+        if s in ('LEXICON', 'COMPOUNDS', 'TRANSLATIONS', 'CHARACTERS', 'NOTES'):
             section = s.lower(); continue
         if section == 'translations':
             if s.startswith('=='):
@@ -110,14 +110,28 @@ def parse_item(path):
                 item[m.group(1).lower()] = m.group(2).strip()
             elif CJK.search(s):
                 item['lines'].append(tokenize(s))
+        elif section == 'notes':
+            item['notes'].append(s)
         elif section in ('lexicon', 'compounds', 'characters'):
             e = parse_entry(s)
             if e:
                 item['entries'].append(e)
     for tr in item['translations']:
-        while tr['lines'] and not tr['lines'][-1].strip():
-            tr['lines'].pop()
-        tr['text'] = '\n'.join(tr.pop('lines'))
+        lines = tr.pop('lines')
+        while lines and not lines[-1].strip():
+            lines.pop()
+        while lines and not lines[0].strip():
+            lines.pop(0)
+        out, blank = [], False                 # keep indentation and stanza breaks; collapse runs of blank lines
+        for l in lines:
+            if not l.strip():
+                if not blank: out.append('')
+                blank = True
+            else:
+                lead = len(l) - len(l.lstrip(' '))
+                out.append(' ' * lead + re.sub(r'(?<=\S) {2,}', ' ', l.strip()))
+                blank = False
+        tr['text'] = '\n'.join(out)
     return item
 
 def split_names(field):
@@ -282,6 +296,7 @@ def main():
             'assigned': assigned,
             'overrides': overrides,
             'translations': it['translations'],
+            'notes': it['notes'],
         })
     items.sort(key=lambda x: (x['week'] is None, x['week'] or 0, x['type'] != 'lesson', x['id']))
 
@@ -320,6 +335,8 @@ def main():
         for line in it['lines']:
             for t in line:
                 font_chars.update(t.get('chars', [])); font_chars.update(t.get('p', ''))
+        for n in it['notes']:
+            font_chars.update(ch for ch in n if CJK.match(ch))
     font_chars.update('，。、；：？！「」『』（）')
     font_chars.update('唐詩識字常用字部首')  # the app's own headings
     top = load_top(os.path.join(ROOT, 'source', 'tang_char_freq.txt'), TOP_N)

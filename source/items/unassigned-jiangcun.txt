@@ -1,0 +1,96 @@
+POEM
+Id: jiangcun
+Poet: 杜甫 Du Fu
+Title: 江村 / River Village
+
+清江一曲抱村流，長夏江村事事幽。
+自去自來堂上燕，相親相近水中鷗。
+老妻畫紙為棋局，稚子敲針作釣鉤。
+多病所須唯藥物，微軀此外更何求。
+
+LEXICON
+江 jiāng, river; *esp.* the Yangzi
+村 cūn, village; rustic
+清 qīng, clear; pure, limpid
+一 yī, one; a, single; whole, all; once
+曲 qū, bend; crooked, winding; *read qǔ*, tune, song
+抱 bào, embrace; hold in the arms, enfold
+流 liú, flow; current, drift
+長 (长) cháng, long; always; *read zhǎng*, grow, elder
+夏 xià, summer
+事 shì, matter; affair, thing, task
+幽 yōu, secluded; quiet, dim, hidden
+自 zì, self; of itself; from
+去 qù, go; depart, leave
+來 (来) lái, come; since; *after a verb*, toward the speaker
+堂 táng, hall; main room
+上 shàng, on; above, up; ascend
+燕 yàn, swallow; *read yān*, the state of Yan
+相 xiāng, each other; mutually; *read xiàng*, appearance, minister
+親 (亲) qīn, close; intimate, kin; *as a verb* draw near
+近 jìn, near; approach, recent
+水/氵 shuǐ, water; river
+中 zhōng, in; middle, inside, among; *read zhòng*, hit the mark
+鷗 (鸥) ōu, gull
+老 lǎo, old; aged, venerable
+妻 qī, wife
+畫 (画) huà, draw; paint, picture
+紙 (纸) zhǐ, paper
+為 (为) wéi, make into; be, become, do, make, act as; *read wèi*, for, because of
+棋 qí, chess; go, board game
+局 jú, board; game, situation
+稚 zhì, young; tender, childish
+子 zǐ, child; son, boy; master; *nominalizer*
+敲 qiāo, knock; tap, beat
+針 (针) zhēn, needle; pin
+作 zuò, make; do, write, become
+釣 (钓) diào, fish with a line; angle
+鉤 (钩) gōu, hook
+多 duō, many; much, often
+病 bìng, illness; sick, ailing
+所 suǒ, place; *before a verb*, what, that which
+須 (须) xū, need; must; beard
+唯 wéi, only; alone
+藥 (药) yào, medicine; herb, drug
+物 wù, thing; creature, matter
+微 wēi, slight; humble, faint, tiny
+軀 (躯) qū, body; person
+此 cǐ, this; here
+外 wài, outside; beyond, besides
+更 gèng, further; more, again; *read gēng*, change, night watch
+何 hé, what; why, how, where
+求 qiú, seek; ask for, want
+
+NOTES
+Line 7: variant, for the whole line 但有故人供祿米 (if only old friends supply me with rice)
+Line 6, compound 稚子 (little son)
+
+TRANSLATIONS
+== Herbert Giles | Home Joys |
+My home is girdled by a limpid stream,
+   And there in summer days life’s movements pause,
+Save where some swallow flits from beam to beam,
+   And the wild sea-gull near and nearer draws.
+
+The goodwife rules a paper board for chess;
+   The children beat a fish-hook out of wire;
+My ailments call for physic more or less,
+   What else should this poor frame of mine require?
+
+== Amy Lowell & Florence Ayscough | The River Village |
+The river makes a bend and encircles the village with its current.
+All the long Summer, the affairs and occupations of the river village are quiet and simple.
+The swallows who nest in the beams go and come as they please.
+The gulls in the middle of the river enjoy one another, they crowd together and touch one another.
+My old wife paints a chess-board on paper.
+My little sons hammer needles to make fish-hooks.
+
+I have many illnesses, therefore my only necessities are medicines;
+Besides these, what more can so humble a man as I ask?
+
+== Gertrude Joerissen (après Franz Toussaint) | Spring Afternoon |
+     The stream divides itself into two branches which form a silver ring around my village.  My dwelling at the parting of the stream is the jewel of that ring.  There happiness reigns.  The swallows build their nests between the girders of my veranda.  The dragon-flies settle on my iris.
+
+     I look at the orchard over which a blue haze is resting.  My aged wife designs a square upon a bit of cloth.  My son bends a needle to make a fish-hook.
+
+     My heart beats feebly, and I yearn for my strengthening draught.

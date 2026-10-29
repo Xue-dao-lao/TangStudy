@@ -180,15 +180,17 @@
     var legend = '<div class="legend">' + (Object.keys(now).length ? '<span class="l-now">characters to learn this week</span>' : '') +
       (Object.keys(past).length ? '<span class="l-past">' + (it.week == null ? 'learned so far' : 'learned in earlier weeks') + '</span>' : '') + '</div>';
 
+    var notes = (it.notes || []).length ? '<section class="poem-notes"><h3>Notes</h3><ul>' + it.notes.map(function (n) {
+      return '<li>' + rich(n).replace(/([\u2e80-\u2fdf\u3400-\u9fff\uf900-\ufaff]+)/g, '<span class="zh" lang="zh-Hant">$1</span>') + '</li>'; }).join('') + '</ul></section>' : '';
     var tr = it.translations.length ? '<section class="translations"><h3>Translations</h3><div class="tr-list">' +
       it.translations.map(function (t, i) {
-        return '<button data-tr="' + i + '" aria-pressed="false">' + esc(t.translator) + ' <span class="yr">(' + esc(t.date) + ')</span></button>';
+        return '<button data-tr="' + i + '" aria-pressed="false">' + esc(t.translator) + (t.date ? ' <span class="yr">(' + esc(t.date) + ')</span>' : '') + '</button>';
       }).join('') + '</div><div class="tr-body"><p class="muted">Choose a translator to read their version.</p></div></section>' : '';
 
     view.innerHTML = '<div class="poem-layout"><div class="poem-main">' + heading +
       '<div class="toolbar btn-row"><button class="btn" id="crib-toggle" aria-pressed="' + (it.type === 'lesson') + '">Show cribs</button>' +
       (it.week != null ? '<a class="btn" href="#/cards?w=' + it.week + '">Practice week ' + it.week + '</a>' : '') + '</div>' +
-      '<div class="grid' + (it.type === 'lesson' ? ' show-cribs' : '') + '" id="grid">' + grid + '</div>' + legend + '</div>' +
+      '<div class="grid' + (it.type === 'lesson' ? ' show-cribs' : '') + '" id="grid">' + grid + '</div>' + legend + notes + '</div>' +
       '<aside class="entry" id="entry" aria-live="polite"><p class="entry-placeholder">Select a character to see its meaning and stroke order.</p></aside>' + tr + '</div>';
 
     var gridEl = document.getElementById('grid');
