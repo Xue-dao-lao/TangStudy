@@ -18,7 +18,7 @@ def is_heading(line):
     s = line.strip()
     return s == s.upper() and not CJK.search(s) and not s.startswith('+')
 
-ENTRY = re.compile(r'^(\+?)\s*([^\s,(（]+)\s*(?:[(（]([^)）]+)[)）])?\s*,\s*(.+?)\s*$')
+ENTRY = re.compile(r'^(\+?)\s*([^\s,(（]+)\s*(?:[(（]([^)）]+)[)）])?\s*([^,(（]*?)\s*,\s*(.+?)\s*$')
 TRAIL = re.compile(r'\s+(#\d+|—|-)\s*$')
 
 def parse_entry(line):
@@ -26,10 +26,10 @@ def parse_entry(line):
     m = ENTRY.match(line)
     if not m:
         return None
-    plus, key, simp, gloss = m.groups()
+    plus, key, simp, py, gloss = m.groups()
     key, *forms = [k for k in key.split('/') if k]   # 手/扌: 扌 is the form used as a component
     crib, _, more = gloss.partition(';')
-    return {'key': key, 'forms': forms or None, 'simp': (simp or '').strip() or None,
+    return {'key': key, 'forms': forms or None, 'simp': (simp or '').strip() or None, 'py': (py or '').strip() or None,
             'crib': crib.strip(), 'more': more.strip() or None,
             'assigned': plus == '+'}
 
@@ -40,7 +40,7 @@ def load_lexicon(path):
             continue
         e = parse_entry(line)
         if e:
-            lex[e['key']] = {k: e[k] for k in ('simp', 'crib', 'more', 'forms')}
+            lex[e['key']] = {k: e[k] for k in ('simp', 'py', 'crib', 'more', 'forms')}
     return lex
 
 def load_ranks(path):
@@ -240,6 +240,16 @@ def main():
             'translations': it['translations'],
         })
     items.sort(key=lambda x: (x['week'] is None, x['week'] or 0, x['type'] != 'lesson', x['id']))
+
+    # Pinyin: from the lexicon line; a missing reading is filled in (most common reading) and reported
+    try:
+        from pypinyin import pinyin as _py, Style as _St
+    except ImportError:
+        _py = None
+    for k, v in lex.items():
+        if not v.get('py') and _py:
+            v['py'] = ''.join(p[0] for p in _py(k, style=_St.TONE))
+            problems.append(f'no pinyin given for {k}; using {v["py"]}')
 
     # Lexicon with ranks and computed "see also" links
     out_lex = {}

@@ -8,28 +8,28 @@ Week: 1
 舉頭望明月，低頭思[故鄉]。
 
 LEXICON
-靜 (静), quiet; still, calm
-夜, night
-床, bed; couch; well-railing
-前, before; in front of; former
-+明, bright; clear, illuminate
-+月, moon; month
-光, light; radiance, glory
-疑, suspect; doubt, wonder whether
-是, be; this; right, correct
-地, ground; earth, land
-+上, on; above, up; ascend
-霜, frost
-舉 (举), raise; lift; all, whole
-頭 (头), head; top, end
-望, gaze toward; look into the distance; hope; full moon
-低, lower; low
-思, think of; long for; thought
-故, old; former; reason, therefore
-鄉 (乡), village; home region, countryside
+靜 (静) jìng, quiet; still, calm
+夜 yè, night
+床 chuáng, bed; couch; well-railing
+前 qián, before; in front of; former
++明 míng, bright; clear, illuminate
++月 yuè, moon; month
+光 guāng, light; radiance, glory
+疑 yí, suspect; doubt, wonder whether
+是 shì, be; this; right, correct
+地 dì, ground; earth, land
++上 shàng, on; above, up; ascend
+霜 shuāng, frost
+舉 (举) jǔ, raise; lift; all, whole
+頭 (头) tóu, head; top, end
+望 wàng, gaze toward; look into the distance; hope; full moon
+低 dī, lower; low
+思 sī, think of; long for; thought
+故 gù, old; former; reason, therefore
+鄉 (乡) xiāng, village; home region, countryside
 
 COMPOUNDS
-故鄉 (故乡), home; native place (*lit.* old village)
+故鄉 (故乡) gùxiāng, home; native place (*lit.* old village)
 
 TRANSLATIONS
 == Judith Gautier | L’auberge | 1867

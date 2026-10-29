@@ -1,66 +1,66 @@
 MASTER LEXICON
-Format: char (simp.), crib gloss; additional glosses
+Format: char (simp.) pinyin, crib gloss; additional glosses
 The simplified form appears only when it differs. Everything before the first semicolon is the crib gloss.
 Compounds are entries of their own. Lines in capitals are headings and are ignored.
 
 CHARACTERS
-床, bed; couch; well-railing
-前, before; in front of; former
-明, bright; clear, illuminate
-月, moon; month
-光, light; radiance, glory
-疑, suspect; doubt, wonder whether
-是, be; this; right, correct
-地, ground; earth, land
-上, on; above, up; ascend
-霜, frost
-舉 (举), raise; lift; all, whole
-頭 (头), head; top, end
-望, gaze toward; look into the distance; hope; full moon
-低, lower; low
-思, think of; long for; thought
-故, old; former; reason, therefore
-鄉 (乡), village; home region, countryside
-靜 (静), quiet; still, calm
-夜, night
+床 chuáng, bed; couch; well-railing
+前 qián, before; in front of; former
+明 míng, bright; clear, illuminate
+月 yuè, moon; month
+光 guāng, light; radiance, glory
+疑 yí, suspect; doubt, wonder whether
+是 shì, be; this; right, correct
+地 dì, ground; earth, land
+上 shàng, on; above, up; ascend
+霜 shuāng, frost
+舉 (举) jǔ, raise; lift; all, whole
+頭 (头) tóu, head; top, end
+望 wàng, gaze toward; look into the distance; hope; full moon
+低 dī, lower; low
+思 sī, think of; long for; thought
+故 gù, old; former; reason, therefore
+鄉 (乡) xiāng, village; home region, countryside
+靜 (静) jìng, quiet; still, calm
+夜 yè, night
 
-人/亻, person; people, others
-刀/刂, knife; blade
-力, strength; force, effort
-又, again; also, moreover; *originally* a right hand
-口, mouth; opening, entrance
-囗, enclosure; *radical only*, not the same as 口
-土, earth; soil, land
-夕, evening; dusk
-大, great; big
-女, woman; girl, daughter
-子, child; son, boy; master; *nominalizer*
-寸, inch; a little
-小, small; little, young
-工, work; skill, artisan
-幺, tiny; slight
-弓, bow
-心/忄, heart; mind, feelings
-戈, dagger-axe; weapon, war
-手/扌, hand
-日, sun; day
-木, tree; wood
-水/氵, water; river
-田, field; farmland
-目, eye; look
-示/礻, show; *as a component*, spirits and rites
-絲/糸 (丝), silk; thread
-耳, ear; *final particle*, only
-衣/衤, clothing; robe
-言, speech; words, say
-貝 (贝), cowrie shell; treasure, money
-走, run; walk, go
-足/⻊, foot; enough
-金/釒, metal; gold
-門 (门), gate; door
-隹, bird; *radical only*, short-tailed bird
-雨, rain
-馬 (马), horse
+人/亻 rén, person; people, others
+刀/刂 dāo, knife; blade
+力 lì, strength; force, effort
+又 yòu, again; also, moreover; *originally* a right hand
+口 kǒu, mouth; opening, entrance
+囗 wéi, enclosure; *radical only*, not the same as 口
+土 tǔ, earth; soil, land
+夕 xī, evening; dusk
+大 dà, great; big
+女 nǚ, woman; girl, daughter
+子 zǐ, child; son, boy; master; *nominalizer*
+寸 cùn, inch; a little
+小 xiǎo, small; little, young
+工 gōng, work; skill, artisan
+幺 yāo, tiny; slight
+弓 gōng, bow
+心/忄 xīn, heart; mind, feelings
+戈 gē, dagger-axe; weapon, war
+手/扌 shǒu, hand
+日 rì, sun; day
+木 mù, tree; wood
+水/氵 shuǐ, water; river
+田 tián, field; farmland
+目 mù, eye; look
+示/礻 shì, show; *as a component*, spirits and rites
+絲/糸 (丝) sī, silk; thread
+耳 ěr, ear; *final particle*, only
+衣/衤 yī, clothing; robe
+言 yán, speech; words, say
+貝 (贝) bèi, cowrie shell; treasure, money
+走 zǒu, run; walk, go
+足/⻊ zú, foot; enough
+金/釒 jīn, metal; gold
+門 (门) mén, gate; door
+隹 zhuī, bird; *radical only*, short-tailed bird
+雨 yǔ, rain
+馬 (马) mǎ, horse
 
 COMPOUNDS
-故鄉 (故乡), home; native place (*lit.* old village)
+故鄉 (故乡) gùxiāng, home; native place (*lit.* old village)

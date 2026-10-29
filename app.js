@@ -69,12 +69,14 @@
     });
   }
   function route() {
+    document.body.classList.remove('sheet-mode');
     var h = location.hash.replace(/^#\/?/, '');
     var parts = h.split('/');
     window.scrollTo(0, 0);
     if (parts[0] === 'poem' || parts[0] === 'lesson') return renderItem(decodeURIComponent(parts[1] || ''));
     if (parts[0] === 'index') return renderIndex();
     if (parts[0] === 'radicals') return renderRadicals();
+    if (parts[0] === 'sheet') return renderSheet(parts.slice(1).map(decodeURIComponent));
     if (parts[0].indexOf('cards') === 0) return renderCards();
     renderHome();
   }
@@ -98,7 +100,8 @@
     if (!keys.length) { view.innerHTML = '<p class="empty">Nothing has been assigned yet.</p>'; return; }
     view.innerHTML = keys.map(function (w) {
       return '<section class="week"><div class="week-head"><h2>Week ' + w + '</h2>' +
-        '<a class="sans muted" href="#/cards?w=' + w + '">Practice this week’s characters</a></div>' +
+        '<a class="sans muted" href="#/cards?w=' + w + '">Practice this week’s characters</a>' +
+        '<a class="sans muted" href="#/sheet/week/' + w + '" target="_blank">Print a writing sheet</a></div>' +
         weeks[w].map(function (it) { return itemRow(it, true); }).join('') + '</section>';
     }).join('');
   }
@@ -219,7 +222,7 @@
     }).join('');
     view.innerHTML = '<div class="poem-layout"><div class="poem-main"><div class="poem-title"><span class="zh" lang="zh-Hant">部首</span><span class="en">Common Radicals</span></div>' +
       '<p class="radicals-note">Radicals are the recurring parts from which characters are built, and a clue to their meaning. Several take a different shape when they stand at the side of a character; that form is shown beside the full one.</p>' +
-      '<div class="toolbar btn-row"><a class="btn" href="#/cards?set=radicals">Practice the radicals</a></div>' +
+      '<div class="toolbar btn-row"><a class="btn" href="#/cards?set=radicals">Practice the radicals</a><a class="btn" href="#/sheet/radicals" target="_blank">Print a writing sheet</a></div>' +
       '<div class="grid show-cribs radical-grid" id="grid">' + cells + '</div></div>' +
       '<aside class="entry" id="entry" aria-live="polite"><p class="entry-placeholder">Select a radical to see its meaning and stroke order.</p></aside></div>';
     var gridEl = document.getElementById('grid');
@@ -230,6 +233,69 @@
       showEntry(b.getAttribute('data-k'), null);
       if (b.classList.contains('form')) { var fb = document.querySelector('[data-form="' + b.textContent + '"]'); if (fb) fb.click(); }
       if (window.innerWidth <= 860) document.getElementById('entry').scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+  }
+
+  // ---------- printable writing sheets ----------
+  var SHEET_COLS = 10, MIN_TRACE = 3;
+  function sheetBox(paths, colors) {          // one 米字格 box, optionally holding strokes
+    var g = '<svg viewBox="0 0 100 100" class="sbox" aria-hidden="true"><path d="M0 0.5H100M0.5 0V100" stroke="#B8321F" stroke-width="1" fill="none"/>' +
+      '<g stroke="#E3B9AE" stroke-width="0.7" stroke-dasharray="4 4"><line x1="0" y1="50" x2="100" y2="50"/><line x1="50" y1="0" x2="50" y2="100"/>' +
+      '<line x1="0" y1="0" x2="100" y2="100"/><line x1="100" y1="0" x2="0" y2="100"/></g>';
+    if (paths && paths.length) {
+      var k = 0.86 * 100 / 1024, off = 7;
+      g += '<g transform="translate(' + off + ',' + (off + 900 * k).toFixed(2) + ') scale(' + k.toFixed(5) + ',' + (-k).toFixed(5) + ')">' +
+        paths.map(function (d, i) { return '<path d="' + d + '" fill="' + colors[i] + '"/>'; }).join('') + '</g>';
+    }
+    return g + '</svg>';
+  }
+  function sheetBoxes(strokes) {              // stroke sequence, then tracing copies, then a full row to write freely
+    var n = strokes.length, boxes = [], i;
+    for (i = 0; i < n; i++) boxes.push(sheetBox(strokes.slice(0, i + 1), strokes.slice(0, i + 1).map(function (_, j) { return j === i ? '#B8321F' : '#2C2C2A'; })));
+    var grey = strokes.map(function () { return '#CFCBC1'; });
+    var left = (SHEET_COLS - boxes.length % SHEET_COLS) % SHEET_COLS;
+    for (i = 0; i < left; i++) boxes.push(sheetBox(strokes, grey));         // trace to the end of the row
+    if (left < MIN_TRACE) {                                                 // too few? start a row with more
+      for (i = 0; i < SHEET_COLS; i++) boxes.push(i < MIN_TRACE ? sheetBox(strokes, grey) : sheetBox());
+    }
+    for (i = 0; i < SHEET_COLS; i++) boxes.push(sheetBox());
+    return boxes.join('');
+  }
+  function renderSheet(args) {
+    setNav('');
+    var list = [], heading = 'Writing practice';
+    if (args[0] === 'week') {
+      var w = +args[1]; heading = 'Week ' + w + ': characters to learn';
+      scheduled().forEach(function (i) { if (i.week === w) i.assigned.forEach(function (k) { if (k.length === 1 && list.indexOf(k) < 0) list.push(k); }); });
+    } else if (args[0] === 'radicals' && radicals()) {
+      heading = 'Common Radicals'; list = radicals().keys.slice();
+    } else if (args[0] === 'char' && args[1]) {
+      list = [args[1]]; heading = 'Writing practice: ' + args[1];
+    }
+    var blocks = [];
+    list.forEach(function (k) {
+      var e = C.lexicon[k] || {};
+      blocks.push({ ch: k, e: e, label: '' });
+      (e.forms || []).forEach(function (f) { blocks.push({ ch: f, e: e, label: 'as a component of ' + k }); });
+    });
+    document.body.classList.add('sheet-mode');
+    view.innerHTML = '<div class="sheet"><div class="sheet-tools"><button class="btn primary" id="print">Print or save as PDF</button>' +
+      '<span class="sans muted">Letter paper, portrait. Each character: its strokes in order, grey copies to trace, then a row to write on your own.</span></div>' +
+      '<header class="sheet-head"><div><span class="zh" lang="zh-Hant">唐詩入門</span> ' + esc(heading) + '</div><div class="sheet-name">Name ______________________</div></header>' +
+      (blocks.length ? blocks.map(function (b, i) {
+        return '<section class="sblock"><div class="scap"><span class="scap-ch" lang="zh-Hant">' + esc(b.ch) + '</span>' +
+          (b.label ? '<span class="scap-label">' + esc(b.label) + '</span>' :
+            (b.e.simp ? '<span class="scap-simp" lang="zh-Hans">(' + esc(b.e.simp) + ')</span>' : '') +
+            (b.e.py ? '<span class="scap-py">' + esc(b.e.py) + '</span>' : '') +
+            '<span class="scap-gloss"><b>' + rich(b.e.crib || '') + '</b>' + (b.e.more ? '; ' + rich(b.e.more) : '') + '</span>') +
+          '<span class="scap-n" id="sn' + i + '"></span></div><div class="sgrid" id="sg' + i + '"></div></section>';
+      }).join('') : '<p class="empty">No characters to practice here yet.</p>') + '</div>';
+    document.getElementById('print').addEventListener('click', function () { window.print(); });
+    blocks.forEach(function (b, i) {
+      loader(b.ch, function (d) {
+        document.getElementById('sg' + i).innerHTML = sheetBoxes(d.strokes);
+        document.getElementById('sn' + i).textContent = d.strokes.length + (d.strokes.length === 1 ? ' stroke' : ' strokes');
+      }, function () { document.getElementById('sg' + i).innerHTML = '<p class="muted">No stroke data for this character.</p>'; });
     });
   }
 
@@ -253,10 +319,12 @@
         (e.forms || []).map(function (f) { return '<button class="btn" data-form="' + esc(f) + '" aria-pressed="false">Component <span lang="zh-Hant">' + esc(f) + '</span></button>'; }).join('') +
         (e.simp ? '<button class="btn" data-form="' + esc(e.simp) + '" aria-pressed="false">Simplified <span lang="zh-Hans">' + esc(e.simp) + '</span></button>' : '') + '</div>' : '') +
       '<div class="writer"></div><div class="writer-status"></div>' +
-      '<div class="btn-row"><button class="btn primary" data-act="animate">Animate strokes</button><button class="btn" data-act="quiz">Practice writing</button></div></div>' : '';
+      '<div class="btn-row"><button class="btn primary" data-act="animate">Animate strokes</button><button class="btn" data-act="quiz">Practice writing</button></div>' +
+      '<p class="entry-sheet"><a href="#/sheet/char/' + encodeURIComponent(key) + '" target="_blank">Print a writing sheet for <span lang="zh-Hant">' + esc(key) + '</span></a></p></div>' : '';
 
     box.innerHTML = '<div class="entry-head"><span class="entry-char" lang="zh-Hant">' + esc(key) + '</span>' +
       (e.simp ? '<span class="entry-simp" lang="zh-Hans">(' + esc(e.simp) + ')</span>' : '') +
+      (e.py ? '<span class="entry-py">' + esc(e.py) + '</span>' : '') +
       (e.forms ? '<span class="entry-form">as a component <span lang="zh-Hant">' + e.forms.map(esc).join(' ') + '</span></span>' : '') + '</div>' + here +
       '<p class="entry-crib">' + rich(e.crib) + '</p>' + (e.more ? '<p class="entry-more">' + rich(e.more) + '</p>' : '') +
       meta + links + writer;
@@ -365,7 +433,7 @@
           '<div class="card-answer" id="ans"></div><div class="btn-row" id="acts"><button class="btn primary" id="reveal">Show meaning</button></div></div>';
         document.getElementById('reveal').addEventListener('click', function () {
           document.getElementById('ans').innerHTML = (e.simp ? '<p class="muted">simplified <span lang="zh-Hans" class="zh">' + esc(e.simp) + '</span></p>' : '') +
-            '<p class="card-prompt">' + rich(e.crib) + '</p>' + (e.more ? '<p class="muted">' + rich(e.more) + '</p>' : '');
+            (e.py ? '<p class="card-py">' + esc(e.py) + '</p>' : '') + '<p class="card-prompt">' + rich(e.crib) + '</p>' + (e.more ? '<p class="muted">' + rich(e.more) + '</p>' : '');
           var acts = document.getElementById('acts');
           acts.innerHTML = '<button class="btn" id="miss">I didn’t know it</button><button class="btn primary" id="hit">I knew it</button>';
           document.getElementById('miss').addEventListener('click', function () { grade(false); });

@@ -2,6 +2,7 @@
  "lexicon": {
   "床": {
    "simp": null,
+   "py": "chuáng",
    "crib": "bed",
    "more": "couch; well-railing",
    "forms": null,
@@ -9,6 +10,7 @@
   },
   "前": {
    "simp": null,
+   "py": "qián",
    "crib": "before",
    "more": "in front of; former",
    "forms": null,
@@ -17,6 +19,7 @@
   },
   "明": {
    "simp": null,
+   "py": "míng",
    "crib": "bright",
    "more": "clear, illuminate",
    "forms": null,
@@ -25,6 +28,7 @@
   },
   "月": {
    "simp": null,
+   "py": "yuè",
    "crib": "moon",
    "more": "month",
    "forms": null,
@@ -33,6 +37,7 @@
   },
   "光": {
    "simp": null,
+   "py": "guāng",
    "crib": "light",
    "more": "radiance, glory",
    "forms": null,
@@ -41,6 +46,7 @@
   },
   "疑": {
    "simp": null,
+   "py": "yí",
    "crib": "suspect",
    "more": "doubt, wonder whether",
    "forms": null,
@@ -49,6 +55,7 @@
   },
   "是": {
    "simp": null,
+   "py": "shì",
    "crib": "be",
    "more": "this; right, correct",
    "forms": null,
@@ -57,6 +64,7 @@
   },
   "地": {
    "simp": null,
+   "py": "dì",
    "crib": "ground",
    "more": "earth, land",
    "forms": null,
@@ -65,6 +73,7 @@
   },
   "上": {
    "simp": null,
+   "py": "shàng",
    "crib": "on",
    "more": "above, up; ascend",
    "forms": null,
@@ -73,6 +82,7 @@
   },
   "霜": {
    "simp": null,
+   "py": "shuāng",
    "crib": "frost",
    "more": null,
    "forms": null,
@@ -81,6 +91,7 @@
   },
   "舉": {
    "simp": "举",
+   "py": "jǔ",
    "crib": "raise",
    "more": "lift; all, whole",
    "forms": null,
@@ -88,6 +99,7 @@
   },
   "頭": {
    "simp": "头",
+   "py": "tóu",
    "crib": "head",
    "more": "top, end",
    "forms": null,
@@ -96,6 +108,7 @@
   },
   "望": {
    "simp": null,
+   "py": "wàng",
    "crib": "gaze toward",
    "more": "look into the distance; hope; full moon",
    "forms": null,
@@ -104,6 +117,7 @@
   },
   "低": {
    "simp": null,
+   "py": "dī",
    "crib": "lower",
    "more": "low",
    "forms": null,
@@ -111,6 +125,7 @@
   },
   "思": {
    "simp": null,
+   "py": "sī",
    "crib": "think of",
    "more": "long for; thought",
    "forms": null,
@@ -119,6 +134,7 @@
   },
   "故": {
    "simp": null,
+   "py": "gù",
    "crib": "old",
    "more": "former; reason, therefore",
    "forms": null,
@@ -129,6 +145,7 @@
   },
   "鄉": {
    "simp": "乡",
+   "py": "xiāng",
    "crib": "village",
    "more": "home region, countryside",
    "forms": null,
@@ -139,6 +156,7 @@
   },
   "靜": {
    "simp": "静",
+   "py": "jìng",
    "crib": "quiet",
    "more": "still, calm",
    "forms": null,
@@ -147,6 +165,7 @@
   },
   "夜": {
    "simp": null,
+   "py": "yè",
    "crib": "night",
    "more": null,
    "forms": null,
@@ -155,6 +174,7 @@
   },
   "人": {
    "simp": null,
+   "py": "rén",
    "crib": "person",
    "more": "people, others",
    "forms": [
@@ -165,6 +185,7 @@
   },
   "刀": {
    "simp": null,
+   "py": "dāo",
    "crib": "knife",
    "more": "blade",
    "forms": [
@@ -174,6 +195,7 @@
   },
   "力": {
    "simp": null,
+   "py": "lì",
    "crib": "strength",
    "more": "force, effort",
    "forms": null,
@@ -182,6 +204,7 @@
   },
   "又": {
    "simp": null,
+   "py": "yòu",
    "crib": "again",
    "more": "also, moreover; *originally* a right hand",
    "forms": null,
@@ -190,6 +213,7 @@
   },
   "口": {
    "simp": null,
+   "py": "kǒu",
    "crib": "mouth",
    "more": "opening, entrance",
    "forms": null,
@@ -198,6 +222,7 @@
   },
   "囗": {
    "simp": null,
+   "py": "wéi",
    "crib": "enclosure",
    "more": "*radical only*, not the same as 口",
    "forms": null,
@@ -205,6 +230,7 @@
   },
   "土": {
    "simp": null,
+   "py": "tǔ",
    "crib": "earth",
    "more": "soil, land",
    "forms": null,
@@ -212,6 +238,7 @@
   },
   "夕": {
    "simp": null,
+   "py": "xī",
    "crib": "evening",
    "more": "dusk",
    "forms": null,
@@ -220,6 +247,7 @@
   },
   "大": {
    "simp": null,
+   "py": "dà",
    "crib": "great",
    "more": "big",
    "forms": null,
@@ -228,6 +256,7 @@
   },
   "女": {
    "simp": null,
+   "py": "nǚ",
    "crib": "woman",
    "more": "girl, daughter",
    "forms": null,
@@ -236,6 +265,7 @@
   },
   "子": {
    "simp": null,
+   "py": "zǐ",
    "crib": "child",
    "more": "son, boy; master; *nominalizer*",
    "forms": null,
@@ -244,6 +274,7 @@
   },
   "寸": {
    "simp": null,
+   "py": "cùn",
    "crib": "inch",
    "more": "a little",
    "forms": null,
@@ -251,6 +282,7 @@
   },
   "小": {
    "simp": null,
+   "py": "xiǎo",
    "crib": "small",
    "more": "little, young",
    "forms": null,
@@ -259,6 +291,7 @@
   },
   "工": {
    "simp": null,
+   "py": "gōng",
    "crib": "work",
    "more": "skill, artisan",
    "forms": null,
@@ -266,6 +299,7 @@
   },
   "幺": {
    "simp": null,
+   "py": "yāo",
    "crib": "tiny",
    "more": "slight",
    "forms": null,
@@ -273,6 +307,7 @@
   },
   "弓": {
    "simp": null,
+   "py": "gōng",
    "crib": "bow",
    "more": null,
    "forms": null,
@@ -280,6 +315,7 @@
   },
   "心": {
    "simp": null,
+   "py": "xīn",
    "crib": "heart",
    "more": "mind, feelings",
    "forms": [
@@ -290,6 +326,7 @@
   },
   "戈": {
    "simp": null,
+   "py": "gē",
    "crib": "dagger-axe",
    "more": "weapon, war",
    "forms": null,
@@ -297,6 +334,7 @@
   },
   "手": {
    "simp": null,
+   "py": "shǒu",
    "crib": "hand",
    "more": null,
    "forms": [
@@ -307,6 +345,7 @@
   },
   "日": {
    "simp": null,
+   "py": "rì",
    "crib": "sun",
    "more": "day",
    "forms": null,
@@ -315,6 +354,7 @@
   },
   "木": {
    "simp": null,
+   "py": "mù",
    "crib": "tree",
    "more": "wood",
    "forms": null,
@@ -323,6 +363,7 @@
   },
   "水": {
    "simp": null,
+   "py": "shuǐ",
    "crib": "water",
    "more": "river",
    "forms": [
@@ -333,6 +374,7 @@
   },
   "田": {
    "simp": null,
+   "py": "tián",
    "crib": "field",
    "more": "farmland",
    "forms": null,
@@ -341,6 +383,7 @@
   },
   "目": {
    "simp": null,
+   "py": "mù",
    "crib": "eye",
    "more": "look",
    "forms": null,
@@ -348,6 +391,7 @@
   },
   "示": {
    "simp": null,
+   "py": "shì",
    "crib": "show",
    "more": "*as a component*, spirits and rites",
    "forms": [
@@ -357,6 +401,7 @@
   },
   "絲": {
    "simp": "丝",
+   "py": "sī",
    "crib": "silk",
    "more": "thread",
    "forms": [
@@ -367,6 +412,7 @@
   },
   "耳": {
    "simp": null,
+   "py": "ěr",
    "crib": "ear",
    "more": "*final particle*, only",
    "forms": null,
@@ -374,6 +420,7 @@
   },
   "衣": {
    "simp": null,
+   "py": "yī",
    "crib": "clothing",
    "more": "robe",
    "forms": [
@@ -384,6 +431,7 @@
   },
   "言": {
    "simp": null,
+   "py": "yán",
    "crib": "speech",
    "more": "words, say",
    "forms": null,
@@ -392,6 +440,7 @@
   },
   "貝": {
    "simp": "贝",
+   "py": "bèi",
    "crib": "cowrie shell",
    "more": "treasure, money",
    "forms": null,
@@ -399,6 +448,7 @@
   },
   "走": {
    "simp": null,
+   "py": "zǒu",
    "crib": "run",
    "more": "walk, go",
    "forms": null,
@@ -406,6 +456,7 @@
   },
   "足": {
    "simp": null,
+   "py": "zú",
    "crib": "foot",
    "more": "enough",
    "forms": [
@@ -416,6 +467,7 @@
   },
   "金": {
    "simp": null,
+   "py": "jīn",
    "crib": "metal",
    "more": "gold",
    "forms": [
@@ -426,6 +478,7 @@
   },
   "門": {
    "simp": "门",
+   "py": "mén",
    "crib": "gate",
    "more": "door",
    "forms": null,
@@ -434,6 +487,7 @@
   },
   "隹": {
    "simp": null,
+   "py": "zhuī",
    "crib": "bird",
    "more": "*radical only*, short-tailed bird",
    "forms": null,
@@ -441,6 +495,7 @@
   },
   "雨": {
    "simp": null,
+   "py": "yǔ",
    "crib": "rain",
    "more": null,
    "forms": null,
@@ -449,6 +504,7 @@
   },
   "馬": {
    "simp": "马",
+   "py": "mǎ",
    "crib": "horse",
    "more": null,
    "forms": null,
@@ -457,6 +513,7 @@
   },
   "故鄉": {
    "simp": "故乡",
+   "py": "gùxiāng",
    "crib": "home",
    "more": "native place (*lit.* old village)",
    "forms": null
@@ -719,5 +776,5 @@
    "translations": []
   }
  ],
- "version": "35f79e1e47"
+ "version": "ba479de386"
 }
