@@ -247,3 +247,4 @@ nav a { white-space: nowrap; }
 .poem-notes ul { margin: 0; padding-left: 1.1em; }
 .poem-notes li { margin: 4px 0; font-size: 17px; }
 .poem-notes .zh { font-size: 21px; }
+.about > p { margin-top: 3.2em; }
