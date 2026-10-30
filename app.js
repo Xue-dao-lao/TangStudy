@@ -107,7 +107,7 @@
   function renderAbout() {
     setNav('about');
     view.innerHTML = '<article class="about">' + epigraph() +
-      '<p>Designed by Timothy Billings for ENGL/CMLT 325 at Middlebury College, and built with the help of Claude.</p></article>';
+      '<p>Designed for ENGL/CMLT 325 “Tang Poetry / American Poetry” (Middlebury College).<br>Vibes by Timothy Billings, code by Claude.</p></article>';
   }
   function renderHome() {
     setNav('home');
