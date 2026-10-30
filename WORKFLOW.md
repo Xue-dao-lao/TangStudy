@@ -17,8 +17,8 @@ Read the specification (tang-study-app-spec.md in the Project) for the design de
   the semicolon, in asterisks (shown in italics).
 - Glosses are spare and suited to Tang poetry: the classical sense first. Flag, rather than bury, any Tang usage
   that diverges from the common sense.
-- Compounds and binomes are entries of their own (明月, 悠悠). In poem text they are marked with [brackets].
-  Propose only genuinely lexical units; leave arguable cases unbracketed and mention them.
+- Compounds and binomes are entries of their own (故鄉, 悠悠), pointed out in the poem's NOTES rather than
+  marked in the text. Propose only genuinely lexical units, and few of them.
 - Use Timothy's text exactly as given. Supply the poet if he omits it. Verify or find texts only when asked,
   as a separate task, and then say whether the text was checked against a named source or reconstructed (m).
 
@@ -35,7 +35,7 @@ Week: 1                               (optional; omit to hold the poem unassigne
 Release: 2027-02-15                   (optional; hides the item until that date)
 
 床前明月光，疑是地上霜。
-舉頭望明月，低頭思[故鄉]。
+舉頭望明月，低頭思故鄉。
 
 LEXICON
 床 chuáng, bed; couch; well-railing                                  —
@@ -43,6 +43,9 @@ LEXICON
 
 COMPOUNDS
 故鄉 (故乡) gùxiāng, home; native place
+
+NOTES
+Line 4: 故鄉, compound "home"
 
 TRANSLATIONS
 Judith Gautier, "L'auberge" (1867)
@@ -55,7 +58,8 @@ Judith Gautier, "L'auberge" (1867)
   against this poem's sense.
 - After each line, the character's rank in `source/tang_char_freq.txt` (`#55`), or `—` if outside the top 500.
 - List translations by translator, title, and date; their full texts are kept from Timothy's message.
-- Tell Timothy to mark characters to memorize with a leading `+`, edit glosses, and add or remove brackets.
+- Tell Timothy to mark characters to memorize with a leading `+` and edit glosses; propose any notes
+  (compounds, variants) in a NOTES section.
 
 ## Step 2: building the item
 
@@ -116,11 +120,16 @@ page measurements in inches.
 
 ## Notes
 
-A poem file may have a NOTES section, placed before TRANSLATIONS, one note per line, e.g.
-`Line 7: variant, for the whole line 但有故人供祿米 (if only old friends supply me with rice)`.
+A poem file may have a NOTES section, placed before TRANSLATIONS, one line per line of the poem, in line
+order. Form: line number and colon, then the Chinese that is the subject of the note, a comma, then the
+note; English renderings in double quotation marks; several notes on one line separated by semicolons:
+`Line 6: 稚子, compound "little son"`
+`Line 7: 多病所須唯藥物, variant 但有故人供祿米 "if only old friends supply me with rice"`
+`Line 3: 美人, compound "a beauty," often a friend or patron longed for; 何處, compound "where"`
 Notes appear beneath the character grid and above the translations; Chinese in them is set in TW-Kai.
-Go light on [bracketed] compounds: the course is about single characters, and a compound worth pointing
-out can be mentioned in a note instead (`Line 6, compound 稚子 (little son)`).
+Compounds are never [bracketed] in the poem text: the course is about single characters, so a compound
+worth pointing out goes in a note instead. Compound entries may still be added to the lexicon, where they
+appear as "see also" links from their characters.
 
 Translations keep their indentation, stanza breaks and paragraph indents as pasted; runs of spaces within a
 line are reduced to one. The date after the title is optional.

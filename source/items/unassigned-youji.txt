@@ -4,7 +4,7 @@ Poet: 杜牧 Du Mu
 Title: 有寄 / Sent to Someone
 
 雲闊煙深樹，江澄水浴秋。
-[美人][何處]在，明月萬山頭。
+美人何處在，明月萬山頭。
 
 LEXICON
 有 yǒu, have; there is, exist
@@ -33,5 +33,8 @@ LEXICON
 COMPOUNDS
 美人 měirén, a beauty; *lit.* fair person, *often* a friend or patron longed for
 何處 (何处) héchù, where; *lit.* what place
+
+NOTES
+Line 3: 美人, compound "a beauty," often a friend or patron longed for; 何處, compound "where"
 
 TRANSLATIONS

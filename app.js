@@ -181,7 +181,7 @@
       (Object.keys(past).length ? '<span class="l-past">' + (it.week == null ? 'learned so far' : 'learned in earlier weeks') + '</span>' : '') + '</div>';
 
     var notes = (it.notes || []).length ? '<section class="poem-notes"><h3>Notes</h3><ul>' + it.notes.map(function (n) {
-      return '<li>' + rich(n).replace(/([\u2e80-\u2fdf\u3400-\u9fff\uf900-\ufaff]+)/g, '<span class="zh" lang="zh-Hant">$1</span>') + '</li>'; }).join('') + '</ul></section>' : '';
+      return '<li>' + rich(n.replace(/"([^"]*)"/g, '\u201c$1\u201d')).replace(/([\u2e80-\u2fdf\u3400-\u9fff\uf900-\ufaff]+)/g, '<span class="zh" lang="zh-Hant">$1</span>') + '</li>'; }).join('') + '</ul></section>' : '';
     var tr = it.translations.length ? '<section class="translations"><h3>Translations</h3><div class="tr-list">' +
       it.translations.map(function (t, i) {
         return '<button data-tr="' + i + '" aria-pressed="false">' + esc(t.translator) + (t.date ? ' <span class="yr">(' + esc(t.date) + ')</span>' : '') + '</button>';

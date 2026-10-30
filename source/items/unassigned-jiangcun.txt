@@ -36,7 +36,7 @@ LEXICON
 妻 qī, wife
 畫 (画) huà, draw; paint, picture
 紙 (纸) zhǐ, paper
-為 (为) wéi, make into; be, become, do, make, act as; *read wèi*, for, because of
+為 (为) wéi, make into; be, become, do, make, make into, act as; *read wèi*, for, because of
 棋 qí, chess; go, board game
 局 jú, board; game, situation
 稚 zhì, young; tender, childish
@@ -62,11 +62,11 @@ LEXICON
 求 qiú, seek; ask for, want
 
 NOTES
-Line 7: variant, for the whole line 但有故人供祿米 (if only old friends supply me with rice)
-Line 6, compound 稚子 (little son)
+Line 6: 稚子, compound "little son"
+Line 7: 多病所須唯藥物, variant 但有故人供祿米 "if only old friends supply me with rice"
 
 TRANSLATIONS
-== Herbert Giles | Home Joys |
+== Herbert Giles | Home Joys | 1898
 My home is girdled by a limpid stream,
    And there in summer days life’s movements pause,
 Save where some swallow flits from beam to beam,
@@ -77,7 +77,7 @@ The goodwife rules a paper board for chess;
 My ailments call for physic more or less,
    What else should this poor frame of mine require?
 
-== Amy Lowell & Florence Ayscough | The River Village |
+== Amy Lowell & Florence Ayscough | The River Village | 1921
 The river makes a bend and encircles the village with its current.
 All the long Summer, the affairs and occupations of the river village are quiet and simple.
 The swallows who nest in the beams go and come as they please.
@@ -88,7 +88,7 @@ My little sons hammer needles to make fish-hooks.
 I have many illnesses, therefore my only necessities are medicines;
 Besides these, what more can so humble a man as I ask?
 
-== Gertrude Joerissen (après Franz Toussaint) | Spring Afternoon |
+== Gertrude Joerissen (après Franz Toussaint) | Spring Afternoon | 1929
      The stream divides itself into two branches which form a silver ring around my village.  My dwelling at the parting of the stream is the jewel of that ring.  There happiness reigns.  The swallows build their nests between the girders of my veranda.  The dragon-flies settle on my iris.
 
      I look at the orchard over which a blue haze is resting.  My aged wife designs a square upon a bit of cloth.  My son bends a needle to make a fish-hook.

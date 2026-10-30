@@ -637,7 +637,7 @@
    "simp": "为",
    "py": "wéi",
    "crib": "be",
-   "more": "become, do, make, act as; *read wèi*, for, because of",
+   "more": "become, do, make, make into, act as; *read wèi*, for, because of",
    "forms": null,
    "rank": 21,
    "compounds": []
@@ -1397,9 +1397,14 @@
       ]
      },
      {
-      "k": "故鄉",
+      "k": "故",
       "chars": [
-       "故",
+       "故"
+      ]
+     },
+     {
+      "k": "鄉",
+      "chars": [
        "鄉"
       ]
      },
@@ -1459,7 +1464,9 @@
      "text": "I wake, and moonbeams play around my bed,\nGlittering like hoar-frost to my wondering eyes;\nUp towards the glorious moon I raise my head,\nThen lay me down, — and thoughts of home arise."
     }
    ],
-   "notes": []
+   "notes": [
+    "Line 4: 故鄉, compound \"home\""
+   ]
   },
   {
    "id": "ganxing",
@@ -1477,9 +1484,14 @@
    "lines": [
     [
      {
-      "k": "香爐",
+      "k": "香",
       "chars": [
-       "香",
+       "香"
+      ]
+     },
+     {
+      "k": "爐",
+      "chars": [
        "爐"
       ]
      },
@@ -1517,9 +1529,14 @@
       ]
      },
      {
-      "k": "高人",
+      "k": "高",
       "chars": [
-       "高",
+       "高"
+      ]
+     },
+     {
+      "k": "人",
+      "chars": [
        "人"
       ]
      },
@@ -1631,7 +1648,10 @@
     "上": "ascend"
    },
    "translations": [],
-   "notes": []
+   "notes": [
+    "Line 1: 香爐, compound \"Incense Burner (Peak)\" on Mount Lu",
+    "Line 2: 高人, compound \"recluse\""
+   ]
   },
   {
    "id": "jiangcun",
@@ -2078,28 +2098,28 @@
     {
      "translator": "Herbert Giles",
      "title": "Home Joys",
-     "date": "",
+     "date": "1898",
      "note": null,
      "text": "My home is girdled by a limpid stream,\n   And there in summer days life’s movements pause,\nSave where some swallow flits from beam to beam,\n   And the wild sea-gull near and nearer draws.\n\nThe goodwife rules a paper board for chess;\n   The children beat a fish-hook out of wire;\nMy ailments call for physic more or less,\n   What else should this poor frame of mine require?"
     },
     {
      "translator": "Amy Lowell & Florence Ayscough",
      "title": "The River Village",
-     "date": "",
+     "date": "1921",
      "note": null,
      "text": "The river makes a bend and encircles the village with its current.\nAll the long Summer, the affairs and occupations of the river village are quiet and simple.\nThe swallows who nest in the beams go and come as they please.\nThe gulls in the middle of the river enjoy one another, they crowd together and touch one another.\nMy old wife paints a chess-board on paper.\nMy little sons hammer needles to make fish-hooks.\n\nI have many illnesses, therefore my only necessities are medicines;\nBesides these, what more can so humble a man as I ask?"
     },
     {
      "translator": "Gertrude Joerissen (après Franz Toussaint)",
      "title": "Spring Afternoon",
-     "date": "",
+     "date": "1929",
      "note": null,
      "text": "     The stream divides itself into two branches which form a silver ring around my village. My dwelling at the parting of the stream is the jewel of that ring. There happiness reigns. The swallows build their nests between the girders of my veranda. The dragon-flies settle on my iris.\n\n     I look at the orchard over which a blue haze is resting. My aged wife designs a square upon a bit of cloth. My son bends a needle to make a fish-hook.\n\n     My heart beats feebly, and I yearn for my strengthening draught."
     }
    ],
    "notes": [
-    "Line 7: variant, for the whole line 但有故人供祿米 (if only old friends supply me with rice)",
-    "Line 6, compound 稚子 (little son)"
+    "Line 6: 稚子, compound \"little son\"",
+    "Line 7: 多病所須唯藥物, variant 但有故人供祿米 \"if only old friends supply me with rice\""
    ]
   },
   {
@@ -2244,16 +2264,26 @@
     ],
     [
      {
-      "k": "美人",
+      "k": "美",
       "chars": [
-       "美",
+       "美"
+      ]
+     },
+     {
+      "k": "人",
+      "chars": [
        "人"
       ]
      },
      {
-      "k": "何處",
+      "k": "何",
       "chars": [
-       "何",
+       "何"
+      ]
+     },
+     {
+      "k": "處",
+      "chars": [
        "處"
       ]
      },
@@ -2332,7 +2362,9 @@
     "頭": "top"
    },
    "translations": [],
-   "notes": []
+   "notes": [
+    "Line 3: 美人, compound \"a beauty,\" often a friend or patron longed for; 何處, compound \"where\""
+   ]
   }
  ],
  "top": [
@@ -3837,5 +3869,5 @@
    "count": 2263
   }
  ],
- "version": "9b255ab936"
+ "version": "84488e0bfa"
 }

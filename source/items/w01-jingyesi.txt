@@ -5,7 +5,7 @@ Title: 靜夜思 / Quiet Night Thoughts
 Week: 1
 
 床前明月光，疑是地上霜。
-舉頭望明月，低頭思[故鄉]。
+舉頭望明月，低頭思故鄉。
 
 LEXICON
 靜 (静) jìng, quiet; still, calm
@@ -30,6 +30,9 @@ LEXICON
 
 COMPOUNDS
 故鄉 (故乡) gùxiāng, home; native place (*lit.* old village)
+
+NOTES
+Line 4: 故鄉, compound "home"
 
 TRANSLATIONS
 == Judith Gautier | L’auberge | 1867

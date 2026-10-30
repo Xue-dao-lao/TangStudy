@@ -3,7 +3,7 @@ Id: ganxing
 Poet: 李端 Li Duan
 Title: 感興 / Moved by a Feeling
 
-[香爐]最高頂，中有[高人]住。
+香爐最高頂，中有高人住。
 日暮下山來，月明上山去。
 
 LEXICON
@@ -31,5 +31,9 @@ LEXICON
 COMPOUNDS
 香爐 (香炉) xiānglú, Incense Burner (Peak); *lit.* censer, *a peak of Mount Lu*
 高人 gāorén, recluse; *lit.* lofty person, man of high character
+
+NOTES
+Line 1: 香爐, compound "Incense Burner (Peak)" on Mount Lu
+Line 2: 高人, compound "recluse"
 
 TRANSLATIONS

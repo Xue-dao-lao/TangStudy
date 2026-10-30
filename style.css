@@ -92,13 +92,13 @@ h2 { font-size: 26px; margin: 0 0 14px; }
 .cell[aria-pressed="true"] { background: var(--zhu-wash); }
 .unit.compound .cells::after { content: ""; position: absolute; left: 12px; right: 13px; bottom: 7px; height: 2px; background: var(--ink); pointer-events: none; }
 .cell.now::after, .cell.past::after { content: ""; position: absolute; top: 4px; right: 4px; border-radius: 50%; pointer-events: none; }
-.cell.now::after { width: 9px; height: 9px; border: 1.6px solid var(--zhu); }
+.cell.now::after { width: 7px; height: 7px; background: var(--zhu); }
 .cell.past::after { width: 6px; height: 6px; background: var(--ink-soft); }
 .crib { display: none; width: 0; min-width: 100%; font-size: 14px; font-style: italic; line-height: 1.25; color: var(--ink-soft); text-align: center; padding: 4px 3px 0; }
 .show-cribs .crib { display: block; }
 .legend { display: flex; gap: 18px; font-family: var(--sans); font-size: 13px; color: var(--ink-soft); margin-top: 14px; }
 .legend span::before { content: ""; display: inline-block; margin-right: 6px; border-radius: 50%; vertical-align: 1px; }
-.legend .l-now::before { width: 8px; height: 8px; border: 1.5px solid var(--zhu); }
+.legend .l-now::before { width: 7px; height: 7px; background: var(--zhu); }
 .legend .l-past::before { width: 6px; height: 6px; background: var(--ink-soft); }
 @media (max-width: 480px) { :root { --cell: 50px; } .crib { font-size: 12px; } }
 
